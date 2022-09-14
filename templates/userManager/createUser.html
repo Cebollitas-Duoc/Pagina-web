@@ -1,0 +1,58 @@
+{% extends 'BaseTemplate.html' %}
+{% load static %}
+
+{% block css %}
+<link href="{% static 'css/login.css'%}" rel="stylesheet">
+{% endblock css %}
+
+{% block wrapper %}
+
+<main class="form-signin w-100 m-auto text-center">
+    <form>
+        <img class="mb-4 m-auto" src="{% static 'img/logo.png'%}" alt="" width="100">
+        <h1 class="h3 mb-3 fw-normal">Crear usuario</h1>
+        <!-- datos usuario -->
+        <div class="form-floating">
+            <input type="nombres" class="form-control" id="floatingNombres" placeholder="Jose Alejandro">
+            <label for="floatingInput">Nombres</label>
+        </div>
+        
+        <div class="form-floating">
+            <input type="apellidos" class="form-control" id="floatingApellidos" placeholder="Espinoza Toro">
+            <label for="floatingInput">Apellidos</label>
+        </div>
+        
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="jose@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        
+        <div class="form-floating">
+            <input type="direccion" class="form-control" id="floatingDireccion" placeholder="1600 Pennsylvania Avenue NW">
+            <label for="floatingInput">Direccion</label>
+        </div>
+        
+        <div class="form-floating">
+            <input type="telefono" class="form-control" id="floatingTelefono" placeholder="+569 1234 4315">
+            <label for="floatingInput">Telefono</label>
+        </div>
+        <!-- password -->
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="password2" class="form-control" id="floatingPassword2" placeholder="Password">
+            <label for="floatingPassword">Password 2</label>
+        </div>
+    
+        <div class="checkbox mb-3">
+
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    </form>
+</main>
+
+
+{% endblock wrapper %}
