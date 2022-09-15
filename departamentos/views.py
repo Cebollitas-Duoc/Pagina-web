@@ -4,6 +4,7 @@ from userManager.authAPI import isSessionValid
 # Create your views here.
 
 def Home(request):
+    print(request.COOKIES)
     context = {
         "isLogged": isSessionValid(request)[0] 
     }
