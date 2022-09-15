@@ -46,6 +46,8 @@
                 </ul>
               </li>
             </ul>
+            <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:Login' %}">Iniciar sesion</a>
+            <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
             {% if isLogged %}
             <img id="userIcon" src="{% static 'img/default.png'%}" alt="">
             {% endif %}
