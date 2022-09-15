@@ -45,6 +45,9 @@
                 </ul>
               </li>
             </ul>
+            {% if isLogged %}
+            <img src="{% static 'img/default.png'%}" alt="">
+            {% endif %}
             <form role="search">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             </form>
