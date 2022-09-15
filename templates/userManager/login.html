@@ -29,8 +29,9 @@
             <input type="checkbox" value="remember-me" data-com.bitwarden.browser.user-edited="yes"> Remember me
             </label>
         </div>
-        <button id="LoginButton" class="w-100 btn btn-lg btn-primary" type="button">Sign in</button>
+        <button id="LoginButton" class="w-100 btn btn-lg btn-primary" type="button">Iniciar sesion</button>
 
     </form>
+    <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
 </main>
 {% endblock wrapper %}
