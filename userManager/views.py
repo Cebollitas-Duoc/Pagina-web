@@ -6,36 +6,12 @@ from django.shortcuts import redirect
 # Create your views here.
 
 def Login(request):
-    if "UsrName" in request.COOKIES:
-        usrName = request.COOKIES["UsrName"]
-    else:
-        usrName = ""
-    if "usrImg" in request.COOKIES:
-        UsrImg = request.COOKIES["usrImg"]
-    else:
-        UsrImg = ""
-
     context = {
-        "isLogged": isSessionValid(request)[0],
-        "usrName": usrName,
-        "usrImg": UsrImg,
     }
     return render(request, "userManager/login.html", context)
 
 def CreateUser(request):
-    if "UsrName" in request.COOKIES:
-        usrName = request.COOKIES["UsrName"]
-    else:
-        usrName = ""
-    if "usrImg" in request.COOKIES:
-        UsrImg = request.COOKIES["usrImg"]
-    else:
-        UsrImg = ""
-
     context = {
-        "isLogged": isSessionValid(request)[0],
-        "usrName": usrName,
-        "usrImg": UsrImg,
     }
     return render(request, "userManager/createUser.html", context)
 
