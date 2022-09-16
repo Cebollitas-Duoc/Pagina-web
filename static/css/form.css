@@ -7,12 +7,12 @@ input.form-control {
   margin-bottom: 10px;
 }
 
-#btn-crearUsuario {
-  margin-top: 1rem;
-}
-
 #btn-crearUsuario:hover {
   color: #251f80;
   font-weight: bold;
 }
-/*# sourceMappingURL=login.css.map */
+
+.btn-primary {
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=form.css.map */

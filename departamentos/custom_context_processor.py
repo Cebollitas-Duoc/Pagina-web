@@ -1,14 +1,8 @@
 from userManager.authAPI import isSessionValid
 
 def user_renderer(request):
-    if "UsrName" in request.COOKIES:
-        usrName = request.COOKIES["UsrName"]
-    else:
-        usrName = ""
-    if "UsrImg" in request.COOKIES:
-        usrImg = request.COOKIES["UsrImg"]
-    else:
-        usrImg = ""
+    usrName = request.COOKIES["UsrName"] if "UsrName" in request.COOKIES else ""
+    usrImg  = request.COOKIES["UsrImg"]  if "UsrImg"  in request.COOKIES else ""
 
     return {
         "isLogged": isSessionValid(request)[0],

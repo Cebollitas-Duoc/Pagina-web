@@ -8,10 +8,12 @@ input.form-control{
 }
 
 #btn-crearUsuario{
-    margin-top: 1rem;
+    &:hover{
+        color: rgb(37, 31, 128);
+        font-weight: bold;
+    }
 }
 
-#btn-crearUsuario:hover{
-    color: rgb(37, 31, 128);
-    font-weight: bold;
+.btn-primary{
+    margin-bottom: 1rem;
 }

@@ -4,8 +4,8 @@ const input_password   = document.getElementById("inputPassword");
 const check_rememberMe = document.getElementById("checkRememberMe");
 
 button_login.addEventListener("click", async ()=>{
-    email = input_email.value
-    password = input_password.value
+    email    = getValue(input_email)
+    password = getValue(input_password)
     response = JSON.parse(await login(email, password))
 
     if (!validateInputs()) return
@@ -45,8 +45,8 @@ async function login(email, password){
 }
 
 function validateInputs(){
-    email = input_email.value
-    password = input_password.value
+    email    = getValue(input_email)
+    password = getValue(input_password)
 
     if (email == ""){
         printErrorMessage("Falta ingresar email"); return false;   

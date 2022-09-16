@@ -8,13 +8,15 @@ const input_password    = document.getElementById("floatingPassword");
 const input_password2   = document.getElementById("floatingPassword2");
 
 button_createUser.addEventListener("click", async ()=>{
-    nombres     = input_nombres.value      
-    apellidos   = input_apellidos.value    
-    email       = input_email.value        
-    direccion   = input_direccion.value    
-    telefono    = input_telefono.value     
-    password    = input_password.value     
-    password2   = input_password2.value    
+    if (!validateInputs()) return
+
+    nombres     = getValue(input_nombres)
+    apellidos   = getValue(input_apellidos)
+    email       = getValue(input_email)
+    direccion   = getValue(input_direccion)
+    telefono    = getValue(input_telefono)
+    password    = getValue(input_password)
+    password2   = getValue(input_password2)
 
     nombre    = nombres.split(" ")[0]
     nombre2   = nombres.split(" ")[1]
@@ -48,4 +50,41 @@ async function createUser(email, nombre, nombre2, apellido, apellido2, password,
     .catch(error => console.log('error', error));
 
     return r
+}
+
+function validateInputs(){
+    nombres     = getValue(input_nombres)
+    apellidos   = getValue(input_apellidos)
+    email       = getValue(input_email)
+    direccion   = getValue(input_direccion)
+    telefono    = getValue(input_telefono)
+    password    = getValue(input_password)
+    password2   = getValue(input_password2)
+
+    if (nombres == ""){
+        printErrorMessage("Falta ingresar su nombre"); return false;   
+    }
+    if (apellidos == ""){
+        printErrorMessage("Falta ingresar su apellido"); return false;
+    }
+    if (email == ""){
+        printErrorMessage("Falta ingresar su email"); return false;
+    }
+    if (direccion == ""){
+        printErrorMessage("Falta ingresar su direccion"); return false;
+    }
+    if (telefono == ""){
+        printErrorMessage("Falta ingresar su telefono"); return false;
+    }
+    if (password == ""){
+        printErrorMessage("Falta ingresar su contraseña"); return false;
+    }
+    if (password2 == ""){
+        printErrorMessage("Falta ingresar la validacion de su contraseña"); return false;
+    }
+    if (password != password2){
+        printErrorMessage("La segunda contraseña no es igual a la primera"); return false;
+    }
+
+    return true
 }
