@@ -7,5 +7,9 @@ function printErrorMessage(message){
 }
 
 errorCard.addEventListener("click", async ()=>{
-    errorCard.classList.add("d-none");
+    hideErrorMessage()
 })
+
+function hideErrorMessage(){
+    errorCard.classList.add("d-none");
+}

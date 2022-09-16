@@ -46,14 +46,23 @@
                 </ul>
               </li>
             </ul>
-            <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:Login' %}">Iniciar sesion</a>
-            <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
+            
             {% if isLogged%}
-            <img id="userIcon" src="{% static 'img/default.png'%}" alt="">
+            <div id="miniProfile">
+              <div>
+                <p class="name">{{usrName}}</p>
+                <div class="logout">
+                  <a href="{% url 'userManager:LogOut' %}">logOut</a>
+                </div>
+              </div>
+              <img src="{% static usrImg %}" alt="">
+            </div>
+            {% else %}
+            <div id="ingreso" class="d-flex flex-column">
+              <a class="login" href="{% url 'userManager:Login' %}">Iniciar sesion</a>
+              <a class="createUser" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
+            </div>
             {% endif %}
-            <form role="search">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-            </form>
           </div>
         </div>
     </nav>

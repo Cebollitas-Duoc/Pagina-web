@@ -7,10 +7,11 @@ button_login.addEventListener("click", async ()=>{
     password = input_password.value
     response = JSON.parse(await login(email, password))
 
+    if (!validateInputs()) return
+
     if (response["ValidPassword"]){
         console.log("Valid user")
-        setCookie("SessionKey", response["SessionKey"], 7)
-        setCookie("LogedIn", true, 7)
+        setSessionCookies(response)
         window.location.href = "http://www.mrmeme.cl";
         alert("Logeado correctamente")
     }
@@ -40,4 +41,25 @@ async function login(email, password){
     .catch(error => console.log('error', error));
 
     return r
+}
+
+function validateInputs(){
+    email = input_email.value
+    password = input_password.value
+
+    if (email == ""){
+        printErrorMessage("Falta ingresar email"); return false;   
+    }
+    if (password == ""){
+        printErrorMessage("Falta ingresar contraseña"); return false;
+    }
+
+    return true
+}
+
+function setSessionCookies(sessionData){
+    setCookie("SessionKey", sessionData["SessionKey"], 7)
+    setCookie("UsrName", sessionData["Nombre"], 7)
+    setCookie("UsrImg", sessionData["Foto"], 7)
+    setCookie("LogedIn", true, 7)
 }

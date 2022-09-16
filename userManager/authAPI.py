@@ -4,7 +4,7 @@ import json
 from sympy import false
 
 def isSessionValid(request):
-    if "LogedIn" not in request.COOKIES or request.COOKIES["LogedIn"] == "false":
+    if "LogedIn" not in request.COOKIES or request.COOKIES["LogedIn"] != "true":
         return (False, 0)
         
     url = "http://api.mrmeme.cl/auth/ValidateSession/"
