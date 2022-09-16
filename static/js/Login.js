@@ -1,6 +1,7 @@
-const button_login   = document.getElementById("LoginButton");
-const input_email    = document.getElementById("inputEmail");
-const input_password = document.getElementById("inputPassword");
+const button_login     = document.getElementById("LoginButton");
+const input_email      = document.getElementById("inputEmail");
+const input_password   = document.getElementById("inputPassword");
+const check_rememberMe = document.getElementById("checkRememberMe");
 
 button_login.addEventListener("click", async ()=>{
     email = input_email.value
@@ -58,8 +59,9 @@ function validateInputs(){
 }
 
 function setSessionCookies(sessionData){
-    setCookie("SessionKey", sessionData["SessionKey"], 7)
-    setCookie("UsrName", sessionData["Nombre"], 7)
-    setCookie("UsrImg", sessionData["Foto"], 7)
-    setCookie("LogedIn", true, 7)
+    rememberMe = check_rememberMe.checked
+    setCookie("SessionKey", sessionData["SessionKey"], 7, rememberMe)
+    setCookie("UsrName", sessionData["Nombre"], 7, rememberMe)
+    setCookie("UsrImg", sessionData["Foto"], 7, rememberMe)
+    setCookie("LogedIn", true, 7, rememberMe)
 }
