@@ -14,7 +14,7 @@
     <form>
         <img class="mb-4 m-auto" src="{% static 'img/logo.png'%}" alt="" width="100">
         <h1 class="h3 mb-3 fw-normal">Inicio de sesion</h1>
-        
+
         <div class="form-floating">
             <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
@@ -33,5 +33,8 @@
 
     </form>
     <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
+
+    {% include 'FormErrorMessage.html' %}
+
 </main>
 {% endblock wrapper %}

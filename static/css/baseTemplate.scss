@@ -1,3 +1,14 @@
 #userIcon{
     width: 50px;
 }
+
+#FormErrorMessage{
+    background-color: rgba(255, 0, 0, 0.322);
+    :hover{
+        cursor: pointer;
+    }
+    span{
+        font-weight: bold;
+        color: black;    
+    }
+}

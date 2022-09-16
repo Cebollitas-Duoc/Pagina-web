@@ -8,17 +8,17 @@ button_login.addEventListener("click", async ()=>{
     response = JSON.parse(await login(email, password))
 
     if (response["ValidPassword"]){
-        console.log("Valid")
+        console.log("Valid user")
         setCookie("SessionKey", response["SessionKey"], 7)
         setCookie("LogedIn", true, 7)
         window.location.href = "http://www.mrmeme.cl";
         alert("Logeado correctamente")
     }
     else{
-        console.log("Invalid")
+        console.log("Invalid credentials")
         setCookie("LogedIn", false, 7)
         deleteCookie("SessionKey")
-        alert("Credenciales invalidas")
+        printErrorMessage("Credenciales invalidas")
     }
 })
 

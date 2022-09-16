@@ -1,4 +1,17 @@
 #userIcon {
   width: 50px;
 }
+
+#FormErrorMessage {
+  background-color: rgba(255, 0, 0, 0.322);
+}
+
+#FormErrorMessage :hover {
+  cursor: pointer;
+}
+
+#FormErrorMessage span {
+  font-weight: bold;
+  color: black;
+}
 /*# sourceMappingURL=baseTemplate.css.map */
