@@ -4,11 +4,10 @@ const input_password   = document.getElementById("inputPassword");
 const check_rememberMe = document.getElementById("checkRememberMe");
 
 button_login.addEventListener("click", async ()=>{
+    if (!validateInputs()) return
     email    = getValue(input_email)
     password = getValue(input_password)
     response = JSON.parse(await login(email, password))
-
-    if (!validateInputs()) return
 
     if (response["ValidPassword"]){
         console.log("Valid user")

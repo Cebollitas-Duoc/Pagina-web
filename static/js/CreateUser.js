@@ -23,11 +23,11 @@ button_createUser.addEventListener("click", async ()=>{
     apellido  = apellidos.split(" ")[0]
     apellido2 = apellidos.split(" ")[1]
 
-    response = JSON.parse(await createUser(email, nombre, nombre2, apellido, apellido2, password, password2))
+    response = JSON.parse(await createUser(email, nombre, nombre2, apellido, apellido2, direccion, telefono, password, password2))
     console.log(response)
 })
 
-async function createUser(email, nombre, nombre2, apellido, apellido2, password, password2){
+async function createUser(email, nombre, nombre2, apellido, apellido2, direccion, telefono, password, password2){
     var formdata = new FormData();
     var r
     formdata.append("Email",     email);
@@ -35,6 +35,8 @@ async function createUser(email, nombre, nombre2, apellido, apellido2, password,
     formdata.append("Name2",     nombre2);
     formdata.append("LastName",  apellido);
     formdata.append("LastName2", apellido2);
+    formdata.append("Address",   direccion);
+    formdata.append("Phone",     telefono);
     formdata.append("Password",  password);
     formdata.append("Password2", password2);
 
