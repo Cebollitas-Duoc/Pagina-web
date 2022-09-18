@@ -46,23 +46,7 @@
                 </ul>
               </li>
             </ul>
-            
-            {% if isLogged %}
-            <div id="miniProfile">
-              <div>
-                <p class="name">{{usrName}}</p>
-                <div class="logout">
-                  <a href="{% url 'userManager:LogOut' %}">logOut</a>
-                </div>
-              </div>
-              <img src="{% static usrImg %}" alt="">
-            </div>
-            {% else %}
-            <div id="ingreso" class="d-flex flex-column">
-              <a class="login" href="{% url 'userManager:Login' %}">Iniciar sesion</a>
-              <a class="createUser" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
-            </div>
-            {% endif %}
+            {% include 'MiniProfile.html' %}
           </div>
         </div>
     </nav>

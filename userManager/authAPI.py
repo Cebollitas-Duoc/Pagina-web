@@ -21,3 +21,19 @@ def isSessionValid(request):
         return (r["Valid"], r["userId"])
     return (False, 0)
 
+def getSessionProfile(request):
+    url = "http://api.mrmeme.cl/profile/getsessionprofile/"
+
+    payload={}
+    files={}
+    headers = {
+    'SessionKey': request.COOKIES["SessionKey"]
+    }
+
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+
+    if response.status_code == 200:
+        r = json.loads(response.text)
+        return r
+    #TODO: que hace en caso de que no sea codigo 200
+
