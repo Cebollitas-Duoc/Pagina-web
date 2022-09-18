@@ -24,7 +24,13 @@ button_createUser.addEventListener("click", async ()=>{
     apellido2 = apellidos.split(" ")[1]
 
     response = JSON.parse(await createUser(email, nombre, nombre2, apellido, apellido2, direccion, telefono, password, password2))
-    console.log(response)
+    console.log(response);
+    if ("Error" in response)
+        printErrorMessage(response["Error"]);
+    else{
+        alert("Usuario creado correctamente")
+        window.location.href = "/user/login";
+    }
 })
 
 async function createUser(email, nombre, nombre2, apellido, apellido2, direccion, telefono, password, password2){

@@ -12,8 +12,8 @@ button_login.addEventListener("click", async ()=>{
     if (response["ValidPassword"]){
         console.log("Valid user")
         setSessionCookies(response)
-        window.location.href = "http://www.mrmeme.cl";
         alert("Logeado correctamente")
+        window.location.href = "/";
     }
     else{
         console.log("Invalid credentials")
