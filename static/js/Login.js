@@ -30,9 +30,9 @@ async function login(email, password){
     formdata.append("Password", password);
 
     var requestOptions = {
-    method: 'POST',
-    body: formdata,
-    redirect: 'follow'
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow'
     };
 
     await fetch("http://api.mrmeme.cl/auth/Login/", requestOptions)
