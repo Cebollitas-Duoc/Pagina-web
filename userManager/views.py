@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
-from .authAPI import *
 from django.shortcuts import redirect
+from .authAPI import *
+from .decorators import isUserLogged, isUserNotLogged
 
 # Create your views here.
 
@@ -20,16 +20,16 @@ class Profile:
         self.address   = address
         self.phone     = phone
 
-
+@isUserNotLogged()
 def Login(request):
     return render(request, "userManager/login.html")
 
+@isUserNotLogged()
 def CreateUser(request):
     return render(request, "userManager/createUser.html")
 
+@isUserLogged(redirectUrl="userManager:Login")
 def MyProfile(request):
-    if not isSessionValid(request)[0]:
-        return redirect("departamentos:Home")
     profileData = getSessionProfile(request)
     p = Profile(
         f"{profileData['Name']} {profileData['Name2']}", 
