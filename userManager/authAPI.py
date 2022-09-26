@@ -11,11 +11,11 @@ def isSessionValid(request):
 
     payload={}
     files={}
-    headers = {
+    body = {
         'SessionKey': request.COOKIES["SessionKey"]
     }
 
-    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+    response = requests.request("GET", url, body=body, data=payload, files=files)
     if response.status_code == 200:
         r = json.loads(response.text)
         return (r["Valid"], r["userId"])
@@ -26,11 +26,11 @@ def getSessionProfile(request):
 
     payload={}
     files={}
-    headers = {
+    body = {
     'SessionKey': request.COOKIES["SessionKey"]
     }
 
-    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+    response = requests.request("GET", url, body=body, data=payload, files=files)
 
     if response.status_code == 200:
         r = json.loads(response.text)
