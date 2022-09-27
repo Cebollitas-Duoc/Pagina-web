@@ -43,6 +43,12 @@ def MyProfile(request):
     }
     return render(request, "userManager/MyProfile.html", context)
 
+@isUserLogged(redirectUrl="userManager:Login")
+def ChangePassword(request):
+    context = {
+    }
+    return render(request, "userManager/ChangePassword.html", context)
+
 def LogOut(request):
     response = redirect("departamentos:Home")
     response.delete_cookie('LogedIn')
