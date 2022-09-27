@@ -1,21 +1,20 @@
-from userManager.authAPI import isSessionValid
-
-def hasImg(cookies):
-    o = True
-    if "UsrImg" not in cookies:
-        o = False
-    elif cookies["UsrImg"] == "null":
-        o = False
-    elif cookies["UsrImg"] == "null":
-        o = True
-    return o
+from userManager.authAPI import *
 
 def user_renderer(request):
-    usrName = request.COOKIES["UsrName"] if "UsrName" in request.COOKIES else ""
-    usrImg  = request.COOKIES["UsrImg"]  if hasImg(request.COOKIES)  else "/img/profiles/default.png"
+    data = {}
+    profileData = getSessionProfile(request)
 
-    return {
-        "isLogged": isSessionValid(request)[0],
-        "usrName": usrName,
-        "usrImg": usrImg,
-    }
+    if (isSessionValid(request)[0]):
+        data = {
+        "isLogged": True,
+        "usrName": f"{profileData["Name"]} {profileData["LastName"]}",
+        "usrImg": profileData["Picture"],
+        }
+    else:
+        data = {
+        "isLogged": False,
+        "usrName": "",
+        "usrImg": "/img/profiles/default.png",
+        }
+
+    return data
