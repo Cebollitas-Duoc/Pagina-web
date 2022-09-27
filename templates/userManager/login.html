@@ -2,34 +2,40 @@
 {% load static %}
 
 {% block css %}
-<link href="{% static 'css/login.css'%}" rel="stylesheet">
+<link href="{% static 'css/form.css'%}" rel="stylesheet">
 {% endblock css %}
 
-{% block wrapper %}
+{% block js %}
+<script src="{% static 'js/Form.js'%}"></script>
+<script src="{% static 'js/Login.js'%}"></script>
+{% endblock js %}
 
+{% block wrapper %}
 <main class="form-signin w-100 m-auto text-center">
     <form>
         <img class="mb-4 m-auto" src="{% static 'img/logo.png'%}" alt="" width="100">
         <h1 class="h3 mb-3 fw-normal">Inicio de sesion</h1>
-        
+
         <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
             <label for="floatingPassword">Password</label>
         </div>
     
         <div class="checkbox mb-3">
         <label>
-            <input type="checkbox" value="remember-me" data-com.bitwarden.browser.user-edited="yes"> Remember me
-            </label>
+            <input type="checkbox" value="remember-me" id="checkRememberMe"> Recuerdame
+        </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <button id="LoginButton" class="w-100 btn btn-lg btn-primary" type="button">Iniciar sesion</button>
 
     </form>
+    <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
+
+    {% include 'FormErrorMessage.html' %}
+
 </main>
-
-
 {% endblock wrapper %}
