@@ -47,6 +47,7 @@
 
         </div>
         <button id="UpdateProfileButton" class="w-100 btn btn-lg btn-primary" type="button">Actualizar perfil</button>
+        <a id="btn-changePassword" class="dropdown-item" href="{% url 'userManager:ChangePassword' %}">Cambiar contraseña</a>
     </form>
     {% include 'FormErrorMessage.html' %}
 </main>

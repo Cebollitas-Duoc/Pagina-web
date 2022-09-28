@@ -23,9 +23,9 @@ async function ChangePassword(old_password, new_password, new_password2){
     var formdata = new FormData();
     var r
     formdata.append("SessionKey", getCookie("SessionKey"));
-    formdata.append("OldPassword", getCookie("old_password"));
-    formdata.append("NewPassword", getCookie("new_password"));
-    formdata.append("NewPassword2", getCookie("new_password2"));
+    formdata.append("OldPassword", old_password);
+    formdata.append("NewPassword", new_password);
+    formdata.append("NewPassword2", new_password2);
     
     var requestOptions = {
         method: 'POST',
