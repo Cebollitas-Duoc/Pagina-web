@@ -35,7 +35,7 @@ async function login(email, password){
         redirect: 'follow'
     };
 
-    await fetch("http://api.mrmeme.cl/auth/Login/", requestOptions)
+    await fetch(`${apidomain}/auth/Login/`, requestOptions)
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));

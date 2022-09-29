@@ -1,6 +1,7 @@
 from email import header
 import requests
 import json
+from turismorealweb.settings import localHostIp
 
 from sympy import false
 
@@ -8,7 +9,7 @@ def isSessionValid(request):
     if "LogedIn" not in request.COOKIES or request.COOKIES["LogedIn"] != "true":
         return (False, 0)
         
-    url = "http://api.mrmeme.cl/auth/ValidateSession/"
+    url = f"http://{localHostIp}:8081/auth/ValidateSession/"
 
     payload = {
         'SessionKey': request.COOKIES["SessionKey"]
@@ -24,7 +25,7 @@ def isSessionValid(request):
     return (False, 0)
 
 def getSessionProfile(request):
-    url = "http://api.mrmeme.cl/profile/getsessionprofile/"
+    url = f"http://{localHostIp}:8081/profile/getsessionprofile/"
 
     payload={'SessionKey': request.COOKIES["SessionKey"]}
     files={}

@@ -26,7 +26,8 @@ button_updateProfile.addEventListener("click", async ()=>{
     if ("Error" in response)
         printErrorMessage(response["Error"]);
     else{
-        alert("Perfil actualizado")
+        alert("Perfil actualizado");
+        location.reload();
     }
 })
 
@@ -48,7 +49,7 @@ async function updateProfile(email, nombre, nombre2, apellido, apellido2, direcc
         redirect: 'follow'
     };
     
-    await fetch("http://api.mrmeme.cl/profile/editsessionprofile/", requestOptions)
+    await fetch(`${apidomain}/profile/editsessionprofile/`, requestOptions)
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));

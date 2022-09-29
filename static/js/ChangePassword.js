@@ -33,7 +33,7 @@ async function ChangePassword(old_password, new_password, new_password2){
         redirect: 'follow'
     };
     
-    await fetch("http://api.mrmeme.cl/auth/changepassword/", requestOptions)
+    await fetch(`${apidomain}/auth/changepassword/`, requestOptions)
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));

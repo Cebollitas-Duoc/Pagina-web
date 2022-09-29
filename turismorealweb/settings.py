@@ -19,7 +19,7 @@ SECRET_KEY = "django-insecure--#hss)qd6_5x4ud6bix&ev2ih&j3n@f$g1nx1qax^w4n8portl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["host.docker.internal"]
+ALLOWED_HOSTS = ["host.docker.internal", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -72,15 +72,14 @@ WSGI_APPLICATION = "turismorealweb.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 isInDocker = os.environ.get('AM_I_IN_A_DOCKER_CONTAINER', False)
+localHostIp = '127.0.0.1'
 if isInDocker:
-    dbHost = 'host.docker.internal'
-else:
-    dbHost = '127.0.0.1'
+    localHostIp = 'host.docker.internal'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': f"{dbHost}:1521/xe",
+        'NAME': f"{localHostIp}:1521/xe",
         'USER': 'USR_TURISMO_REAL',
         'PASSWORD': 'USR_TURISMO_REAL',
         'TEST': {

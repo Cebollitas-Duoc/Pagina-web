@@ -52,7 +52,7 @@ async function createUser(email, nombre, nombre2, apellido, apellido2, direccion
     redirect: 'follow'
     };
 
-    await fetch("http://api.mrmeme.cl/auth/CreateUser/", requestOptions)
+    await fetch(`${apidomain}/auth/CreateUser/`, requestOptions)
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));
