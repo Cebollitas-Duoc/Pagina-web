@@ -11,9 +11,7 @@ def isSessionValid(request):
         
     url = f"http://{localHostIp}:8081/auth/ValidateSession/"
 
-    payload = {
-        'SessionKey': request.COOKIES["SessionKey"]
-        }
+    payload = {'SessionKey': request.COOKIES["SessionKey"]}
     files={}
     headers={}
 
