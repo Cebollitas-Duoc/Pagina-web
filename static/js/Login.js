@@ -9,7 +9,7 @@ button_login.addEventListener("click", async ()=>{
     password = getValue(input_password)
     response = JSON.parse(await login(email, password))
 
-    if (response["ValidPassword"]){
+    if ("SessionKey" in response){
         console.log("Valid user")
         setSessionCookies(response)
         alert("Logeado correctamente")
