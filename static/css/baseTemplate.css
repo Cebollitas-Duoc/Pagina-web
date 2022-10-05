@@ -1,3 +1,7 @@
+#miniProfile {
+  text-align: right;
+}
+
 #miniProfile div {
   float: left;
   margin-right: 1rem;

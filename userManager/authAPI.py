@@ -1,5 +1,7 @@
+from email import header
 import requests
 import json
+from turismorealweb.settings import localHostIp
 
 from sympy import false
 
@@ -7,30 +9,27 @@ def isSessionValid(request):
     if "LogedIn" not in request.COOKIES or request.COOKIES["LogedIn"] != "true":
         return (False, 0)
         
-    url = "http://api.mrmeme.cl/auth/ValidateSession/"
+    url = f"http://{localHostIp}:8081/auth/ValidateSession/"
 
-    payload={}
+    payload = {'SessionKey': request.COOKIES["SessionKey"]}
     files={}
-    body = {
-        'SessionKey': request.COOKIES["SessionKey"]
-    }
+    headers={}
 
-    response = requests.request("GET", url, body=body, data=payload, files=files)
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
     if response.status_code == 200:
         r = json.loads(response.text)
-        return (r["Valid"], r["userId"])
+        if (r["Valid"]):
+            return (r["Valid"], r["userId"])
     return (False, 0)
 
 def getSessionProfile(request):
-    url = "http://api.mrmeme.cl/profile/getsessionprofile/"
+    url = f"http://{localHostIp}:8081/profile/getsessionprofile/"
 
-    payload={}
+    payload={'SessionKey': request.COOKIES["SessionKey"]}
     files={}
-    body = {
-    'SessionKey': request.COOKIES["SessionKey"]
-    }
+    headers = {}
 
-    response = requests.request("GET", url, body=body, data=payload, files=files)
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
 
     if response.status_code == 200:
         r = json.loads(response.text)

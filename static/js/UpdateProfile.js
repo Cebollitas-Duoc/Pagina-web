@@ -14,10 +14,13 @@ button_updateProfile.addEventListener("click", async ()=>{
     direccion   = getValue(input_direccion)
     telefono    = getValue(input_telefono)
 
-    nombre    = nombres.split(" ")[0]
-    nombre2   = nombres.split(" ")[1]
-    apellido  = apellidos.split(" ")[0]
-    apellido2 = apellidos.split(" ")[1]
+    nombre    = nombres.split(/[ ]+/)[0]
+    nombre2   = nombres.split(/[ ]+/)[1]
+    apellido  = apellidos.split(/[ ]+/)[0]
+    apellido2 = apellidos.split(/[ ]+/)[1]
+
+    if (nombre2 == undefined) nombre2 = " ";
+    if (apellido2 == undefined) apellido2 = " ";
 
     var a = await updateProfile(email, nombre, nombre2, apellido, apellido2, direccion, telefono)
     console.log(a);
@@ -26,7 +29,8 @@ button_updateProfile.addEventListener("click", async ()=>{
     if ("Error" in response)
         printErrorMessage(response["Error"]);
     else{
-        alert("Perfil actualizado")
+        alert("Perfil actualizado");
+        location.reload();
     }
 })
 
@@ -48,7 +52,7 @@ async function updateProfile(email, nombre, nombre2, apellido, apellido2, direcc
         redirect: 'follow'
     };
     
-    await fetch("http://api.mrmeme.cl/profile/editsessionprofile/", requestOptions)
+    await fetch(`${apidomain}/profile/editsessionprofile/`, requestOptions)
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));

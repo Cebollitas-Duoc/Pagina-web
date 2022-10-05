@@ -9,7 +9,7 @@ button_login.addEventListener("click", async ()=>{
     password = getValue(input_password)
     response = JSON.parse(await login(email, password))
 
-    if (response["ValidPassword"]){
+    if ("SessionKey" in response){
         console.log("Valid user")
         setSessionCookies(response)
         alert("Logeado correctamente")
@@ -35,7 +35,7 @@ async function login(email, password){
         redirect: 'follow'
     };
 
-    await fetch("http://api.mrmeme.cl/auth/Login/", requestOptions)
+    await fetch(`${apidomain}/auth/Login/`, requestOptions)
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));
