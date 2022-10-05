@@ -18,5 +18,4 @@ def user_renderer(request):
             if (profileData["Picture"] ):
                 data["usrImg"] = profileData["Picture"]
             
-
     return data

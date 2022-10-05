@@ -77,17 +77,7 @@ if isInDocker:
     localHostIp = 'host.docker.internal'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': f"{localHostIp}:1521/xe",
-        'USER': 'USR_TURISMO_REAL',
-        'PASSWORD': 'USR_TURISMO_REAL',
-        'TEST': {
-            'USER': 'default_test',
-            'TBLSPACE': 'default_test_tbls',
-            'TBLSPACE_TMP': 'default_test_tbls_tmp',
-        },
-    }
+
 }
 
 
