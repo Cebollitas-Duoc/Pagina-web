@@ -11,33 +11,37 @@
 {% endblock js %}
 
 {% block wrapper %}
-<main class="form-signin w-100 m-auto text-center" id="colorfondo ">
-    <div id="cartalogin">
-        <form >
-            <img class="mb-4 m-auto" src="{% static 'img/logo.png'%}" alt="" width="100">
-            <h1 class="h3 mb-3 fw-normal">Inicio de sesion</h1>
+<div class="d-flex justify-content-center align-items-center" id="colorfondo">
+    <main class="form-signin w-100 m-auto text-center">
+        
+            <div id="cartalogin">
+                <form >
+                    <img class="mb-3 m-auto" src="{% static 'img/logo.png'%}" alt="" width="100">
+                    <h1 class="h3 mb-3 fw-normal">Inicio de sesion</h1>
 
-            <div class="form-floating">
-                <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                
+                    <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me" id="checkRememberMe"> Recuerdame
+                    </label>
+                    </div>
+                    <button id="LoginButton" class="w-100 btn btn-lg btn-primary botonhover" type="button">Iniciar sesion</button>
+
+                </form>
+                <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
             </div>
         
-            <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me" id="checkRememberMe"> Recuerdame
-            </label>
-            </div>
-            <button id="LoginButton" class="w-100 btn btn-lg btn-primary" type="button">Iniciar sesion</button>
 
-        </form>
-        <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
-    </div>
+        {% include 'FormErrorMessage.html' %}
 
-    {% include 'FormErrorMessage.html' %}
-
-</main>
+    </main>
+</div>
 {% endblock wrapper %}

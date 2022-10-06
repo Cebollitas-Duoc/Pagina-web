@@ -47,22 +47,116 @@
 #navbar{
     background-color: #1B262C;
     font-weight: bold;
-    color: #DCD7C9;
-    
 }
 
 #colorfondo{
-    background-color: #A27B5C;
+    background-image: url("/static/img/paisajes.png");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: 100% 100%;
 
 }
 
-#cartalogin {
-    background-color: #DCD7C9;
-    padding-left: 20px;
-    padding-right: 20px;
+@media only screen and (max-width: 600px){
+    #colorfondo{
+        background-image: url(/static/img/fondotelefono.png);
+    }
+}
 
+#cartalogin {
+    width: 100%;
+    max-width: 330px;
+    padding: 25px;
+    margin: auto;
+    border-radius: 25px;
+    background-color: rgb(220, 215, 201, 0.8);
 }
 
 #colorboton {
     background-color: #126E82;
 }
+
+#LoginButton {
+    background-color: rgb(18, 110, 130, 0.9);
+    border: rgb(18, 110, 130);
+}
+
+#CreateUserButton{
+    background-color: rgb(18, 110, 130, 0.9);
+    border: rgb(18, 110, 130);
+}
+
+.ColorTexto{
+    color: #DCD7C9!important;
+}
+
+.botonhover:hover{
+    background-color: #1B262C!important;
+}
+
+/*
+.contenedor input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+
+  .contenedor:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+
+  .contenedor input:checked ~ .checkmark {
+    background-color: #126E82;
+  }
+  
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+
+  .contenedor input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+  .contenedor .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.contenedor {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}  */
