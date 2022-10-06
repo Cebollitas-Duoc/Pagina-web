@@ -1,32 +1,26 @@
 #miniProfile {
   text-align: right;
 }
-
 #miniProfile div {
   float: left;
   margin-right: 1rem;
 }
-
 #miniProfile .name {
   color: #cfd8dc;
   float: down;
   margin-bottom: 0;
 }
-
 #miniProfile .logout {
   width: 100%;
   text-align: right;
 }
-
 #miniProfile .logout a {
   text-decoration: none;
   color: #46545a;
 }
-
 #miniProfile .logout a:hover {
   color: #bdbdbd;
 }
-
 #miniProfile img {
   width: 50px;
   border-radius: 50px;
@@ -37,11 +31,9 @@
   background-color: rgba(255, 0, 0, 0.322);
   width: 100%;
 }
-
 #FormErrorMessage:hover {
   cursor: pointer;
 }
-
 #FormErrorMessage span {
   font-weight: bold;
   color: black;
@@ -51,4 +43,23 @@
   color: #cfd8dc;
   text-decoration: none;
 }
-/*# sourceMappingURL=baseTemplate.css.map */
+
+#navbar {
+  background-color: #1B262C;
+  font-weight: bold;
+  color: #DCD7C9;
+}
+
+#colorfondo {
+  background-color: #A27B5C;
+}
+
+#cartalogin {
+  background-color: #DCD7C9;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#colorboton {
+  background-color: #126E82;
+}/*# sourceMappingURL=baseTemplate.css.map */
