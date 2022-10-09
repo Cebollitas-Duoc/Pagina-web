@@ -17,9 +17,13 @@ button_login.addEventListener("click", async ()=>{
     }
     else{
         console.log("Invalid credentials")
+        if ("Error" in response)
+            printErrorMessage(response["Error"])
+        else
+            printErrorMessage("No se pudo iniciar sesion")
+
         setCookie("LogedIn", false, 7)
         deleteCookie("SessionKey")
-        printErrorMessage("Credenciales invalidas")
     }
 })
 

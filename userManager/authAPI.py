@@ -34,5 +34,4 @@ def getSessionProfile(request):
     if response.status_code == 200:
         r = json.loads(response.text)
         return r
-    #TODO: que hace en caso de que no sea codigo 200
-
+    return {"ValidSession": False}

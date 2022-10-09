@@ -6,9 +6,8 @@ def user_renderer(request):
         "usrName": "",
         "usrImg": "/img/profiles/default.png",
     }
-    if ("SessionKey" in request.COOKIES):
+    if ("SessionKey" in request.COOKIES and request.COOKIES["SessionKey"] != ""):
         profileData = getSessionProfile(request)
-
         if (profileData["ValidSession"]):
             name = profileData["Name"]
             lastName = profileData["LastName"]
