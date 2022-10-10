@@ -1,1 +1,1 @@
-sudo docker start -i turismoreal-webpage
+docker start -i turismoreal-webpage
