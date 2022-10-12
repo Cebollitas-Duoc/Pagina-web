@@ -93,6 +93,18 @@
   background-color: #1B262C !important;
 }
 
+#colorhome {
+  background-color: #A27B5C !important;
+}
+
+#textoboton1 {
+  font-size: 16px;
+}
+
+#textoboton2 {
+  font-size: 13px;
+}
+
 /*
 .contenedor input {
     position: absolute;

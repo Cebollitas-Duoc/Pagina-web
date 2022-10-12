@@ -21,7 +21,7 @@
   <body >
     <nav class="navbar navbar-expand-sm" id="navbar" aria-label="Third navbar example">
         <div class="container-fluid">
-          <a class="navbar-brand ColorTexto" href="#">Turismo Real</a>
+          <a class="navbar-brand ColorTexto" href="{% url 'departamentos:Home' %}">Turismo Real</a>
           <button class="navbar-toggler collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -53,6 +53,7 @@
 
     {% block wrapper %}
     {% endblock wrapper %}
+<div id="colorhome">cuatico</div>
 
     <footer class="container">
       <p>© Company 2017-2018 | Cebollitas ltda</p>

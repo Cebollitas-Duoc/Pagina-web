@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AACA,AAAA,eAAe,CAAA;EACX,KAAK,EAFM,KAAK;EAGhB,aAAa,EAHF,KAAK;EAIhB,MAAM,EAAE,iBAAiB;CAC5B",
-    "sources": [
-        "myProfile.scss"
-    ],
-    "names": [],
-    "file": "myProfile.css"
-}
+{"version":3,"sources":["myProfile.scss","myProfile.css"],"names":[],"mappings":"AACA;EACI,YAFW;EAGX,oBAHW;EAIX,yBAAA;ACAJ","file":"myProfile.css"}
