@@ -4,4 +4,8 @@ $picture-size: 200px;
     height: $picture-size;
     border-radius: $picture-size;
     border: 5px solid #cfd8dc;
+    cursor: pointer;
+    &:hover{
+        filter: grayscale(50%);
+    }
 }

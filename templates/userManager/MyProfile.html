@@ -15,12 +15,10 @@
 
 <main class="form-signin w-100 m-auto text-center">
     <form>
-        <img id="profilePicture" class="mb-4 m-auto" src="{{ usrImg }}" alt="" width="100">
+        <img id="profilePicture" class="mb-4 m-auto" src="{{ usrImg }}" alt="" width="100" onclick="input_imagen.click()">
+        <input class="form-control d-none" type="file" id="input-Imagen">
         <h1 class="h3 mb-3 fw-normal">Mi perfil</h1>
         <!-- datos usuario -->
-        <div>
-            <input class="form-control" type="file" id="input-Imagen">
-        </div>
         <div class="form-floating">
             <input type="nombres" class="form-control" id="input-Nombres" value="{{ profile.names }}">
             <label for="floatingInput">Nombres</label>
