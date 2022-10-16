@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AACA,AAAA,eAAe,CAAA;EACX,KAAK,EAFM,KAAK;EAGhB,aAAa,EAHF,KAAK;EAIhB,MAAM,EAAE,iBAAiB;CAC5B",
+    "mappings": "AACA,AAAA,eAAe,CAAA;EACX,KAAK,EAFM,KAAK;EAGhB,MAAM,EAHK,KAAK;EAIhB,aAAa,EAJF,KAAK;EAKhB,MAAM,EAAE,iBAAiB;CAC5B",
     "sources": [
         "myProfile.scss"
     ],

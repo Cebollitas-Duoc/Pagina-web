@@ -9,7 +9,7 @@
     </div>
     </div>
     <a href="{% url 'userManager:MyProfile' %}">
-        <img src="{% static usrImg %}" alt="">
+        <img src="{{ usrImg }}" alt="">
     </a>
 </div>
 {% else %}

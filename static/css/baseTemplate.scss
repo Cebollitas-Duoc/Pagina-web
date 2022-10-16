@@ -21,7 +21,9 @@
         }
     }
     img{
-        width: 50px;
+        $picture-size: 50px;
+        width: $picture-size;
+        height: $picture-size;
         border-radius: 50px;
         border: 2px solid #cfd8dc;
     }

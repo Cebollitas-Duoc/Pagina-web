@@ -1,9 +1,10 @@
 const button_updateProfile = document.getElementById("UpdateProfileButton");
-const input_nombres        = document.getElementById("floatingNombres");
-const input_apellidos      = document.getElementById("floatingApellidos");
-const input_email          = document.getElementById("floatingEmail");
-const input_direccion      = document.getElementById("floatingDireccion");
-const input_telefono       = document.getElementById("floatingTelefono");
+const input_nombres        = document.getElementById("input-Nombres");
+const input_apellidos      = document.getElementById("input-Apellidos");
+const input_email          = document.getElementById("input-Email");
+const input_direccion      = document.getElementById("input-Direccion");
+const input_telefono       = document.getElementById("input-Telefono");
+const input_imagen         = document.getElementById("input-Imagen");
 
 button_updateProfile.addEventListener("click", async ()=>{
     if (!validateInputs()) return
@@ -13,6 +14,7 @@ button_updateProfile.addEventListener("click", async ()=>{
     email       = getValue(input_email)
     direccion   = getValue(input_direccion)
     telefono    = getValue(input_telefono)
+    imagen      = input_imagen.files[0]
 
     nombre    = nombres.split(/[ ]+/)[0]
     nombre2   = nombres.split(/[ ]+/)[1]
@@ -22,7 +24,7 @@ button_updateProfile.addEventListener("click", async ()=>{
     if (nombre2 == undefined) nombre2 = " ";
     if (apellido2 == undefined) apellido2 = " ";
 
-    var a = await updateProfile(email, nombre, nombre2, apellido, apellido2, direccion, telefono)
+    var a = await updateProfile(email, nombre, nombre2, apellido, apellido2, direccion, telefono, imagen)
     console.log(a);
     response = JSON.parse(a)
     console.log(response);
@@ -34,7 +36,7 @@ button_updateProfile.addEventListener("click", async ()=>{
     }
 })
 
-async function updateProfile(email, nombre, nombre2, apellido, apellido2, direccion, telefono){  
+async function updateProfile(email, nombre, nombre2, apellido, apellido2, direccion, telefono, imagen){  
     var formdata = new FormData();
     var r
     formdata.append("SessionKey", getCookie("SessionKey"));
@@ -45,6 +47,7 @@ async function updateProfile(email, nombre, nombre2, apellido, apellido2, direcc
     formdata.append("SegundoApellido", apellido2);
     formdata.append("Direccion", direccion);
     formdata.append("Telefono", telefono);
+    formdata.append("Imagen", imagen);
     
     var requestOptions = {
         method: 'POST',

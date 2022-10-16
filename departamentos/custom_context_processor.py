@@ -4,7 +4,7 @@ def user_renderer(request):
     data = {
         "isLogged": False,
         "usrName": "",
-        "usrImg": "/img/profiles/default.png",
+        "usrImg": "/static/img/profiles/default.png",
     }
     if ("SessionKey" in request.COOKIES and request.COOKIES["SessionKey"] != ""):
         profileData = getSessionProfile(request)
@@ -15,6 +15,6 @@ def user_renderer(request):
             data["usrName"] = f"{name} {lastName}"
             
             if (profileData["Picture"] ):
-                data["usrImg"] = profileData["Picture"]
+                data["usrImg"] = f"http://api.mrmeme.cl/files/getimage/{profileData['Picture']}"
             
     return data
