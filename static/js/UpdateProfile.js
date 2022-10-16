@@ -1,10 +1,18 @@
 const button_updateProfile = document.getElementById("UpdateProfileButton");
+const profile_img          = document.getElementById("profilePicture");
 const input_nombres        = document.getElementById("input-Nombres");
 const input_apellidos      = document.getElementById("input-Apellidos");
 const input_email          = document.getElementById("input-Email");
 const input_direccion      = document.getElementById("input-Direccion");
 const input_telefono       = document.getElementById("input-Telefono");
 const input_imagen         = document.getElementById("input-Imagen");
+
+input_imagen.onchange = evt => {
+    const file = input_imagen.files[0]
+    if (file) {
+        profile_img.src = URL.createObjectURL(file)
+    }
+  }
 
 button_updateProfile.addEventListener("click", async ()=>{
     if (!validateInputs()) return
