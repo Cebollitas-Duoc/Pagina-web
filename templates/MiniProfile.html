@@ -13,7 +13,7 @@
     </a>
 </div>
 {% else %}
-<button class="usuariobtn" onclick="toggleDisplay('#ingreso')"></button>
+<a class="usuariobtn" onclick="toggleDisplay('#ingreso')"> <img src="/static/img/ImagenSesion.png"></a>
     <div id="ingreso" class="d-none">
         <a class="login" id="textoboton1" href="{% url 'userManager:Login' %}">Iniciar sesion</a>
         <a class="createUser" id="textoboton2" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>

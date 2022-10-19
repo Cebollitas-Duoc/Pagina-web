@@ -52,15 +52,15 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-left: auto;
-    margin-right: 20px;
-    min-width: 200px;
-    height: 200px;
-    background-color: #126E82;
-    border: 2px solid #DCD7C9;
-    border-radius: 0px 0px 10px 10px;
+    margin-left: -35px;
+    margin-right: 10px;
+    min-width: 140px;
+    height: auto;
+    background-color: #1B262C!important;
+    border: 1px solid #494949bf;
+    border-radius: 8px 8px 8px 8px;
     top: 0;
-    margin-top: 60px;
+    margin-top: 82px;
 }
 
 #navbar{
@@ -131,12 +131,22 @@ body{
    }
 #textoboton1{
     font-size: 16px;
-    border-bottom: 2px solid #DCD7C9;
+    padding-left: 10px;
 }
-
 #textoboton2{
     font-size: 16px;
+    padding-left: 10px;
 }
+#textoboton1:hover{
+    background-color: #126E82!important;
+    border-radius: 7px 7px 0px 0px;
+
+}
+#textoboton2:hover{
+    background-color: #126E82!important;
+    border-radius: 0px 0px 7px 7px;
+}
+
 #deptos{
     grid-column-start: 2;
     grid-column-end: 2;
@@ -162,12 +172,18 @@ footer{
     margin: auto;
     font-size: 30px;
 }
-.usuariobtn{
-    width:  200px;
-    height: 30px;
-    margin-right: 20px;
-    background-color: rebeccapurple;
+.usuariobtn{    
+    background-color: #1B262C;
+    border: 2px solid #DCD7C9;
+    border-radius: 50px;
+}
+.usuariobtn img{
+    width: 100px;
+    height: 50px;
 
+}
+.usuariobtn:hover{
+    border: 4px solid white;
 }
 #box{
     position: absolute;
