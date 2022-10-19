@@ -1,4 +1,4 @@
-{% extends 'BaseTemplate.html' %}
+{% extends 'BaseTemplate2.html' %}
 {% load static %}
 
 {% block css %}
@@ -8,6 +8,7 @@
 {% block js %}
 <script src="{% static 'js/Form.js'%}"></script>
 <script src="{% static 'js/Login.js'%}"></script>
+<script src="{% static 'js/hide-show-password.js'%}"></script>
 {% endblock js %}
 
 {% block wrapper %}
@@ -26,6 +27,7 @@
                     <div class="form-floating">
                         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                         <label for="floatingPassword">Contraseña</label>
+                        <input type="checkbox" id="box" onclick ="reveal()">
                     </div>
                 
                     <div class="checkbox mb-3">

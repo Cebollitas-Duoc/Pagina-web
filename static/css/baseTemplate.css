@@ -1,4 +1,7 @@
 #miniProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: right;
 }
 #miniProfile div {
@@ -45,10 +48,29 @@
   text-decoration: none;
 }
 
+#ingreso {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-left: auto;
+  margin-right: 20px;
+  min-width: 200px;
+  height: 200px;
+  background-color: #126E82;
+  border: 2px solid #DCD7C9;
+  border-radius: 0px 0px 10px 10px;
+  top: 0;
+  margin-top: 60px;
+}
+
 #navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
   background-color: #1B262C;
   font-weight: bold;
-  height: 60px;
+  height: 90px;
 }
 
 #colorfondo {
@@ -97,20 +119,68 @@
 
 #colorhome {
   display: grid;
-  grid-template-columns: 1fr 3fr 1f;
-  background-color: #A27B5C !important;
+  grid-template-columns: 10vh 1fr 10vh;
+  background-color: #126E82 !important;
 }
 
 body {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 60px 1fr 60px;
+  grid-template-rows: 90px 1fr 50px;
 }
 
 #textoboton1 {
   font-size: 16px;
+  border-bottom: 2px solid #DCD7C9;
 }
 
 #textoboton2 {
-  font-size: 13px;
+  font-size: 16px;
+}
+
+#deptos {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  background-color: rgba(220, 215, 201, 0.75);
+}
+
+footer {
+  display: flex;
+  background-color: #1B262C;
+  font-weight: bold;
+  height: 50px;
+  color: #DCD7C9;
+}
+
+.copy {
+  margin: auto;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 90px 200px;
+}
+
+.logo {
+  color: #DCD7C9;
+  text-decoration: none;
+  margin: auto;
+  font-size: 30px;
+}
+
+.usuariobtn {
+  width: 200px;
+  height: 30px;
+  margin-right: 20px;
+  background-color: rebeccapurple;
+}
+
+#box {
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  bottom: 50%;
+  min-width: 15px;
+  min-height: 15px;
+  right: 20px;
 }/*# sourceMappingURL=baseTemplate.css.map */
