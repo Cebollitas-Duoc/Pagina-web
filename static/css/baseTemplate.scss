@@ -27,7 +27,7 @@
         $picture-size: 50px;
         width: $picture-size;
         height: $picture-size;
-        border-radius: 50px;
+        border-radius: $picture-size;
         border: 2px solid #cfd8dc;
     }
 }
