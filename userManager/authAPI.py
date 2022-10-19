@@ -35,3 +35,16 @@ def getSessionProfile(request):
         r = json.loads(response.text)
         return r
     return {"ValidSession": False}
+def getDeptos(request):
+    url = f"http://{localHostIp}:8081/departamentos/viewdptos/" 
+
+    payload={}
+    files={}
+    headers = {}
+
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+
+    if response.status_code == 200:
+        r = json.loads(response.text)
+        return r
+    return {"NoDeptos": True}

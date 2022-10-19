@@ -67,7 +67,7 @@
   position: -webkit-sticky;
   position: sticky;
   display: grid;
-  grid-template-columns: 220px 1fr 220px;
+  grid-template-columns: 300px 1fr 220px;
   background-color: #1B262C;
   font-weight: bold;
   height: 90px;
@@ -190,6 +190,17 @@ footer {
   height: 50px;
 }
 
+.logo:hover {
+  color: white !important;
+}
+
+.usuariobtn {
+  width: 200px;
+  height: 30px;
+  margin-right: 20px;
+  background-color: rebeccapurple;
+}
+
 .usuariobtn:hover {
   border: 4px solid white;
 }
@@ -202,4 +213,30 @@ footer {
   min-width: 15px;
   min-height: 15px;
   right: 20px;
+}
+
+.margen_lista {
+  background-color: #a7acb0 !important;
+  border: 5px solid #4acacb !important;
+  width: 400px;
+  height: 600px;
+}
+
+.depto-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.depto-image {
+  width: 100%;
+  height: 100%;
+}
+
+.flecha {
+  width: 50px;
+}
+
+.flecha:hover {
+  background: rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=baseTemplate.css.map */

@@ -3,7 +3,19 @@
 {% block body %}
 <div id="colorhome">
     <div id="deptos">
-
+        {% for depto in deptos%}
+        <div id="deptoCard" class="card margen_lista">
+            <div><img onclick="" class="flecha" src="/static/img/flecha.png" alt=""></div>
+            <div class="">
+                <div class="depto-image-container">
+                    <div>
+                        <img class="depto-image" src="/static/theboys.png">
+                    </div>
+                </div>
+                <div class="direccionDepto">{{ depto.Address }}</div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock body %}
