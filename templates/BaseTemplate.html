@@ -18,7 +18,7 @@
     {% block css %}
     {% endblock css %}
 
-  <body >
+  <body class="body">
     <nav class="navbar navbar-expand-sm" id="navbar" aria-label="Third navbar example">
         <div class="container-fluid">
           <a class="navbar-brand ColorTexto" href="{% url 'departamentos:Home' %}">Turismo Real</a>
@@ -32,11 +32,12 @@
           </div>
         </div>
     </nav>
-
+    {% block body %}
+    {% endblock body %}
     {% block wrapper %}
     {% endblock wrapper %}
 
-    <footer class="container">
+    <footer class="">
       <p>© Company 2017-2018 | Cebollitas ltda</p>
     </footer>
 

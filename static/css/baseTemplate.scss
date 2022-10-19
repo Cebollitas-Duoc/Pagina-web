@@ -49,6 +49,7 @@
 #navbar{
     background-color: #1B262C;
     font-weight: bold;
+    height: 60px;
 }
 
 #colorfondo{
@@ -101,10 +102,12 @@
     display: grid;
     grid-template-columns: 1fr 3fr 1f;
     background-color: #A27B5C!important;
-    min-width: 820;
-    min-height: 1180;
 }
-
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 60px 1fr 60px;
+   }
 #textoboton1{
     font-size: 16px;
 }
