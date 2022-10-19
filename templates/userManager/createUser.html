@@ -11,54 +11,56 @@
 {% endblock js %}
 
 {% block wrapper %}
+<div id="colorfondo">
+    <main class="form-signin w-100 m-auto text-center">
+        <div id="cartalogin">
+            <form>
+                <img class="mb-4 m-auto" src="{% static 'img/logo.png'%}" alt="" width="100">
+                <h1 class="h3 mb-3 fw-normal">Crear usuario</h1>
+                <!-- datos usuario -->
+                <div class="form-floating">
+                    <input type="nombres" class="form-control" id="floatingNombres" placeholder="Jose Alejandro">
+                    <label for="floatingInput">Nombres</label>
+                </div>
+                
+                <div class="form-floating">
+                    <input type="apellidos" class="form-control" id="floatingApellidos" placeholder="Espinoza Toro">
+                    <label for="floatingInput">Apellidos</label>
+                </div>
+                
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingEmail" placeholder="jose@example.com">
+                    <label for="floatingInput">Correo electronico</label>
+                </div>
+                
+                <div class="form-floating">
+                    <input type="direccion" class="form-control" id="floatingDireccion" placeholder="1600 Pennsylvania Avenue NW">
+                    <label for="floatingInput">Direccion</label>
+                </div>
+                
+                <div class="form-floating">
+                    <input type="telefono" class="form-control" id="floatingTelefono" placeholder="+569 1234 4315">
+                    <label for="floatingInput">Telefono</label>
+                </div>
+                <!-- password -->
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
 
-<main class="form-signin w-100 m-auto text-center">
-    <form>
-        <img class="mb-4 m-auto" src="{% static 'img/logo.png'%}" alt="" width="100">
-        <h1 class="h3 mb-3 fw-normal">Crear usuario</h1>
-        <!-- datos usuario -->
-        <div class="form-floating">
-            <input type="nombres" class="form-control" id="floatingNombres" placeholder="Jose Alejandro">
-            <label for="floatingInput">Nombres</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="apellidos" class="form-control" id="floatingApellidos" placeholder="Espinoza Toro">
-            <label for="floatingInput">Apellidos</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="email" class="form-control" id="floatingEmail" placeholder="jose@example.com">
-            <label for="floatingInput">Correo electronico</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="direccion" class="form-control" id="floatingDireccion" placeholder="1600 Pennsylvania Avenue NW">
-            <label for="floatingInput">Direccion</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="telefono" class="form-control" id="floatingTelefono" placeholder="+569 1234 4315">
-            <label for="floatingInput">Telefono</label>
-        </div>
-        <!-- password -->
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Contraseña</label>
-        </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword2" placeholder="Password">
+                    <label for="floatingPassword">Repetir contraseña</label>
+                </div>
+            
+                <div class="checkbox mb-3">
 
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword2" placeholder="Password">
-            <label for="floatingPassword">Repetir contraseña</label>
+                </div>
+                <button id="CreateUserButton" class="w-100 btn btn-lg btn-primary botonhover" type="button">Crear usuario</button>
+            </form>
         </div>
-    
-        <div class="checkbox mb-3">
-
-        </div>
-        <button id="CreateUserButton" class="w-100 btn btn-lg btn-primary" type="button">Crear usuario</button>
-    </form>
-    {% include 'FormErrorMessage.html' %}
-</main>
-
+        {% include 'FormErrorMessage.html' %}
+    </main>
+</div>
 
 {% endblock wrapper %}

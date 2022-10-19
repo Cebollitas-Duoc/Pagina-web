@@ -45,3 +45,73 @@
     color: #cfd8dc;
     text-decoration: none;
 }
+
+#navbar{
+    background-color: #1B262C;
+    font-weight: bold;
+    height: 60px;
+}
+
+#colorfondo{
+    background-image: url("/static/img/paisajes.png");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+
+}
+
+@media only screen and (max-width: 600px){
+    #colorfondo{
+        background-image: url(/static/img/fondotelefono.png);
+    }
+}
+
+#cartalogin {
+    width: 100%;
+    max-width: 330px;
+    padding: 25px;
+    margin: auto;
+    border-radius: 25px;
+    background-color: rgb(220, 215, 201, 0.8);
+}
+
+#colorboton {
+    background-color: #126E82;
+}
+
+#LoginButton {
+    background-color: rgb(18, 110, 130, 0.9);
+    border: rgb(18, 110, 130);
+}
+
+#CreateUserButton{
+    background-color: rgb(18, 110, 130, 0.9);
+    border: rgb(18, 110, 130);
+}
+
+.ColorTexto{
+    color: #DCD7C9!important;
+}
+
+.botonhover:hover{
+    background-color: #1B262C!important;
+}
+
+#colorhome{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1f;
+    background-color: #A27B5C!important;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 60px 1fr 60px;
+   }
+#textoboton1{
+    font-size: 16px;
+}
+
+#textoboton2{
+    font-size: 13px;
+}

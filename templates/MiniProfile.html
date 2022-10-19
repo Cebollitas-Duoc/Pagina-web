@@ -14,7 +14,7 @@
 </div>
 {% else %}
 <div id="ingreso" class="d-flex flex-column">
-    <a class="login" href="{% url 'userManager:Login' %}">Iniciar sesion</a>
-    <a class="createUser" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
+    <a class="login" id="textoboton1" href="{% url 'userManager:Login' %}">Iniciar sesion</a>
+    <a class="createUser" id="textoboton2" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
 </div>
 {% endif %}
