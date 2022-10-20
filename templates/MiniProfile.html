@@ -1,20 +1,26 @@
 {% load static %}
 
 {% if isLogged %}
-<div id="miniProfile">
-    <div>
-    <p class="name">{{usrName}}</p>
-    <div class="logout">
-        <a href="{% url 'userManager:LogOut' %}">Cerrar sesion</a>
+<div id="miniProfile" class="d-grid">
+    <div class="nombre">
+        <p class="name m-auto">{{usrName}}</p>
     </div>
+    <div onclick="toggleDisplay('#ingreso')" class="usuariobtn perfilnav">
+        <div class="burger">
+            <img src="/static/img/hamburguesa.png" alt="">
+        </div>
+        <div class="userimg">
+            <img src="{{ usrImg }}" alt="">
+        </div>
     </div>
-    <a href="{% url 'userManager:MyProfile' %}">
-        <img src="{{ usrImg }}" alt="">
-    </a>
+    <div id="ingreso" class="d-none navlog">
+        <a id="textoboton1" href="{% url 'userManager:MyProfile' %}">Mi Perfil</a>
+        <a id="textoboton2" href="{% url 'userManager:LogOut' %}">Cerrar sesion</a>
+    </div>
 </div>
 {% else %}
-<a class="usuariobtn" onclick="toggleDisplay('#ingreso')"> <img src="/static/img/ImagenSesion.png"></a>
-    <div id="ingreso" class="d-none">
+<div class="usuariobtn " onclick="toggleDisplay('#ingreso')"> <img class="icono" src="/static/img/ImagenSesion.png"></div>
+    <div id="ingreso" class="d-none navnolog">
         <a class="login" id="textoboton1" href="{% url 'userManager:Login' %}">Iniciar sesion</a>
         <a class="createUser" id="textoboton2" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
     </div>
