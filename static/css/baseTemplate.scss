@@ -95,7 +95,12 @@ body{
     padding: 25px;
     margin: auto;
     border-radius: 25px;
-    background-color: rgb(220, 215, 201, 0.8);
+    background-color: rgb(27, 38, 44, 0.8);
+    color: #DCD7C9;
+}
+
+.logo1{
+    width: 100px;
 }
 
 #colorboton {
@@ -126,6 +131,13 @@ body{
 
     background-color: rgb(220, 215, 201, 0.75);
 }
+
+.logoimg{
+    width: 80px;
+    height: 70px;
+    margin: auto;
+}
+
 body{
     min-height: 100vh;
     display: grid;

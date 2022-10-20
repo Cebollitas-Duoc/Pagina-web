@@ -96,7 +96,12 @@ body {
   padding: 25px;
   margin: auto;
   border-radius: 25px;
-  background-color: rgba(220, 215, 201, 0.8);
+  background-color: rgba(27, 38, 44, 0.8);
+  color: #DCD7C9;
+}
+
+.logo1 {
+  width: 100px;
 }
 
 #colorboton {
@@ -125,6 +130,12 @@ body {
   display: grid;
   grid-template-columns: 10vh 1fr 10vh;
   background-color: rgba(220, 215, 201, 0.75);
+}
+
+.logoimg {
+  width: 80px;
+  height: 70px;
+  margin: auto;
 }
 
 body {
