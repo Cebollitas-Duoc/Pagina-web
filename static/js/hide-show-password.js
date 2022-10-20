@@ -1,7 +1,7 @@
-function reveal()
+function reveal(checkbox, id)
       {
-      if(document.getElementById('box').checked)
-         {document.getElementById("inputPassword").type='text';}
+      if(checkbox.checked)
+         {document.getElementById(id).type='text';}
       else
-      document.getElementById("inputPassword").type='password';
+      document.getElementById(id).type='password';
       }

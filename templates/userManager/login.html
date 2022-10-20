@@ -21,13 +21,13 @@
                     <h1 class="h3 mb-3 fw-normal">Inicio de sesion</h1>
 
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
-                        <label for="floatingInput">Correo electronico</label>
+                        <input type="email" class="form-control" id="inputEmail" ::placeholder = "name@example.com" >
+                        <label class="label1" for="floatingInput">Correo electronico</label>
                     </div>
                     <div class="form-floating">
                         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                        <label for="floatingPassword">Contraseña</label>
-                        <input type="checkbox" id="box" onclick ="reveal()">
+                        <label class="label1" for="floatingPassword">Contraseña</label>
+                        <input type="checkbox" id="box" onclick ="reveal(this,'inputPassword')">
                     </div>
                 
                     <div class="checkbox mb-3">
