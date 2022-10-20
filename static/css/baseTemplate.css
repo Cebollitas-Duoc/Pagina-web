@@ -1,34 +1,10 @@
 #miniProfile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: right;
+  grid-template-columns: 1fr 1fr;
 }
-#miniProfile div {
-  float: left;
-  margin-right: 1rem;
-}
-#miniProfile .name {
-  color: #cfd8dc;
-  float: down;
-  margin-bottom: 0;
-}
-#miniProfile .logout {
-  width: 100%;
-  text-align: right;
-}
-#miniProfile .logout a {
-  text-decoration: none;
-  color: #46545a;
-}
-#miniProfile .logout a:hover {
-  color: #bdbdbd;
-}
-#miniProfile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  border: 2px solid #cfd8dc;
+
+.nombre {
+  color: #DCD7C9;
+  margin: auto;
 }
 
 body {
@@ -52,7 +28,22 @@ body {
   text-decoration: none;
 }
 
-#ingreso {
+.navlog {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 80px;
+  margin-right: 10px;
+  min-width: 120px;
+  height: auto;
+  background-color: #1B262C !important;
+  border: 1px solid rgba(73, 73, 73, 0.7490196078);
+  border-radius: 8px 8px 8px 8px;
+  top: 0;
+  margin-top: 82px;
+}
+
+.navnolog {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -71,7 +62,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   display: grid;
-  grid-template-columns: 300px 1fr 220px;
+  grid-template-columns: 300px 1fr 300px;
   background-color: #1B262C;
   font-weight: bold;
   height: 90px;
@@ -199,12 +190,13 @@ footer {
 }
 
 .usuariobtn {
+  max-width: 100px;
   background-color: #1B262C;
   border: 2px solid #DCD7C9;
   border-radius: 50px;
 }
 
-.usuariobtn img {
+.icono {
   width: 100px;
   height: 50px;
 }
@@ -214,7 +206,8 @@ footer {
 }
 
 .usuariobtn:hover {
-  border: 4px solid white;
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px solid white;
 }
 
 #box {
@@ -251,4 +244,31 @@ footer {
 
 .flecha:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+
+.burger {
+  margin: auto;
+}
+
+.userimg {
+  margin: auto;
+}
+
+.burger img {
+  width: 25px;
+  height: 25px;
+}
+
+.userimg img {
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  border: 2px solid #DCD7C9;
+}
+
+.perfilnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100px;
+  height: 50px;
 }/*# sourceMappingURL=baseTemplate.css.map */
