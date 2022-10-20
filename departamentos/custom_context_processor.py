@@ -1,6 +1,10 @@
 from userManager.authAPI import *
 
 def user_renderer(request):
+    request_domain = request._current_scheme_host
+    apidomain = "http://api.mrmeme.cl"
+    if ("localhost" in request_domain):
+        apidomain =  "http://localhost:8081"
     data = {
         "isLogged": False,
         "usrName": "",
@@ -15,6 +19,6 @@ def user_renderer(request):
             data["usrName"] = f"{name} {lastName}"
             
             if (profileData["Picture"] ):
-                data["usrImg"] = f"http://api.mrmeme.cl/files/getimage/{profileData['Picture']}"
+                data["usrImg"] = f"{apidomain}/files/getimage/{profileData['Picture']}"
             
     return data
