@@ -31,6 +31,10 @@
   border: 2px solid #cfd8dc;
 }
 
+body {
+  background-color: #126E82 !important;
+}
+
 #FormErrorMessage {
   background-color: rgba(255, 0, 0, 0.322);
   width: 100%;
@@ -120,7 +124,7 @@
 #colorhome {
   display: grid;
   grid-template-columns: 10vh 1fr 10vh;
-  background-color: #126E82 !important;
+  background-color: rgba(220, 215, 201, 0.75);
 }
 
 body {
@@ -152,7 +156,7 @@ body {
 #deptos {
   grid-column-start: 2;
   grid-column-end: 2;
-  background-color: rgba(220, 215, 201, 0.75);
+  background-color: rgba(220, 215, 201, 0);
 }
 
 footer {
