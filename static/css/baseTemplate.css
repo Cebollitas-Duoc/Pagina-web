@@ -1,6 +1,5 @@
 #miniProfile {
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .nombre {
@@ -16,11 +15,9 @@ body {
   background-color: rgba(255, 0, 0, 0.322);
   width: 100%;
 }
-
 #FormErrorMessage:hover {
   cursor: pointer;
 }
-
 #FormErrorMessage span {
   font-weight: bold;
   color: black;
@@ -36,13 +33,11 @@ body {
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
 }
-
 #GlobalMessage.error {
-  background-color: #fb9b9bc9;
+  background-color: rgba(251, 155, 155, 0.7882352941);
 }
-
 #GlobalMessage.success {
-  background-color: #a1fb9bc9;
+  background-color: rgba(161, 251, 155, 0.7882352941);
 }
 
 #ingreso a {
@@ -51,40 +46,30 @@ body {
 }
 
 .navlog {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: absolute;
   margin-left: 80px;
   margin-right: 10px;
   min-width: 120px;
   height: auto;
   background-color: #1B262C !important;
-  border: 1px solid #494949bf;
+  border: 1px solid rgba(73, 73, 73, 0.7490196078);
   border-radius: 8px 8px 8px 8px;
   top: 0;
   margin-top: 82px;
 }
 
 .navnolog {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: absolute;
   margin-left: -35px;
   margin-right: 10px;
   min-width: 140px;
   height: auto;
   background-color: #1B262C !important;
-  border: 1px solid #494949bf;
+  border: 1px solid rgba(73, 73, 73, 0.7490196078);
   border-radius: 8px 8px 8px 8px;
   top: 0;
   margin-top: 82px;
@@ -93,10 +78,8 @@ body {
 #navbar {
   position: -webkit-sticky;
   position: sticky;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 1fr 300px;
-      grid-template-columns: 300px 1fr 300px;
+  grid-template-columns: 300px 1fr 300px;
   background-color: #1B262C;
   font-weight: bold;
   height: 90px;
@@ -115,7 +98,6 @@ body {
     background-image: url(/static/img/fondotelefono.png);
   }
 }
-
 #cartalogin {
   width: 100%;
   max-width: 330px;
@@ -140,12 +122,12 @@ body {
 
 #LoginButton {
   background-color: rgba(18, 110, 130, 0.9);
-  border: #126e82;
+  border: rgb(18, 110, 130);
 }
 
 #CreateUserButton {
   background-color: rgba(18, 110, 130, 0.9);
-  border: #126e82;
+  border: rgb(18, 110, 130);
 }
 
 .ColorTexto {
@@ -157,10 +139,8 @@ body {
 }
 
 #colorhome {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10vh 1fr 10vh;
-      grid-template-columns: 10vh 1fr 10vh;
+  grid-template-columns: 10vh 1fr 10vh;
   background-color: rgba(220, 215, 201, 0.75);
 }
 
@@ -172,10 +152,8 @@ body {
 
 body {
   min-height: 100vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 90px 1fr 50px;
-      grid-template-rows: 90px 1fr 50px;
+  grid-template-rows: 90px 1fr 50px;
 }
 
 #textoboton1 {
@@ -199,15 +177,12 @@ body {
 }
 
 #deptos {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+  grid-column-start: 2;
   grid-column-end: 2;
   background-color: rgba(220, 215, 201, 0);
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #1B262C;
   font-weight: bold;
@@ -220,10 +195,8 @@ footer {
 }
 
 .header {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 90px 200px;
-      grid-template-rows: 90px 200px;
+  grid-template-rows: 90px 200px;
 }
 
 .logo {
@@ -273,12 +246,8 @@ footer {
 }
 
 .depto-image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -316,11 +285,8 @@ footer {
 }
 
 .perfilnav {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 100px;
   height: 50px;
-}
-/*# sourceMappingURL=baseTemplate.css.map */
+}/*# sourceMappingURL=baseTemplate.css.map */
