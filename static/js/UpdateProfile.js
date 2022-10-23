@@ -41,7 +41,7 @@ button_updateProfile.addEventListener("click", async ()=>{
     if ("Error" in response)
         printErrorMessage(response["Error"]);
     else{
-        alert("Perfil actualizado");
+        GlobalMessage.setGlobalSuccessMessage("Perfil actualizado");
         location.reload();
     }
 })

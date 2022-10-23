@@ -5,6 +5,9 @@
   border: 5px solid #cfd8dc;
   cursor: pointer;
 }
+
 #profilePicture:hover {
-  filter: grayscale(50%);
-}/*# sourceMappingURL=myProfile.css.map */
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+/*# sourceMappingURL=myProfile.css.map */

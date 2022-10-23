@@ -12,7 +12,7 @@ button_login.addEventListener("click", async ()=>{
     if ("SessionKey" in response){
         console.log("Valid user")
         setSessionCookies(response)
-        alert("Logeado correctamente")
+        GlobalMessage.setGlobalSuccessMessage("Logeado Correctamente");
         window.location.href = "/";
     }
     else{

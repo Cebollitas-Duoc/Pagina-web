@@ -33,7 +33,7 @@ button_createUser.addEventListener("click", async ()=>{
     if ("Error" in response)
         printErrorMessage(response["Error"]);
     else{
-        alert("Usuario creado correctamente")
+        GlobalMessage.setGlobalSuccessMessage("Usuario creado correctamente");
         window.location.href = "/user/login";
     }
 })
