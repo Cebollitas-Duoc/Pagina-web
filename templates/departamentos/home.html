@@ -4,18 +4,16 @@
 <div id="colorhome">
     <div id="deptos" class="d-flex justify-content-space-between">
         {% for depto in deptos%}
-        <div id="deptoCard" class="card margen_lista " >
-            <div class="">
+        <div id="deptoCard" class="margen_lista " >
                 <div class="depto-image-container">
-                    <div>
                         <img class="depto-image" src="{{ depto.Imagen }}">
-                    </div>
                 </div>
-                <div class="direccionDepto">Dirrección: {{ depto.Address }} </div>
-                <div class="direccionDepto">Habitaciones: {{ depto.Rooms }} </div>
-                <div class="direccionDepto">Baños: {{ depto.Bathrooms }} </div>
-                <div class="direccionDepto">Valor X noche: ${{ depto.Value }} </div>
-            </div>
+                <div>
+                    <div class="direccionDepto">Dirrección: {{ depto.Address }} </div>
+                    <div class="direccionDepto">Habitaciones: {{ depto.Rooms }} </div>
+                    <div class="direccionDepto">Baños: {{ depto.Bathrooms }} </div>
+                    <div class="direccionDepto">Valor X noche: ${{ depto.Value }} </div>
+                </div>
         </div>
         {% endfor %}
     </div>

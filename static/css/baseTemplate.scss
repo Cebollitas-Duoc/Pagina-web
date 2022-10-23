@@ -5,9 +5,6 @@
     color: #DCD7C9;
     margin: auto;
 }
-body{
-    background-color: #126E82!important;
-}
 #FormErrorMessage{
     background-color: rgba(255, 0, 0, 0.322);
     width: 100%;
@@ -92,6 +89,9 @@ body{
     #colorfondo{
         background-image: url(/static/img/fondotelefono.png);
     }
+    #colorhome{
+        grid-template-columns: 1fr 300px 1fr !important;
+    }
 }
 
 /*Responsibidad Navbar*/
@@ -164,9 +164,7 @@ body{
 
 #colorhome{
     display: grid;
-    grid-template-columns: 10vh 1fr 10vh;
-
-    background-color: rgba(220, 215, 201, 0.75);
+    grid-template-columns: 1fr 1600px 1fr;
 }
 
 .logoimg{
@@ -179,6 +177,7 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-rows: 90px 1fr 50px;
+    background-color: #faf6eb;
    }
 #textoboton1{
     font-size: 16px;
@@ -199,9 +198,8 @@ body{
 }
 
 #deptos{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    background-color: rgba(220, 215, 201, 0);
+ grid-column: 2;
+ flex-wrap: wrap;
 }
 footer{
     display: flex;
@@ -252,10 +250,13 @@ footer{
     right: 20px;
 }
 .margen_lista{
-    background-color: #a7acb0!important;
-    border: 5px solid #4acacb!important;
-    width: 400px;
-    height: 600px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #faf6eb;
+    max-width: 300px;
+    max-height: 600px;
+    min-width: 300px;
+    min-height: 600px;
   }
 .depto-image-container{
     display: flex;
@@ -265,6 +266,8 @@ footer{
 .depto-image{
     width: 100%;
     height: 100%;
+    border-radius: 50px;
+    padding: 5px;
 }
 .flecha{
     width: 50px;
