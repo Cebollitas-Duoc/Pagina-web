@@ -14,48 +14,50 @@
 {% block wrapper %}
 
 <main class="form-signin w-100 m-auto text-center">
-    <form>
-        <img id="profilePicture" class="mb-4 m-auto" src="{{ usrImg }}" alt="" width="100" onclick="input_imagen.click()">
-        <input class="form-control d-none" type="file" id="input-Imagen">
-        <h1 class="h3 mb-3 fw-normal">Mi perfil</h1>
-        <!-- datos usuario -->
-        <div class="form-floating">
-            <input type="text" class="form-control" id="input-Nombres" value="{{ profile.names }}">
-            <label for="floatingInput">Nombres</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="text" class="form-control" id="input-Apellidos" value="{{ profile.lastnames }}">
-            <label for="floatingInput">Apellidos</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="text" class="form-control" id="input-Rut" value="{{ profile.rut }}">
-            <label for="floatingInput">Rut</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="email" class="form-control" id="input-Email" value="{{ profile.email }}">
-            <label for="floatingInput">Email address</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="text" class="form-control" id="input-Direccion" value="{{ profile.address }}">
-            <label for="floatingInput">Direccion</label>
-        </div>
-        
-        <div class="form-floating">
-            <input type="text" class="form-control" id="input-Telefono"value="{{ profile.phone }}">
-            <label for="floatingInput">Telefono</label>
-        </div>
-    
-        <div class="checkbox mb-3">
+    <div id="cartalogin">
+        <form>
+            <img id="profilePicture" class="mb-4 m-auto" src="{{ usrImg }}" alt="" width="100" onclick="input_imagen.click()">
+            <input class="form-control d-none" type="file" id="input-Imagen">
+            <h1 class="h3 mb-3 fw-normal">Mi perfil</h1>
+            <!-- datos usuario -->
+            <div class="form-floating">
+                <input type="nombres" class="form-control" id="input-Nombres" value="{{ profile.names }}">
+                <label for="floatingInput" class="label1">Nombres</label>
+            </div>
+            
+            <div class="form-floating">
+                <input type="apellidos" class="form-control" id="input-Apellidos" value="{{ profile.lastnames }}">
+                <label for="floatingInput" class="label1">Apellidos</label>
+            </div>
 
-        </div>
-        <button id="UpdateProfileButton" class="w-100 btn btn-lg btn-primary" type="button">Actualizar perfil</button>
-        <a id="btn-changePassword" class="dropdown-item" href="{% url 'userManager:ChangePassword' %}">Cambiar contraseña</a>
-    </form>
-    {% include 'FormErrorMessage.html' %}
+            <div class="form-floating">
+                <input type="text" class="form-control" id="input-Rut" value="{{ profile.rut }}">
+                <label for="floatingInput">Rut</label>
+            </div>
+            
+            <div class="form-floating">
+                <input type="email" class="form-control" id="input-Email" value="{{ profile.email }}">
+                <label for="floatingInput" class="label1">Email address</label>
+            </div>
+            
+            <div class="form-floating">
+                <input type="direccion" class="form-control" id="input-Direccion" value="{{ profile.address }}">
+                <label for="floatingInput" class="label1">Direccion</label>
+            </div>
+            
+            <div class="form-floating">
+                <input type="telefono" class="form-control" id="input-Telefono"value="{{ profile.phone }}">
+                <label for="floatingInput" class="label1">Telefono</label>
+            </div>
+        
+            <div class="checkbox mb-3">
+
+            </div>
+            <button id="UpdateProfileButton" class="w-100 btn btn-lg btn-primary" type="button">Actualizar perfil</button>
+            <a id="btn-changePassword" class="dropdown-item" href="{% url 'userManager:ChangePassword' %}">Cambiar contraseña</a>
+        </form>
+        {% include 'FormErrorMessage.html' %}
+    </div>
 </main>
 
 

@@ -1,35 +1,9 @@
 #miniProfile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
-    div{
-        float: left;
-        margin-right: 1rem;
-    }
-    .name{
-        color: #cfd8dc;
-        float: down;
-        margin-bottom: 0;
-    }
-    .logout{
-        width: 100%;
-        text-align: right;
-        a{
-            text-decoration: none;
-            color: #46545a;
-            &:hover{
-                color: #bdbdbd;
-            }
-        }
-    }
-    img{
-        $picture-size: 50px;
-        width: $picture-size;
-        height: $picture-size;
-        border-radius: $picture-size;
-        border: 2px solid #cfd8dc;
-    }
+    grid-template-columns: 1fr 1fr;
+}
+.nombre{
+    color: #DCD7C9;
+    margin: auto;
 }
 body{
     background-color: #126E82!important;
@@ -50,7 +24,22 @@ body{
     color: #cfd8dc;
     text-decoration: none;
 }
-#ingreso{
+.navlog{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 80px;
+    margin-right: 10px;
+    min-width: 120px;
+    height: auto;
+    background-color: #1B262C!important;
+    border: 1px solid #494949bf;
+    border-radius: 8px 8px 8px 8px;
+    top: 0;
+    margin-top: 82px;
+
+}
+.navnolog{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -64,11 +53,10 @@ body{
     top: 0;
     margin-top: 82px;
 }
-
 #navbar{
     position: sticky;
     display: grid;
-    grid-template-columns:  300px 1fr 220px;
+    grid-template-columns:  300px 1fr 300px;
     background-color: #1B262C;
     font-weight: bold;
     height: 90px;
@@ -95,7 +83,16 @@ body{
     padding: 25px;
     margin: auto;
     border-radius: 25px;
-    background-color: rgb(220, 215, 201, 0.8);
+    background-color: rgb(27, 38, 44, 0.8);
+    color: #DCD7C9;
+}
+
+.label1{
+    color: #1B262C;
+} 
+
+.logo1{
+    width: 100px;
 }
 
 #colorboton {
@@ -126,6 +123,13 @@ body{
 
     background-color: rgb(220, 215, 201, 0.75);
 }
+
+.logoimg{
+    width: 80px;
+    height: 70px;
+    margin: auto;
+}
+
 body{
     min-height: 100vh;
     display: grid;
@@ -174,12 +178,14 @@ footer{
     margin: auto;
     font-size: 30px;
 }
-.usuariobtn{    
+.usuariobtn{
+    max-width: 100px;
     background-color: #1B262C;
     border: 2px solid #DCD7C9;
     border-radius: 50px;
+    margin-left: 15px;
 }
-.usuariobtn img{
+.icono{
     width: 100px;
     height: 50px;
 }
@@ -187,9 +193,10 @@ footer{
     color: white!important;
 }
 .usuariobtn:hover{
-    border: 4px solid white;
+    background: rgb(0,0,0,0.4);
+    border: 3px solid white;
 }
-#box{
+.box{
     position: absolute;
     top: 50%;
     margin: auto;
@@ -219,4 +226,26 @@ footer{
 
 .flecha:hover{
     background: rgb(0,0,0,0.2);
+}
+.burger{
+    margin: auto;
+}
+.userimg{
+    margin: auto;
+}
+.burger img{
+    width: 25px;
+    height: 25px;
+}
+.userimg img{
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    border: 2px solid #DCD7C9;
+}
+.perfilnav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100px;
+    height: 50px;
 }

@@ -8,6 +8,7 @@
 {% block js %}
 <script src="{% static 'js/Form.js'%}"></script>
 <script src="{% static 'js/CreateUser.js'%}"></script>
+<script src="{% static 'js/hide-show-password.js'%}"></script>
 {% endblock js %}
 
 {% block wrapper %}
@@ -15,17 +16,17 @@
     <main class="form-signin w-100 m-auto text-center">
         <div id="cartalogin">
             <form>
-                <img class="mb-4 m-auto" src="{% static 'img/logo.png'%}" alt="" width="100">
+                <img class="mb-4 m-auto logo1" src="{% static 'img/logo.png'%}" alt="" >
                 <h1 class="h3 mb-3 fw-normal">Crear usuario</h1>
                 <!-- datos usuario -->
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingNombres">
-                    <label for="floatingInput">Nombres</label>
+                    <input type="nombres" class="form-control" id="floatingNombres" placeholder="Jose Alejandro">
+                    <label class="label1" for="floatingInput">Nombres</label>
                 </div>
                 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingApellidos">
-                    <label for="floatingInput">Apellidos</label>
+                    <input type="apellidos" class="form-control" id="floatingApellidos" placeholder="Espinoza Toro">
+                    <label class="label1" for="floatingInput">Apellidos</label>
                 </div>
 
                 <div class="form-floating">
@@ -34,28 +35,30 @@
                 </div>
                 
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingEmail">
-                    <label for="floatingInput">Correo electronico</label>
+                    <input type="email" class="form-control" id="floatingEmail" placeholder="jose@example.com">
+                    <label class="label1" for="floatingInput">Correo electronico</label>
                 </div>
                 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingDireccion">
-                    <label for="floatingInput">Direccion</label>
+                    <input type="direccion" class="form-control" id="floatingDireccion" placeholder="1600 Pennsylvania Avenue NW">
+                    <label class="label1" for="floatingInput">Direccion</label>
                 </div>
                 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingTelefono">
-                    <label for="floatingInput">Telefono</label>
+                    <input type="telefono" class="form-control" id="floatingTelefono" placeholder="+569 1234 4315">
+                    <label class="label1" for="floatingInput">Telefono</label>
                 </div>
                 <!-- password -->
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword">
-                    <label for="floatingPassword">Contraseña</label>
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label class="label1" for="floatingPassword">Contraseña</label>
+                    <input class= "box" type="checkbox" onclick ="reveal(this,'floatingPassword')">
                 </div>
 
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword2">
-                    <label for="floatingPassword">Repetir contraseña</label>
+                    <input type="password" class="form-control" id="floatingPassword2" placeholder="Password">
+                    <label class="label1" for="floatingPassword">Repetir contraseña</label>
+                    <input class= "box" type="checkbox"  onclick ="reveal(this,'floatingPassword2')">
                 </div>
             
                 <div class="checkbox mb-3">
