@@ -27,8 +27,16 @@ class Depto:
         self.Imagen = Imagen
 
 def Home(request):
-    d = getDeptos(request)
+    request_domain = request._current_scheme_host
+    apidomain = "http://api.mrmeme.cl"
+    if ("localhost" in request_domain):
+        apidomain =  "http://localhost:8081"
+
+    deptos = getDeptos(request)
+    for depto in deptos:
+        depto["Imagen"] = f"{apidomain}/files/getimage/{depto['Imagen']}"
+
     context = {
-        "deptos": d
+        "deptos": deptos
     }
     return render(request, "departamentos/home.html", context)

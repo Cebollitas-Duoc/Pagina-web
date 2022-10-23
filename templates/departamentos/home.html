@@ -9,10 +9,13 @@
             <div class="">
                 <div class="depto-image-container">
                     <div>
-                        <img class="depto-image" src="/static/theboys.png">
+                        {{ depto.Imagen }}
                     </div>
                 </div>
-                <div class="direccionDepto">{{ depto.Address }}</div>
+                <div class="direccionDepto">Dirrección: {{ depto.Address }} </div>
+                <div class="direccionDepto">Habitaciones: {{ depto.Rooms }} </div>
+                <div class="direccionDepto">Baños: {{ depto.Bathrooms }} </div>
+                <div class="direccionDepto">Valor X noche: ${{ depto.Value }} </div>
             </div>
         </div>
         {% endfor %}
