@@ -2,14 +2,13 @@
 {% load static %}
 {% block body %}
 <div id="colorhome">
-    <div id="deptos">
+    <div id="deptos" class="d-flex justify-content-space-around">
         {% for depto in deptos%}
-        <div id="deptoCard" class="card margen_lista">
-            <div><img onclick="" class="flecha" src="/static/img/flecha.png" alt=""></div>
+        <div id="deptoCard" class="card margen_lista " >
             <div class="">
                 <div class="depto-image-container">
                     <div>
-                        {{ depto.Imagen }}
+                        <img class="depto-image" src="{{ depto.Imagen }}">
                     </div>
                 </div>
                 <div class="direccionDepto">Dirrección: {{ depto.Address }} </div>
