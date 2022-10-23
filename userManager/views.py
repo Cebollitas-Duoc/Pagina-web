@@ -8,14 +8,16 @@ from .decorators import isUserLogged, isUserNotLogged
 class Profile:
     names     = ""
     lastnames = ""
+    rut       = ""
     email     = ""
     address   = ""
     phone     = ""
 
     # default constructor
-    def __init__(self, names, lastnames, email, address, phone):
+    def __init__(self, names, lastnames, rut, email, address, phone):
         self.names     = names
         self.lastnames = lastnames
+        self.rut       = rut
         self.email     = email
         self.address   = address
         self.phone     = phone
@@ -33,7 +35,8 @@ def MyProfile(request):
     profileData = getSessionProfile(request)
     p = Profile(
         f"{profileData['Name']} {profileData['Name2']}", 
-        f"{profileData['LastName']} {profileData['LastName2']}", 
+        f"{profileData['LastName']} {profileData['LastName2']}",
+        profileData['Rut'], 
         profileData['Email'], 
         profileData['Address'], 
         profileData['Phone']

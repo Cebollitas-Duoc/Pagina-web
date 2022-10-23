@@ -2,6 +2,7 @@ const button_updateProfile = document.getElementById("UpdateProfileButton");
 const profile_img          = document.getElementById("profilePicture");
 const input_nombres        = document.getElementById("input-Nombres");
 const input_apellidos      = document.getElementById("input-Apellidos");
+const input_rut            = document.getElementById("input-Rut");
 const input_email          = document.getElementById("input-Email");
 const input_direccion      = document.getElementById("input-Direccion");
 const input_telefono       = document.getElementById("input-Telefono");
@@ -19,6 +20,7 @@ button_updateProfile.addEventListener("click", async ()=>{
 
     nombres     = getValue(input_nombres)
     apellidos   = getValue(input_apellidos)
+    rut   = getValue(input_rut)
     email       = getValue(input_email)
     direccion   = getValue(input_direccion)
     telefono    = getValue(input_telefono)
@@ -32,7 +34,7 @@ button_updateProfile.addEventListener("click", async ()=>{
     if (nombre2 == undefined) nombre2 = " ";
     if (apellido2 == undefined) apellido2 = " ";
 
-    var a = await updateProfile(email, nombre, nombre2, apellido, apellido2, direccion, telefono, imagen)
+    var a = await updateProfile(email, nombre, nombre2, apellido, apellido2, rut, direccion, telefono, imagen)
     console.log(a);
     response = JSON.parse(a)
     console.log(response);
@@ -44,7 +46,7 @@ button_updateProfile.addEventListener("click", async ()=>{
     }
 })
 
-async function updateProfile(email, nombre, nombre2, apellido, apellido2, direccion, telefono, imagen){  
+async function updateProfile(email, nombre, nombre2, apellido, apellido2, rut, direccion, telefono, imagen){  
     var formdata = new FormData();
     var r
     formdata.append("SessionKey", getCookie("SessionKey"));
@@ -53,6 +55,7 @@ async function updateProfile(email, nombre, nombre2, apellido, apellido2, direcc
     formdata.append("SegundoNombre", nombre2);
     formdata.append("PrimerApellido", apellido);
     formdata.append("SegundoApellido", apellido2);
+    formdata.append("Rut", rut);
     formdata.append("Direccion", direccion);
     formdata.append("Telefono", telefono);
     formdata.append("Imagen", imagen);
