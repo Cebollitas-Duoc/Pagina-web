@@ -1,6 +1,7 @@
 const button_createUser = document.getElementById("CreateUserButton");
 const input_nombres     = document.getElementById("floatingNombres");
 const input_apellidos   = document.getElementById("floatingApellidos");
+const input_rut         = document.getElementById("floatingRut");
 const input_email       = document.getElementById("floatingEmail");
 const input_direccion   = document.getElementById("floatingDireccion");
 const input_telefono    = document.getElementById("floatingTelefono");
@@ -12,6 +13,7 @@ button_createUser.addEventListener("click", async ()=>{
 
     nombres     = getValue(input_nombres)
     apellidos   = getValue(input_apellidos)
+    rut         = getValue(input_rut)
     email       = getValue(input_email)
     direccion   = getValue(input_direccion)
     telefono    = getValue(input_telefono)
@@ -26,7 +28,7 @@ button_createUser.addEventListener("click", async ()=>{
     if (nombre2 == undefined) nombre2 = " ";
     if (apellido2 == undefined) apellido2 = " ";
 
-    response = JSON.parse(await createUser(email, nombre, nombre2, apellido, apellido2, direccion, telefono, password, password2))
+    response = JSON.parse(await createUser(email, nombre, nombre2, apellido, apellido2, rut, direccion, telefono, password, password2))
     console.log(response);
     if ("Error" in response)
         printErrorMessage(response["Error"]);
@@ -36,7 +38,7 @@ button_createUser.addEventListener("click", async ()=>{
     }
 })
 
-async function createUser(email, nombre, nombre2, apellido, apellido2, direccion, telefono, password, password2){
+async function createUser(email, nombre, nombre2, apellido, apellido2, rut, direccion, telefono, password, password2){
     var formdata = new FormData();
     var r
     formdata.append("Email",     email);
@@ -44,6 +46,7 @@ async function createUser(email, nombre, nombre2, apellido, apellido2, direccion
     formdata.append("Name2",     nombre2);
     formdata.append("LastName",  apellido);
     formdata.append("LastName2", apellido2);
+    formdata.append("Rut",       rut);
     formdata.append("Address",   direccion);
     formdata.append("Phone",     telefono);
     formdata.append("Password",  password);
