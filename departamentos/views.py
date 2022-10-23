@@ -40,3 +40,14 @@ def Home(request):
         "deptos": deptos
     }
     return render(request, "departamentos/home.html", context)
+
+
+# def Departamento(request,_Id_Dpto):
+#     request_domain = request._current_scheme_host
+#     apidomain = "http://api.mrmeme.cl"
+#     if ("localhost" in request_domain):
+#         apidomain =  "http://localhost:8081"
+
+#     deptos = getDeptos(request)
+#     for depto in deptos:
+#         depto["Imagen"] = f"{apidomain}/files/getimage/{depto['Imagen']}"  
