@@ -9,3 +9,10 @@ $picture-size: 200px;
         filter: grayscale(50%);
     }
 }
+
+#profilePictureG{
+    width: $picture-size;
+    height: $picture-size;
+    border-radius: $picture-size;
+    border: 5px solid #cfd8dc;
+}

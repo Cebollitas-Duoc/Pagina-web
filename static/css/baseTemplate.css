@@ -333,4 +333,23 @@ footer {
 
 .fondoMiPerfil {
   background-color: #126E82;
+}
+
+.CambioPassword {
+  background-color: #126E82;
+}
+
+.CartaCambioPassword {
+  width: 100%;
+  max-width: 330px;
+  padding: 25px;
+  margin: auto;
+  border-radius: 25px;
+  background-color: rgba(27, 38, 44, 0.8);
+  color: #DCD7C9;
+}
+
+.Actualizar {
+  text-decoration: none;
+  background-color: #1B262C;
 }/*# sourceMappingURL=baseTemplate.css.map */

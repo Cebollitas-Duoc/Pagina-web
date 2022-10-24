@@ -7,4 +7,11 @@
 }
 #profilePicture:hover {
   filter: grayscale(50%);
+}
+
+#profilePictureG {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  border: 5px solid #cfd8dc;
 }/*# sourceMappingURL=myProfile.css.map */

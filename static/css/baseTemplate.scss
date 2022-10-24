@@ -5,6 +5,8 @@
     color: #DCD7C9;
     margin: auto;
 }
+
+
 #FormErrorMessage{
     background-color: rgba(255, 0, 0, 0.322);
     width: 100%;
@@ -312,4 +314,24 @@ footer{
 }
 .fondoMiPerfil{
     background-color: #126E82;
+}
+
+.CambioPassword{
+    background-color: #126E82;
+}
+
+.CartaCambioPassword {
+    width: 100%;
+    max-width: 330px;
+    padding: 25px;
+    margin: auto;
+    border-radius: 25px;
+    background-color: rgba(27, 38, 44, 0.8);
+    color: #DCD7C9;
+}
+
+.Actualizar{
+    
+    text-decoration: none;
+    background-color: #1B262C;
 }
