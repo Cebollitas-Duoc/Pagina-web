@@ -48,3 +48,31 @@ def getDeptos(request):
         r = json.loads(response.text)
         return r
     return {"NoDeptos": True}
+
+def getDepto(ID_depto):
+    url = f"http://{localHostIp}:8081/departamentos/viewdpto/{ID_depto}" 
+
+    payload={}
+    files={}
+    headers = {}
+
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+
+    if response.status_code == 200:
+        r = json.loads(response.text)
+        return r
+    return {"NoDeptos": True}
+
+def getImagenes(ID_depto):
+    url = f"http://{localHostIp}:8081/departamentos/viewfotosdpto/{ID_depto}" 
+
+    payload={}
+    files={}
+    headers = {}
+
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+
+    if response.status_code == 200:
+        r = json.loads(response.text)
+        return r
+    return {"NoImagenes": True}

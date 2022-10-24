@@ -42,12 +42,20 @@ def Home(request):
     return render(request, "departamentos/home.html", context)
 
 
-# def Departamento(request,_Id_Dpto):
-#     request_domain = request._current_scheme_host
-#     apidomain = "http://api.mrmeme.cl"
-#     if ("localhost" in request_domain):
-#         apidomain =  "http://localhost:8081"
+def Departamento(request,_Id_Dpto):
+    request_domain = request._current_scheme_host
+    apidomain = "http://api.mrmeme.cl"
+    if ("localhost" in request_domain):
+        apidomain =  "http://localhost:8081"
 
-#     deptos = getDeptos(request)
-#     for depto in deptos:
-#         depto["Imagen"] = f"{apidomain}/files/getimage/{depto['Imagen']}"  
+    depto = getDepto(_Id_Dpto)
+    Imagenes = getImagenes(_Id_Dpto)
+    Fotos = []
+    for Imagen in Imagenes:
+        Fotos.append(str(f"{apidomain}/files/getimage/{Imagen['Path']}"))
+    context = {
+        "depto": depto,
+        "Imagenes": Fotos
+    }
+    return render(request, "departamentos/depto.html", context)
+

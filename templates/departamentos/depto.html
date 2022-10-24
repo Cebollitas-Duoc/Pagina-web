@@ -7,11 +7,30 @@
 {% endblock css %}
 
 {% block js %}
-
+<script src="{% static 'js/imagegallery.js' %}"></script>
 {% endblock js %}
 
 {% block wrapper %}
+<div class="image-container">
+    <div class="image-gallery">
+        {% for Imagen in Imagenes %}
+            <div class=" mini-image"
+                onclick="setMainImage('{{Imagen}}')"
+                style="background-image: url({{Imagen}}); 
+                background-size: cover; 
+                background-position: center center;">
+            </div>
+        {% endfor %}
+    </div>
+    <div class="ContenedorMainImagen">
+        <img class="main-image">
+         
+        </img>
+    </div>
+</div>
 
+
+<div>{{depto.Address}}</div>
 
 
 
