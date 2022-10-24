@@ -82,6 +82,7 @@ footer{
     right: 20px;
 }
 .margen_lista{
+    text-decoration: none!important;
     display: grid;
     grid-template-rows: 1fr 1fr;
     background-color: #faf6eb;
@@ -102,11 +103,15 @@ footer{
     padding: 5px;
 }
 .InfoDepto1{
+    color: #1B262C!important;
+    text-decoration: none!important;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
 }
 .InfoDepto2{
+    color: #1B262C!important;
+    text-decoration: none!important;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
