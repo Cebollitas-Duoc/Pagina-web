@@ -12,7 +12,7 @@
     padding: 25px;
     margin: auto;
     border-radius: 25px;
-    background-color: rgba(27, 38, 44, 0.8);
+    background: linear-gradient(to top, rgba(27, 38, 44, 0.9), rgba(28, 28, 28,0.5));
     color: #DCD7C9;
 }
 .logoIniciarSesion{
@@ -24,8 +24,8 @@
 }
 
 @media only screen and (max-width: 600px){
-    #colorfondo{
-        background-image: none;
+    #colorfondoLogin{
+        background-image: none!important;
         background-color: #126E82 !important;
     }
 }
