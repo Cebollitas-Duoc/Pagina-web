@@ -4,6 +4,7 @@
 {% block css %}
 <link href="{% static 'css/form.css'%}" rel="stylesheet">
 <link href="{% static 'css/myProfile.css'%}" rel="stylesheet">
+<link href="{% static 'css/Departamento.css'%}" rel="stylesheet">
 {% endblock css %}
 
 {% block js %}
@@ -11,21 +12,30 @@
 {% endblock js %}
 
 {% block wrapper %}
-<div class="image-container">
-    <div class="image-gallery">
-        {% for Imagen in Imagenes %}
-            <div class=" mini-image"
-                onclick="setMainImage('{{Imagen}}')"
-                style="background-image: url({{Imagen}}); 
-                background-size: cover; 
-                background-position: center center;">
-            </div>
-        {% endfor %}
+<div class="TituloDepto FondoDepto"> {{ depto.Address }}
+    <div class="image-container">
+        <div class="image-gallery">
+            {% for Imagen in Imagenes %}
+                <div class=" mini-image"
+                    onclick="setMainImage('{{Imagen}}')"
+                    style="background-image: url({{Imagen}}); 
+                    background-size: cover; 
+                    background-position: center center;">
+                </div>
+            {% endfor %}
+        </div>
+        <div class="ContenedorMainImagen">
+            <img class="main-image">
+            
+            </img>
+        </div>
     </div>
-    <div class="ContenedorMainImagen">
-        <img class="main-image">
-         
-        </img>
+    <div class="DescripcionDepto">
+        <div class="">{{ depto.Descripcion}}</div>
+        <div class="InfoDepto1 DescripcionDepto">{{ depto.Address }} </div>
+        <div class="InfoDepto2">Habitaciones: {{ depto.Rooms }} </div>
+        <div class="InfoDepto2">Baños: {{ depto.Bathrooms }} </div>
+        <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
     </div>
 </div>
 <iframe
@@ -37,7 +47,6 @@
 </iframe>
 
 
-<div>{{depto.Address}}</div>
 
 
 
