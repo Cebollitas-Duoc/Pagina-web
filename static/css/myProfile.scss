@@ -9,10 +9,35 @@ $picture-size: 200px;
         filter: grayscale(50%);
     }
 }
-
+/*Foto de perfil para visualizar sin acciones*/
 #profilePictureG{
     width: $picture-size;
     height: $picture-size;
     border-radius: $picture-size;
     border: 5px solid #cfd8dc;
+}
+#cartaMiPerfil {
+    width: 100%;
+    max-width: 330px;
+    padding: 25px;
+    margin: auto;
+    border-radius: 25px;
+    background-color: rgba(27, 38, 44, 0.8);
+    color: #DCD7C9;
+}
+.fondoMiPerfil{
+    background-color: #126E82;
+}
+
+.CambioPassword{
+    background-color: #126E82;
+}
+.CartaCambioPassword {
+    width: 100%;
+    max-width: 330px;
+    padding: 25px;
+    margin: auto;
+    border-radius: 25px;
+    background-color: rgba(27, 38, 44, 0.8);
+    color: #DCD7C9;
 }

@@ -3,6 +3,7 @@
 
 {% block css %}
 <link href="{% static 'css/form.css'%}" rel="stylesheet">
+<link href="{% static 'css/Login.css'%}" rel="stylesheet">
 {% endblock css %}
 
 {% block js %}
@@ -13,21 +14,21 @@
 {% endblock js %}
 
 {% block wrapper %}
-<div class="d-flex justify-content-center align-items-center" id="colorfondo">
+<div class="d-flex justify-content-center align-items-center" id="colorfondoLogin">
     <main class="form-signin w-100 m-auto text-center">
         
             <div id="cartalogin">
                 <form >
-                    <img class="mb-3 m-auto logo1" src="{% static 'img/logo.png'%}" alt="" >
+                    <img class="mb-3 m-auto logoIniciarSesion" src="{% static 'img/logo.png'%}" alt="" >
                     <h1 class="h3 mb-3 fw-normal">Inicio de sesion</h1>
 
                     <div class="form-floating">
                         <input type="email" class="form-control" id="inputEmail" placeholder = " " >
-                        <label class="label1" for="floatingInput">Correo electronico</label>
+                        <label class="labelcolor" for="floatingInput">Correo electronico</label>
                     </div>
                     <div class="form-floating">
                         <input type="password" class="form-control" id="inputPassword" placeholder=" ">
-                        <label class="label1" for="floatingPassword">Contraseña</label>
+                        <label class="labelcolor" for="floatingPassword">Contraseña</label>
                         <input class= "box" type="checkbox"  onclick ="reveal(this,'inputPassword')">
                     </div>
                 

@@ -1,12 +1,3 @@
-#miniProfile {
-  grid-template-columns: 1fr 1fr;
-}
-
-.nombre {
-  color: #DCD7C9;
-  margin: auto;
-}
-
 #FormErrorMessage {
   background-color: rgba(255, 0, 0, 0.322);
   width: 100%;
@@ -36,120 +27,22 @@
   background-color: rgba(161, 251, 155, 0.7882352941);
 }
 
-#ingreso a {
-  color: #cfd8dc;
-  text-decoration: none;
-}
-
-.navlog {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  margin-left: 80px;
-  margin-right: 10px;
-  min-width: 120px;
-  height: auto;
-  background-color: #1B262C !important;
-  border: 1px solid rgba(73, 73, 73, 0.7490196078);
-  border-radius: 8px 8px 8px 8px;
-  top: 0;
-  margin-top: 82px;
-}
-
-.navnolog {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  margin-left: -35px;
-  margin-right: 10px;
-  min-width: 140px;
-  height: auto;
-  background-color: #1B262C !important;
-  border: 1px solid rgba(73, 73, 73, 0.7490196078);
-  border-radius: 8px 8px 8px 8px;
-  top: 0;
-  margin-top: 82px;
-}
-
-#navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: #1B262C;
-  font-weight: bold;
-  height: 100%;
-}
-
-#colorfondo {
-  background-image: url("/static/img/paisajes.png");
-  height: 100vh;
-  width: 100%;
-  background-position: center;
-  background-size: 100% 100%;
-}
-
 /*Responsibidad*/
 @media only screen and (max-width: 600px) {
-  #navbar {
-    grid-template-columns: 2fr 1px 2fr !important;
-  }
-  .logo {
-    font-size: 20px !important;
-  }
-  .logoimg {
-    width: 60px !important;
-    height: 50px !important;
-  }
   .nombre {
     font-size: 12px !important;
-  }
-  .usuariobtn {
-    max-width: 110px !important;
-    border-radius: 50px !important;
-    margin-left: 5px !important;
-  }
-  #colorfondo {
-    background-image: url(/static/img/fondotelefono.png);
   }
   #colorhome {
     grid-template-columns: 1fr 300px 1fr !important;
   }
 }
-#cartalogin {
-  width: 100%;
-  max-width: 330px;
-  padding: 25px;
-  margin: auto;
-  border-radius: 25px;
-  background-color: rgba(27, 38, 44, 0.8);
-  color: #DCD7C9;
-}
-
-.label1 {
+.labelcolor {
   color: #1B262C;
-}
-
-.logo1 {
-  width: 100px;
 }
 
 #colorboton {
   background-color: #126E82;
-}
-
-#LoginButton {
-  background-color: rgba(18, 110, 130, 0.9);
-  border: rgb(18, 110, 130);
-}
-
-#CreateUserButton {
-  background-color: rgba(18, 110, 130, 0.9);
-  border: rgb(18, 110, 130);
-}
-
-.ColorTexto {
-  color: #DCD7C9 !important;
+  grid-template-columns: 1fr 1400px 1fr;
 }
 
 .botonhover:hover {
@@ -157,14 +50,8 @@
 }
 
 #colorhome {
-  display: grid;
-  grid-template-columns: 1fr 1600px 1fr;
-}
-
-.logoimg {
-  width: 80px;
-  height: 70px;
-  margin-top: 10px;
+  display: grid !important;
+  grid-template-columns: 1fr 1500px 1fr;
 }
 
 body {
@@ -172,26 +59,6 @@ body {
   display: grid;
   grid-template-rows: 90px 1fr 50px;
   background-color: #faf6eb;
-}
-
-#textoboton1 {
-  font-size: 16px;
-  padding-left: 10px;
-}
-
-#textoboton2 {
-  font-size: 16px;
-  padding-left: 10px;
-}
-
-#textoboton1:hover {
-  background-color: #126E82 !important;
-  border-radius: 7px 7px 0px 0px;
-}
-
-#textoboton2:hover {
-  background-color: #126E82 !important;
-  border-radius: 0px 0px 7px 7px;
 }
 
 #deptos {
@@ -209,40 +76,6 @@ footer {
 
 .copy {
   margin: auto;
-}
-
-.header {
-  display: grid;
-  grid-template-rows: 90px 200px;
-}
-
-.logo {
-  color: #DCD7C9;
-  text-decoration: none;
-  margin: auto;
-  font-size: 30px;
-}
-
-.usuariobtn {
-  max-width: 100px;
-  background-color: #1B262C;
-  border: 2px solid #DCD7C9;
-  border-radius: 50px;
-  margin-left: 15px;
-}
-
-.icono {
-  width: 100px;
-  height: 50px;
-}
-
-.logo:hover {
-  color: white !important;
-}
-
-.usuariobtn:hover {
-  background: rgba(0, 0, 0, 0.4);
-  border: 3px solid white;
 }
 
 .box {
@@ -278,41 +111,6 @@ footer {
   padding: 5px;
 }
 
-.flecha {
-  width: 50px;
-}
-
-.flecha:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.burger {
-  margin: auto;
-}
-
-.userimg {
-  margin: auto;
-}
-
-.burger img {
-  width: 25px;
-  height: 25px;
-}
-
-.userimg img {
-  width: 35px;
-  height: 35px;
-  border-radius: 35px;
-  border: 2px solid #DCD7C9;
-}
-
-.perfilnav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100px;
-  height: 50px;
-}
-
 .InfoDepto1 {
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -322,31 +120,6 @@ footer {
 .InfoDepto2 {
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.miniperfil {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 20px;
-}
-
-.fondoMiPerfil {
-  background-color: #126E82;
-}
-
-.CambioPassword {
-  background-color: #126E82;
-}
-
-.CartaCambioPassword {
-  width: 100%;
-  max-width: 330px;
-  padding: 25px;
-  margin: auto;
-  border-radius: 25px;
-  background-color: rgba(27, 38, 44, 0.8);
-  color: #DCD7C9;
 }
 
 .Actualizar {

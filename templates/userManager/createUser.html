@@ -3,6 +3,7 @@
 
 {% block css %}
 <link href="{% static 'css/form.css'%}" rel="stylesheet">
+<link href="{% static 'css/CrearUsuario.css'%}" rel="stylesheet">
 {% endblock css %}
 
 {% block js %}
@@ -13,52 +14,52 @@
 {% endblock js %}
 
 {% block wrapper %}
-<div id="colorfondo">
+<div id="colorfondoCrearUsuario">
     <main class="form-signin w-100 m-auto text-center">
-        <div id="cartalogin">
+        <div id="cartaCrearUsuario">
             <form>
-                <img class="mb-4 m-auto logo1" src="{% static 'img/logo.png'%}" alt="" >
+                <img class="mb-4 m-auto logoCrearUsuario" src="{% static 'img/logo.png'%}" alt="" >
                 <h1 class="h3 mb-3 fw-normal">Crear usuario</h1>
                 <!-- datos usuario -->
                 <div class="form-floating">
                     <input type="nombres" class="form-control" id="floatingNombres" placeholder=" ">
-                    <label class="label1" for="floatingInput">Nombres</label>
+                    <label class="labelcolor" for="floatingInput">Nombres</label>
                 </div>
                 
                 <div class="form-floating">
                     <input type="apellidos" class="form-control" id="floatingApellidos" placeholder=" ">
-                    <label class="label1" for="floatingInput">Apellidos</label>
+                    <label class="labelcolor" for="floatingInput">Apellidos</label>
                 </div>
 
                 <div class="form-floating">
                     <input type="text" class="form-control" id="floatingRut" placeholder=" ">
-                    <label class="label1" for="floatingInput">Rut</label>
+                    <label class="labelcolor" for="floatingInput">Rut</label>
                 </div>
                 
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingEmail" placeholder=" ">
-                    <label class="label1" for="floatingInput">Correo electronico</label>
+                    <label class="labelcolor" for="floatingInput">Correo electronico</label>
                 </div>
                 
                 <div class="form-floating">
                     <input type="direccion" class="form-control" id="floatingDireccion" placeholder=" ">
-                    <label class="label1" for="floatingInput">Direccion</label>
+                    <label class="labelcolor" for="floatingInput">Direccion</label>
                 </div>
                 
                 <div class="form-floating">
                     <input type="telefono" class="form-control" id="floatingTelefono" placeholder=" ">
-                    <label class="label1" for="floatingInput">Telefono</label>
+                    <label class="labelcolor" for="floatingInput">Telefono</label>
                 </div>
                 <!-- password -->
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword" placeholder=" ">
-                    <label class="label1" for="floatingPassword">Contraseña</label>
+                    <label class="labelcolor" for="floatingPassword">Contraseña</label>
                     <input class= "box" type="checkbox" onclick ="reveal(this,'floatingPassword')">
                 </div>
 
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword2" placeholder=" ">
-                    <label class="label1" for="floatingPassword">Repetir contraseña</label>
+                    <label class="labelcolor" for="floatingPassword">Repetir contraseña</label>
                     <input class= "box" type="checkbox"  onclick ="reveal(this,'floatingPassword2')">
                 </div>
             
