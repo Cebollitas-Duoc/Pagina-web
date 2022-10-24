@@ -37,6 +37,7 @@ class GlobalMessage{
         this.messageCard.classList.remove("success");
         this.messageCard.classList.remove("d-none");
         this.message.innerHTML = message
+        this.startAutoHide()
     }
     
     static printGlobalSuccessMessage(message){
@@ -45,6 +46,7 @@ class GlobalMessage{
         this.messageCard.classList.remove("error");
         this.messageCard.classList.remove("d-none");
         this.message.innerHTML = message
+        this.startAutoHide()
     }
     
     static setGlobalErrorMessage(message){
@@ -53,5 +55,10 @@ class GlobalMessage{
     
     static setGlobalSuccessMessage(message){
         setCookie("successMsg", message, 1, false)
+    }
+
+    static async startAutoHide(){
+        await new Promise(r => setTimeout(r, 1500));
+        this.messageCard.classList.add("d-none");
     }
 }
