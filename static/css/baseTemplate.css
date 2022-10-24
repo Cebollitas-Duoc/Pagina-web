@@ -98,10 +98,9 @@
   }
 }
 /*Responsibidad Navbar*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   #navbar {
     grid-template-columns: 2fr 1px 2fr !important;
-    max-width: 800px !important;
   }
   .logo {
     font-size: 20px !important;
