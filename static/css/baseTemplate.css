@@ -89,15 +89,7 @@
   background-size: 100% 100%;
 }
 
-@media only screen and (max-width: 600px) {
-  #colorfondo {
-    background-image: url(/static/img/fondotelefono.png);
-  }
-  #colorhome {
-    grid-template-columns: 1fr 300px 1fr !important;
-  }
-}
-/*Responsibidad Navbar*/
+/*Responsibidad*/
 @media only screen and (max-width: 600px) {
   #navbar {
     grid-template-columns: 2fr 1px 2fr !important;
@@ -116,6 +108,12 @@
     max-width: 110px !important;
     border-radius: 50px !important;
     margin-left: 5px !important;
+  }
+  #colorfondo {
+    background-image: url(/static/img/fondotelefono.png);
+  }
+  #colorhome {
+    grid-template-columns: 1fr 300px 1fr !important;
   }
 }
 #cartalogin {
