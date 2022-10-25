@@ -35,6 +35,10 @@
   #colorhome {
     grid-template-columns: 1fr 300px 1fr !important;
   }
+  #GlobalMessage {
+    right: 1rem !important;
+    width: 20rem !important;
+  }
 }
 .labelcolor {
   color: #1B262C;
@@ -51,7 +55,7 @@
 
 #colorhome {
   display: grid !important;
-  grid-template-columns: 1fr 1500px 1fr;
+  grid-template-columns: 1fr 1200px 1fr;
 }
 
 body {

@@ -18,9 +18,7 @@
             {% for Imagen in Imagenes %}
                 <div class=" mini-image"
                     onclick="setMainImage('{{Imagen}}')"
-                    style="background-image: url({{Imagen}}); 
-                    background-size: cover; 
-                    background-position: center center;">
+                    style="background-image: url({{Imagen}});">
                 </div>
             {% endfor %}
         </div>
@@ -32,19 +30,18 @@
     </div>
     <div class="DescripcionDepto">
         <div class="">{{ depto.Descripcion}}</div>
-        <div class="InfoDepto1 DescripcionDepto">{{ depto.Address }} </div>
+        <div class="InfoDepto1">{{ depto.Address }} </div>
         <div class="InfoDepto2">Habitaciones: {{ depto.Rooms }} </div>
         <div class="InfoDepto2">Baños: {{ depto.Bathrooms }} </div>
         <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
     </div>
+    <div>
+        <iframe class="Mapadepto"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
+            &q=-{{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
+        </iframe>
+    </div>
 </div>
-<iframe
-    width="300"
-    height="225"
-    style="border:0"
-    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
-    &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
-</iframe>
 
 
 
