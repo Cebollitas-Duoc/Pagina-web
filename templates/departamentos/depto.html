@@ -55,11 +55,18 @@
                 </div>
             </div>
         </div>
-        <div class="DescripcionDepto">
-            <div class="InfoDepto1">Direccion : {{ depto.Address }}</div>
-            <div class="InfoDepto1">Habitaciones: {{ depto.Rooms }} </div>
-            <div class="InfoDepto1">Baños: {{ depto.Bathrooms }} </div>
-            <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
+        <div class="ServiciosDeptoContenedor">
+            <div class="m-auto" >Detalles del Departamento:</div>
+            <div class="DescripcionDepto">
+                <div class="InfoDepto1">Direccion :</div>
+                <div class="">{{ depto.Address }}</div>
+                <div class="InfoDepto1">Habitaciones : </div>
+                <div class="">{{ depto.Rooms }} </div>
+                <div class="InfoDepto1">Baños : </div>
+                <div class="">{{ depto.Bathrooms }} </div>
+                <div class="InfoDepto1">Valor : </div>
+                <div class="">${{ depto.Value }}CLP por noche</div>
+            </div>
         </div>
         <div class="Mapadepto">
             <iframe

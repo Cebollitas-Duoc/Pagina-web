@@ -55,11 +55,12 @@
   }
 
 .DescripcionDepto{
-    justify-content: end;
-    flex-direction: column;
-    margin-left: 50px;
-    border: 1px solid black;
-    margin-bottom: 15px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  width: auto;
 }
 .FondoDepto{
     background-color: #faf6eb;
