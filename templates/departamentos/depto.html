@@ -55,18 +55,18 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="DescripcionDepto">
-        <div class="InfoDepto1">Direccion : {{ depto.Address }}</div>
-        <div class="InfoDepto1">Habitaciones: {{ depto.Rooms }} </div>
-        <div class="InfoDepto1">Baños: {{ depto.Bathrooms }} </div>
-        <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
-    </div>
-    <div class="Mapadepto">
-        <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
-            &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
-        </iframe>
+        <div class="DescripcionDepto">
+            <div class="InfoDepto1">Direccion : {{ depto.Address }}</div>
+            <div class="InfoDepto1">Habitaciones: {{ depto.Rooms }} </div>
+            <div class="InfoDepto1">Baños: {{ depto.Bathrooms }} </div>
+            <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
+        </div>
+        <div class="Mapadepto">
+            <iframe
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
+                &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
+            </iframe>
+        </div>
     </div>
 </div>
 
