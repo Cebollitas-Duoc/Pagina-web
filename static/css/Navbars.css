@@ -30,13 +30,11 @@
 }
 
 #navbar {
-  position: -webkit-sticky;
-  position: sticky;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: #1B262C;
   font-weight: bold;
-  height: 100%;
+  height: 90px;
 }
 
 .miniperfil {

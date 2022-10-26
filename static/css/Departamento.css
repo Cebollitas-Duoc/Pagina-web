@@ -76,4 +76,26 @@
 .gallery-map {
   display: flex;
   flex-direction: row;
+}
+
+.ServiciosDeptoContenedor {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.ServiciosDepto img {
+  max-height: 25px;
+  max-width: 25px;
+}
+
+.ServiciosDepto {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  border: 2px solid #1B262C;
+}
+
+.tablaservicios1 {
+  background-color: #1B262C;
+  color: #DCD7C9;
 }/*# sourceMappingURL=Departamento.css.map */

@@ -68,6 +68,7 @@ body{
 }
 footer{
     display: flex;
+    align-self: flex-end;
     background-color: #1B262C;
     font-weight: bold;
     height: 50px;
@@ -121,9 +122,7 @@ footer{
 }
 
 .Actualizar{
-    
     text-decoration: none;
     background-color: #1B262C;
 }
-
   
