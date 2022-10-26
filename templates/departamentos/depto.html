@@ -15,7 +15,6 @@
 <div class="FondoDepto">
     <div class="gallery-map">
         <div>
-            <div class="TituloDepto">{{ depto.Address }}</div>
             <div class="image-container">
                 <div class="image-gallery">
                     {% for  Imagen in Imagenes %}
@@ -45,10 +44,9 @@
         </div>
     </div>
     <div class="DescripcionDepto">
-        <div class="">Direccion : {{ depto.Descripcion }}</div>
-        <div class="InfoDepto1">{{ depto.Address }} </div>
-        <div class="InfoDepto2">Habitaciones: {{ depto.Rooms }} </div>
-        <div class="InfoDepto2">Baños: {{ depto.Bathrooms }} </div>
+        <div class="InfoDepto1">Direccion : {{ depto.Address }}</div>
+        <div class="InfoDepto1">Habitaciones: {{ depto.Rooms }} </div>
+        <div class="InfoDepto1">Baños: {{ depto.Bathrooms }} </div>
         <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
     </div>
     <div class="Mapadepto">
