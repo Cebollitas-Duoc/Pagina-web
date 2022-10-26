@@ -16,7 +16,7 @@ button_changePassword.addEventListener("click", async ()=>{
         printErrorMessage(response["Error"]);
     else{
         GlobalMessage.setGlobalSuccessMessage("Contraseña actualizada");
-        window.location.href = "/user/myprofile/";
+        window.location.href = "/user/myprofile";
     }
 })
 
