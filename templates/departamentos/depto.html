@@ -12,31 +12,47 @@
 {% endblock js %}
 
 {% block wrapper %}
-<div class="TituloDepto FondoDepto"> {{ depto.Address }}
-    <div class="image-container">
-        <div class="image-gallery">
-            {% for Imagen in Imagenes %}
-                <div class=" mini-image"
-                    onclick="setMainImage('{{Imagen}}')"
-                    style="background-image: url({{Imagen}});">
+<div class="FondoDepto">
+    <div class="gallery-map">
+        <div>
+            <div class="TituloDepto">{{ depto.Address }}</div>
+            <div class="image-container">
+                <div class="image-gallery">
+                    {% for  Imagen in Imagenes %}
+                        <div src="{{Imagen}}" class=" mini-image "
+                            onclick="setMainImage('{{Imagen}}')"
+                            style="background-image: url({{Imagen}});">
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endfor %}
+                <div class="ContenedorMainImagen">
+                    <img class="main-image">
+                    
+                    </img>
+                </div>
+            </div>
         </div>
-        <div class="ContenedorMainImagen">
-            <img class="main-image">
-            
-            </img>
+        <div class="ServiciosDepto">
+            <div class="wifi">WIFI:</div>
+            <div class="Calefaccion">Calefaccion: </div>
+            <div class="Estacionamiento">Estacionamiento: </div>
+            <div class="TVs">TVs: </div>
+            <div class="Cocina">Cocina: </div>
+            <div class="Patio">Patio: </div>
+            <div class="cama">Cama - Singular: </div>
+            <div class="cama">Cama - Queen: </div>
+            <div class="cama">Cama - King: </div>
         </div>
     </div>
     <div class="DescripcionDepto">
-        <div class="">{{ depto.Descripcion}}</div>
+        <div class="">Direccion : {{ depto.Descripcion }}</div>
         <div class="InfoDepto1">{{ depto.Address }} </div>
         <div class="InfoDepto2">Habitaciones: {{ depto.Rooms }} </div>
         <div class="InfoDepto2">Baños: {{ depto.Bathrooms }} </div>
         <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
     </div>
-    <div>
-        <iframe class="Mapadepto"
+    <div class="Mapadepto">
+        <iframe
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
             &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
         </iframe>

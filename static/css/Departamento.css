@@ -60,7 +60,7 @@
 }
 
 .FondoDepto {
-  background-color: faf6eb;
+  background-color: #faf6eb;
 }
 
 .Mapadepto {
@@ -70,4 +70,9 @@
   margin-left: 50px;
   display: flex;
   justify-content: end;
+}
+
+.gallery-map {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=Departamento.css.map */

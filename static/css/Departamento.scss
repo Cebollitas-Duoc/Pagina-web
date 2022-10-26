@@ -61,7 +61,7 @@
     margin-left: 50px;
 }
 .FondoDepto{
-    background-color: faf6eb;
+    background-color: #faf6eb;
 }
 .Mapadepto{
     width: 300px;
@@ -70,4 +70,8 @@
     margin-left: 50px;
     display: flex;
     justify-content: end;
+}
+.gallery-map{
+  display: flex;
+  flex-direction: row;
 }

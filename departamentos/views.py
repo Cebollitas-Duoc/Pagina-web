@@ -55,7 +55,7 @@ def Departamento(request,_Id_Dpto):
         Fotos.append(str(f"{apidomain}/files/getimage/{Imagen['Path']}"))
     context = {
         "depto": depto,
-        "Imagenes": Fotos
+        "Imagenes": Fotos,
     }
     return render(request, "departamentos/depto.html", context)
 
