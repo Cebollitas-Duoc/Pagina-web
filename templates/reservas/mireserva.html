@@ -21,17 +21,19 @@
           <th>Valor</th>
         </tr>
         {% for reserva in reservas %}
-        <tr>
-          <td>{{reserva.Id_Reserva}}</td>
-          <td>{{reserva.Id_Usuario}}</td>
-          <td>{{reserva.Id_Departamento}}</td>
-          <td>{{reserva.Id_Estado}}</td>
-          <td>{{reserva.Id_Pago}}</td>
-          <td>{{reserva.Fecha_Desde}}</td>
-          <td>{{reserva.Fecha_Hasta}}</td>
-          <td>{{reserva.Fecha_Valor}}</td>
-          <td><button onclick="cancelar('{{reserva.Id_Reserva}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></td>
-        </tr>
+            {% if reserva.Id_Estado != "" and reserva.Id_Estado != 3 %}
+                    <tr>
+                        <td>{{reserva.Id_Reserva}}</td>
+                        <td>{{reserva.Id_Usuario}}</td>
+                        <td>{{reserva.Id_Departamento}}</td>
+                        <td>{{reserva.Id_Estado}}</td>
+                        <td>{{reserva.Id_Pago}}</td>
+                        <td>{{reserva.Fecha_Desde}}</td>
+                        <td>{{reserva.Fecha_Hasta}}</td>
+                        <td>{{reserva.Fecha_Valor}}</td>
+                        <td><button onclick="cancelar('{{reserva.Id_Reserva}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></td>
+                    </tr>
+            {% endif %}
         {% endfor %}
       </table>
 </div>

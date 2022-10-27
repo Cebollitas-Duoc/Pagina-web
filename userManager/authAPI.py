@@ -47,7 +47,6 @@ def getDeptos(request):
     if response.status_code == 200:
         r = json.loads(response.text)
         return r
-    return {"NoDeptos": True}
 
 def getDepto(ID_depto):
     url = f"http://{localHostIp}:8081/departamentos/viewdpto/{ID_depto}" 
@@ -61,7 +60,6 @@ def getDepto(ID_depto):
     if response.status_code == 200:
         r = json.loads(response.text)
         return r
-    return {"NoDeptos": True}
 
 def getImagenes(ID_depto):
     url = f"http://{localHostIp}:8081/departamentos/viewfotosdpto/{ID_depto}" 
@@ -75,7 +73,6 @@ def getImagenes(ID_depto):
     if response.status_code == 200:
         r = json.loads(response.text)
         return r
-    return {"NoImagenes": True}
 
 def getServicios(ID_depto):
     url = f"http://{localHostIp}:8081/departamentos/listservices/{ID_depto}" 
@@ -89,7 +86,6 @@ def getServicios(ID_depto):
     if response.status_code == 200:
         r = json.loads(response.text)
         return r
-    return {"Noservicios": True}
 def getReservas(request):
     url = f"http://{localHostIp}:8081/reservas/getuserreserves/" 
 
@@ -102,4 +98,3 @@ def getReservas(request):
     if response.status_code == 200:
         r = json.loads(response.text)
         return r
-    return {"Noservicios": True}
