@@ -2,9 +2,11 @@
   background-color: rgba(255, 0, 0, 0.322);
   width: 100%;
 }
+
 #FormErrorMessage:hover {
   cursor: pointer;
 }
+
 #FormErrorMessage span {
   font-weight: bold;
   color: black;
@@ -20,11 +22,13 @@
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
 }
+
 #GlobalMessage.error {
-  background-color: rgba(251, 155, 155, 0.7882352941);
+  background-color: #fb9b9bc9;
 }
+
 #GlobalMessage.success {
-  background-color: rgba(161, 251, 155, 0.7882352941);
+  background-color: #a1fb9bc9;
 }
 
 /*Responsibidad*/
@@ -33,20 +37,23 @@
     font-size: 12px !important;
   }
   #colorhome {
-    grid-template-columns: 1fr 300px 1fr !important;
+    -ms-grid-columns: 1fr 300px 1fr !important;
+        grid-template-columns: 1fr 300px 1fr !important;
   }
   #GlobalMessage {
     right: 1rem !important;
     width: 20rem !important;
   }
 }
+
 .labelcolor {
   color: #1B262C;
 }
 
 #colorboton {
   background-color: #126E82;
-  grid-template-columns: 1fr 1400px 1fr;
+  -ms-grid-columns: 1fr 1400px 1fr;
+      grid-template-columns: 1fr 1400px 1fr;
 }
 
 .botonhover:hover {
@@ -54,25 +61,34 @@
 }
 
 #colorhome {
+  display: -ms-grid !important;
   display: grid !important;
-  grid-template-columns: 1fr 1200px 1fr;
+  -ms-grid-columns: 1fr 1200px 1fr;
+      grid-template-columns: 1fr 1200px 1fr;
 }
 
 body {
   min-height: 100vh;
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 90px 1fr 50px;
+  -ms-grid-rows: 90px 1fr 50px;
+      grid-template-rows: 90px 1fr 50px;
   background-color: #faf6eb;
 }
 
 #deptos {
+  -ms-grid-column: 2;
   grid-column: 2;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   background-color: #1B262C;
   font-weight: bold;
   height: 50px;
@@ -95,8 +111,10 @@ footer {
 
 .margen_lista {
   text-decoration: none !important;
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   background-color: #faf6eb;
   max-width: 300px;
   max-height: 600px;
@@ -105,8 +123,12 @@ footer {
 }
 
 .depto-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -135,4 +157,5 @@ footer {
 .Actualizar {
   text-decoration: none;
   background-color: #1B262C;
-}/*# sourceMappingURL=baseTemplate.css.map */
+}
+/*# sourceMappingURL=baseTemplate.css.map */
