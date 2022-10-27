@@ -273,4 +273,7 @@
   font-weight: bold;
   font-size: larger;
 }
-/*# sourceMappingURL=Departamento.css.map */
+
+.descripcion {
+  width: 900px;
+}/*# sourceMappingURL=Departamento.css.map */
