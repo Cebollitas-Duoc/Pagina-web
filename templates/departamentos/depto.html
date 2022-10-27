@@ -49,34 +49,45 @@
                 <button id="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
             </div>
         </div>
-        <div class="mapa-descripcion">
-            <div class="descripcion">
-                <div class="InfoDepto1">Descripcion : </div>
-                    <div>{{ depto.Description }} </div>
-            </div>
-            <div class="Mapadepto">
-                <div class="InfoDepto1">Mapa referencial : </div>
-                <iframe class="mapa"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
-                    &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
-                </iframe>
-            </div>
-            <div class="ServiciosDeptoContenedor">
-                <div class="infoservicios" >Este lugar cuenta con</div>
-                <div class="ServiciosDepto">
-                    {% for service in servicios %}
-                        {% if service.Id_Estado == 0 %}
-                            
-                            <div class="servicio">
-                                <img class=""src="{% static 'img/servicios/'%}{{service.Id_ServiceCategory}}.png"></img>
-                                <div class="">{{ service.Nombre }}:</div>
-                                {% if service.Cantidad != 1 %}
-                                <div class="">{{ service.Cantidad }}:</div>
+        <div class="bodydesc">
+            <div class="descripcionizq">
+                <div class="mapa-descripcion">
+                    <div class="descripcion">
+                        <div class="InfoDepto1">Descripcion : </div>
+                            <div>{{ depto.Description }} </div>
+                    </div>
+                    <div class="Mapadepto">
+                        <div class="InfoDepto1">Mapa referencial : </div>
+                        <iframe class="mapa"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
+                            &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="ServiciosDeptoContenedor">
+                        <div class="infoservicios" >Este lugar cuenta con</div>
+                        <div class="ServiciosDepto">
+                            {% for service in servicios %}
+                                {% if service.Id_Estado == 0 %}
+                                    
+                                    <div class="servicio">
+                                        <div class="serviciotop">
+                                            <img class=""src="{% static 'img/servicios/'%}{{service.Id_ServiceCategory}}.png"></img>
+                                            <div class="">{{ service.Nombre }}</div>
+                                        </div>
+                                        <div class="serviciobot">
+                                            {% if service.Cantidad != 1 %}
+                                            <div class="">{{ service.Cantidad }}</div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 {% endif %}
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="descripcionder">
+                <img src="{% static 'img/publicidad.png'%}" alt="">
             </div>
         </div>
     </div>

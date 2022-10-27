@@ -1,17 +1,8 @@
 .image-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   max-height: 700px;
   overflow-y: auto;
   padding: 20px;
@@ -52,10 +43,8 @@
   margin: 10px;
   max-width: 1000px;
   max-height: 700px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 150px 1fr;
-      grid-template-columns: 150px 1fr;
+  grid-template-columns: 150px 1fr;
 }
 
 .TituloDepto {
@@ -72,22 +61,13 @@
   width: 500px;
   height: 350px;
   border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .titulodesc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   top: 50px;
 }
 
@@ -95,51 +75,34 @@
   margin-left: 15px;
   margin-top: 30px;
   margin-bottom: auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: auto;
 }
 
 .FondoDepto {
   background-color: #faf6eb;
-  -ms-grid-column: 2;
   grid-column: 2;
 }
 
 .Mapadepto {
   max-width: 900px;
   height: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: auto;
   margin-left: 5px;
 }
 
 .gallery-map {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .ServiciosDeptoContenedor {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: auto;
   margin-left: 15px;
   margin-bottom: 50px;
@@ -152,48 +115,32 @@
 
 .ServiciosDepto {
   margin: auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
 .ServiciosDepto .servicio {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 40px 1fr;
-      grid-template-columns: 40px 1fr;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
 }
-
 .ServiciosDepto .servicio:nth-child(2n+1) {
   background-color: #1B262C;
   color: #DCD7C9;
 }
-
 .ServiciosDepto .servicio:nth-child(2n+1) img {
-  -webkit-filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
-          filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
+  filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
 }
-
 .ServiciosDepto .servicio:nth-child(2n+2) {
   background-color: #DCD7C9;
   color: #1B262C;
 }
-
 .ServiciosDepto .servicio:nth-child(2n+2) img {
-  -webkit-filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
-          filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
+  filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
 }
 
 .galeriayserv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   border-bottom: 1px solid lightgray;
 }
 
@@ -206,24 +153,15 @@
     max-width: 450px !important;
   }
   .galeriayserv {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    flex-direction: column !important;
   }
   .image-container {
     max-width: 60vh !important;
   }
 }
-
 .mapa-descripcion {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .mapa {
@@ -237,10 +175,8 @@
 }
 
 .fondo {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 8fr 1fr;
-      grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 8fr 1fr;
 }
 
 #ButtonReserva {
@@ -249,12 +185,8 @@
   border-radius: 25px;
   margin: auto;
   margin-bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   background-color: #1B262C;
   border: 2px solid #DCD7C9;
   color: #DCD7C9;
@@ -276,4 +208,28 @@
 
 .descripcion {
   width: 900px;
+}
+
+.serviciotop {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+
+.serviciobot {
+  display: flex;
+  margin: auto;
+}
+
+.bodydesc {
+  display: grid;
+  grid-template-columns: 900px 1fr;
+}
+
+.descripcionder {
+  display: flex;
+}
+
+.descripcionder img {
+  display: flex;
+  margin: auto;
 }/*# sourceMappingURL=Departamento.css.map */

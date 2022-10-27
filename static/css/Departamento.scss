@@ -111,8 +111,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   .servicio{
-    display: grid;
-    grid-template-columns: 40px 1fr;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     &:nth-child(2n+1) {
       background-color: #1B262C;
@@ -194,4 +194,23 @@
 }
 .descripcion{
   width: 900px;
+}
+.serviciotop{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+.serviciobot{
+  display: flex;
+  margin: auto;
+}
+.bodydesc{
+  display: grid;
+  grid-template-columns: 900px 1fr;
+}
+.descripcionder{
+  display: flex;
+}
+.descripcionder img{
+  display: flex;
+  margin: auto;
 }
