@@ -21,7 +21,7 @@
           <th>Valor</th>
         </tr>
         {% for reserva in reservas %}
-            {% if reserva.Id_Estado != "" and reserva.Id_Estado != 3 %}
+            {% if reserva.Id_Estado != 3 %}
                     <tr>
                         <td>{{reserva.Id_Reserva}}</td>
                         <td>{{reserva.Id_Usuario}}</td>
