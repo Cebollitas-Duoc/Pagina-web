@@ -1,8 +1,12 @@
 {% extends 'BaseTemplate.html' %}
 {% load static %}
 {% block css %}
-<link href="{% static 'css/mireserva.css'%}" rel="stylesheet">
+    <link href="{% static 'css/misreservas.css'%}" rel="stylesheet">
 {% endblock css %}
+
+{% block js %}
+    <script src="{% static 'js/cancelarreserva.js' %}"></script>
+{% endblock js %}
 {% block body %}
 <div id="colorhome" class="">
     <table>
@@ -26,6 +30,7 @@
           <td>{{reserva.Fecha_Desde}}</td>
           <td>{{reserva.Fecha_Hasta}}</td>
           <td>{{reserva.Fecha_Valor}}</td>
+          <td><button onclick="cancelar('{{reserva.Id_Reserva}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></td>
         </tr>
         {% endfor %}
       </table>
