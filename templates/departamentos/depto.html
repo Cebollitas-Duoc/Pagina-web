@@ -64,42 +64,18 @@
             <div class="ServiciosDeptoContenedor">
                 <div class="infoservicios" >Este lugar cuenta con</div>
                 <div class="ServiciosDepto">
-                    <div class="tablaservicios1">
-                        <img class=""src="{% static 'img/servicios/Wifi.png'%}"></img>
-                        <div class="">WIFI:</div>
-                    </div>
-                    <div class="tablaservicios2">
-                        <img class="" src="{% static 'img/servicios/calefaccion.png'%}"> </img>
-                        <div class="">Calefaccion: </div>
-                    </div>
-                    <div class="tablaservicios1">
-                        <img class="" src="{% static 'img/servicios/Estacionamiento.png'%}"> </img>
-                        <div class="">Estacionamiento: </div>
-                    </div>
-                    <div class="tablaservicios2">
-                        <img class="" src="{% static 'img/servicios/TV.png'%}"> </img>
-                        <div class="">TVs: </div>
-                    </div>
-                    <div class="tablaservicios1">
-                        <img class="" src="{% static 'img/servicios/Cocina.png'%}"> </img>
-                        <div class="">Cocina: </div>
-                    </div>
-                    <div class="tablaservicios2">
-                        <img class="" src="{% static 'img/servicios/patio.png'%}"> </img>
-                        <div class="">Patio: </div>
-                    </div>
-                    <div class="tablaservicios1">
-                        <img class="" src="{% static 'img/servicios/camasimple.png'%}"> </img>
-                        <div class="">Cama - Singular: </div>
-                    </div>
-                    <div class="tablaservicios2">
-                        <img class=""src="{% static 'img/servicios/camagrande.png'%}"> </img>
-                        <div class="">Cama - Queen: </div>
-                    </div>
-                    <div class="tablaservicios1">
-                        <img class="" src="{% static 'img/servicios/camagrande2.png'%}"> </img>
-                        <div class="">Cama - King: </div>
-                    </div>
+                    {% for service in servicios %}
+                        {% if service.Id_Estado == 0 %}
+                            
+                            <div class="servicio">
+                                <img class=""src="{% static 'img/servicios/'%}{{service.Id_ServiceCategory}}.png"></img>
+                                <div class="">{{ service.Nombre }}:</div>
+                                {% if service.Cantidad != 1 %}
+                                <div class="">{{ service.Cantidad }}:</div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>

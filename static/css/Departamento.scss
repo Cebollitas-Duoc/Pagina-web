@@ -110,21 +110,27 @@
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  .servicio{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    padding: 10px;
+    &:nth-child(2n+1) {
+      background-color: #1B262C;
+      color: #DCD7C9;
+      img{
+        filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
+      }
+    }
+    &:nth-child(2n+2) {
+      background-color: #DCD7C9;
+      color: #1B262C;
+      img{
+        filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
+      }
+    }
+  }
 }
-.tablaservicios1{
-  background-color: #1B262C;
-  color: #DCD7C9;
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  padding: 10px;
-}
-.tablaservicios2{
-  background-color: #DCD7C9;
-  color: #1B262C;
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  padding: 10px;
-}
+
 .galeriayserv{
   display: flex;
   flex-direction: row;

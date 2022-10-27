@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from userManager.authAPI import *
+from .dptoAPI import *
 
 # Create your views here.
 class Depto:
@@ -50,12 +51,15 @@ def Departamento(request,_Id_Dpto):
 
     depto = getDepto(_Id_Dpto)
     Imagenes = getImagenes(_Id_Dpto)
+    servicios = getFormattedDptoServices(_Id_Dpto)
+    print(servicios)
     Fotos = []
     for Imagen in Imagenes:
         Fotos.append(str(f"{apidomain}/files/getimage/{Imagen['Path']}"))
     context = {
         "depto": depto,
         "Imagenes": Fotos,
+        "servicios": servicios
     }
     return render(request, "departamentos/depto.html", context)
 
