@@ -9,6 +9,7 @@
 
 {% block js %}
 <script src="{% static 'js/imagegallery.js' %}"></script>
+<script src="{% static 'js/reservar.js' %}"></script>
 {% endblock js %}
 
 {% block wrapper %}
@@ -37,6 +38,9 @@
             <div class="DescripcionDeptoContenedor">
                 <div class="titulodesc infoservicios" >Detalles del Departamento</div>
                 <div class="DescripcionDepto">
+                    <input id="Id_Dpto"class="d-hidden" value="{{ Id_Dpto }}"></input>
+                    <input id="Id_State"class="d-hidden" value="{{ depto.Id_State }}"></input>
+                    <input id="Value"class="d-hidden" value="{{ depto.Value }}"></input>
                     <div class="InfoDepto1">Direccion :</div>
                     <div class="">{{ depto.Address }}</div>
                     <div class="InfoDepto1">Habitaciones : </div>
@@ -44,7 +48,7 @@
                     <div class="InfoDepto1">Baños : </div>
                     <div class="">{{ depto.Bathrooms }} </div>
                     <div class="InfoDepto1">Valor : </div>
-                    <div class="">${{ depto.Value }}CLP por noche</div>
+                    <div id="" class="">${{ depto.Value }}CLP por noche</div>
                 </div>
                 <button id="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
             </div>

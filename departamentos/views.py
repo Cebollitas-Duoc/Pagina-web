@@ -58,7 +58,8 @@ def Departamento(request,_Id_Dpto):
     context = {
         "depto": depto,
         "Imagenes": Fotos,
-        "servicios": servicios
+        "servicios": servicios,
+        "Id_Dpto":_Id_Dpto,
     }
     return render(request, "departamentos/depto.html", context)
 
