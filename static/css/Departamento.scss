@@ -181,6 +181,11 @@
   .bodydesc{
     grid-template-columns: 40vh!important;
   }
+  .ServiciosDepto{
+    display: flex!important;
+    flex-direction: column;
+  }
+
 
 }
 .mapa-descripcion{
