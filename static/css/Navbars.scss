@@ -134,20 +134,44 @@
     width: 25px;
     height: 25px;
 }
-#textoboton1{
+#BotonMiPerfil{
     font-size: 16px;
     padding-left: 10px;
 }
-#textoboton2{
+#BotonMisReservas{
     font-size: 16px;
     padding-left: 10px;
 }
-#textoboton1:hover{
+#BotonCerrarSesion{
+    font-size: 16px;
+    padding-left: 10px;
+}
+#BotonLogin{
+    font-size: 16px;
+    padding-left: 10px;
+}
+#BotonCrearUsuario{
+    font-size: 16px;
+    padding-left: 10px;
+}
+#BotonMiPerfil:hover{
     background-color: #126E82!important;
     border-radius: 7px 7px 0px 0px;
 
 }
-#textoboton2:hover{
+#BotonMisReservas:hover{
+    background-color: #126E82!important;
+    border-radius:0px 0px 0px 0px;
+}
+#BotonCerrarSesion:hover{
+    background-color: #126E82!important;
+    border-radius: 0px 0px 7px 7px;
+}
+#BotonLogin:hover{
+    background-color: #126E82!important;
+    border-radius: 7px 7px 0px 0px;
+}
+#BotonCrearUsuario:hover{
     background-color: #126E82!important;
     border-radius: 0px 0px 7px 7px;
 }
