@@ -139,7 +139,7 @@
 /*Responsibidad*/
 @media only screen and (max-width: 600px){
   .gallery-map{
-    max-width: 60vh!important;
+    max-width: 50vh!important;
   }
   .gallery-map img{
     max-width: 450px!important;
@@ -148,7 +148,32 @@
     flex-direction: column !important;
   }
   .image-container{
-    max-width: 60vh!important;
+    max-width: 50vh!important;
+  }
+  .Mapadepto{
+    width: 40vh!important;
+  }
+  .mapa{
+    width: 40vh!important;
+  }
+  .descripcionder{
+    display: none!important;
+  }
+  .descripcionizq{
+    display: flex!important;
+    flex-direction: column;
+  }
+  .descripcion{
+    width: 40vh!important;
+  }
+  .DescripcionDeptoContenedor{
+    width: 40vh!important;
+  }
+  #ButtonReserva{
+    width: 25vh!important;
+  }
+  .bodydesc{
+    grid-template-columns: 40vh!important;
   }
 
 }
