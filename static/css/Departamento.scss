@@ -139,16 +139,22 @@
 /*Responsibidad*/
 @media only screen and (max-width: 600px){
   .gallery-map{
-    max-width: 50vh!important;
+    max-width: 40vh!important;
   }
   .gallery-map img{
-    max-width: 450px!important;
+    max-width: 40vh!important;
+  }
+  .image-gallery{
+    display: flex!important;
+    flex-direction: row!important;
   }
   .galeriayserv{
     flex-direction: column !important;
   }
   .image-container{
-    max-width: 50vh!important;
+    display: flex!important;
+    max-width: 40vh!important;
+    flex-direction: column-reverse!important;
   }
   .Mapadepto{
     width: 40vh!important;
