@@ -12,67 +12,96 @@
 {% endblock js %}
 
 {% block wrapper %}
+<div class="fondo">
 <div class="FondoDepto">
-    <div class="gallery-map">
-        <div>
-            <div class="image-container">
-                <div class="image-gallery">
-                    {% for  Imagen in Imagenes %}
-                        <div src="{{Imagen}}" class=" mini-image "
-                            onclick="setMainImage('{{Imagen}}')"
-                            style="background-image: url({{Imagen}});">
+    <div class="galeriayserv">
+        <div class="gallery-map">
+                <div>
+                    <div class="image-container">
+                        <div class="image-gallery">
+                            {% for  Imagen in Imagenes %}
+                                <div src="{{Imagen}}" class=" mini-image "
+                                    onclick="setMainImage('{{Imagen}}')"
+                                    style="background-image: url({{Imagen}});">
+                                </div>
+                            {% endfor %}
                         </div>
-                    {% endfor %}
-                </div>
-                <div class="ContenedorMainImagen">
-                    <img class="main-image">
-                    
-                    </img>
-                </div>
-            </div>
-        </div>
-        <div class="ServiciosDeptoContenedor">
-            <div class="m-auto" >Servicios del Departamento:</div>
-            <div class="ServiciosDepto">
-                <img class="tablaservicios1"src="{% static 'img/servicios/Wifi.png'%}"> </img>
-                <div class="tablaservicios1">WIFI:</div>
-                <img class="tablaservicios2" src="{% static 'img/servicios/calefaccion.png'%}"> </img>
-                <div class="tablaservicios2">Calefaccion: </div>
-                <img class="tablaservicios1" src="{% static 'img/servicios/Estacionamiento.png'%}"> </img>
-                <div class="tablaservicios1">Estacionamiento: </div>
-                <img class="tablaservicios2" src="{% static 'img/servicios/TV.png'%}"> </img>
-                <div class="tablaservicios2">TVs: </div>
-                <img class="tablaservicios1" src="{% static 'img/servicios/Cocina.png'%}"> </img>
-                <div class="tablaservicios1">Cocina: </div>
-                <img class="tablaservicios2" src="{% static 'img/servicios/patio.png'%}"> </img>
-                <div class="tablaservicios2">Patio: </div>
-                <img class="tablaservicios1" src="{% static 'img/servicios/camasimple.png'%}"> </img>
-                <div class="tablaservicios1">Cama - Singular: </div>
-                <img class="tablaservicios2"src="{% static 'img/servicios/camagrande.png'%}"> </img>
-                <div class="tablaservicios2">Cama - Queen: </div>
-                <img class="tablaservicios1" src="{% static 'img/servicios/camagrande.png'%}"> </img>
-                <div class="tablaservicios1">Cama - King: </div>
+                        <div class="ContenedorMainImagen">
+                            <img class="main-image">
+                            
+                            </img>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="ServiciosDeptoContenedor">
-            <div class="m-auto" >Detalles del Departamento:</div>
-            <div class="DescripcionDepto">
-                <div class="InfoDepto1">Direccion :</div>
-                <div class="">{{ depto.Address }}</div>
-                <div class="InfoDepto1">Habitaciones : </div>
-                <div class="">{{ depto.Rooms }} </div>
-                <div class="InfoDepto1">Baños : </div>
-                <div class="">{{ depto.Bathrooms }} </div>
-                <div class="InfoDepto1">Valor : </div>
-                <div class="">${{ depto.Value }}CLP por noche</div>
+            <div class="DescripcionDeptoContenedor">
+                <div class="titulodesc infoservicios" >Detalles del Departamento</div>
+                <div class="DescripcionDepto">
+                    <div class="InfoDepto1">Direccion :</div>
+                    <div class="">{{ depto.Address }}</div>
+                    <div class="InfoDepto1">Habitaciones : </div>
+                    <div class="">{{ depto.Rooms }} </div>
+                    <div class="InfoDepto1">Baños : </div>
+                    <div class="">{{ depto.Bathrooms }} </div>
+                    <div class="InfoDepto1">Valor : </div>
+                    <div class="">${{ depto.Value }}CLP por noche</div>
+                </div>
+                <button id="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
             </div>
         </div>
-        <div class="Mapadepto">
-            <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
-                &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
-            </iframe>
+        <div class="mapa-descripcion">
+            <div class="descripcion">
+                <div class="InfoDepto1">Descripcion : </div>
+                    <div>{{ depto.Description }} </div>
+            </div>
+            <div class="Mapadepto">
+                <div class="InfoDepto1">Mapa referencial : </div>
+                <iframe class="mapa"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSzLhAQm8sQDTC5gNJV3Zn20WViJLX-0
+                    &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="ServiciosDeptoContenedor">
+                <div class="infoservicios" >Este lugar cuenta con</div>
+                <div class="ServiciosDepto">
+                    <div class="tablaservicios1">
+                        <img class=""src="{% static 'img/servicios/Wifi.png'%}"></img>
+                        <div class="">WIFI:</div>
+                    </div>
+                    <div class="tablaservicios2">
+                        <img class="" src="{% static 'img/servicios/calefaccion.png'%}"> </img>
+                        <div class="">Calefaccion: </div>
+                    </div>
+                    <div class="tablaservicios1">
+                        <img class="" src="{% static 'img/servicios/Estacionamiento.png'%}"> </img>
+                        <div class="">Estacionamiento: </div>
+                    </div>
+                    <div class="tablaservicios2">
+                        <img class="" src="{% static 'img/servicios/TV.png'%}"> </img>
+                        <div class="">TVs: </div>
+                    </div>
+                    <div class="tablaservicios1">
+                        <img class="" src="{% static 'img/servicios/Cocina.png'%}"> </img>
+                        <div class="">Cocina: </div>
+                    </div>
+                    <div class="tablaservicios2">
+                        <img class="" src="{% static 'img/servicios/patio.png'%}"> </img>
+                        <div class="">Patio: </div>
+                    </div>
+                    <div class="tablaservicios1">
+                        <img class="" src="{% static 'img/servicios/camasimple.png'%}"> </img>
+                        <div class="">Cama - Singular: </div>
+                    </div>
+                    <div class="tablaservicios2">
+                        <img class=""src="{% static 'img/servicios/camagrande.png'%}"> </img>
+                        <div class="">Cama - Queen: </div>
+                    </div>
+                    <div class="tablaservicios1">
+                        <img class="" src="{% static 'img/servicios/camagrande2.png'%}"> </img>
+                        <div class="">Cama - King: </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
