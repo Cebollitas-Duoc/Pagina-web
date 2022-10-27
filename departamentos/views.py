@@ -52,7 +52,6 @@ def Departamento(request,_Id_Dpto):
     depto = getDepto(_Id_Dpto)
     Imagenes = getImagenes(_Id_Dpto)
     servicios = getFormattedDptoServices(_Id_Dpto)
-    print(servicios)
     Fotos = []
     for Imagen in Imagenes:
         Fotos.append(str(f"{apidomain}/files/getimage/{Imagen['Path']}"))
