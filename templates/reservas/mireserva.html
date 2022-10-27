@@ -9,33 +9,36 @@
 {% endblock js %}
 {% block body %}
 <div id="colorhome" class="">
-    <table>
-        <tr>
-          <th>Id_Reserva</th>
-          <th>Id_Usuario</th>
-          <th>Id_Departamento</th>
-          <th>Id_Estado</th>
-          <th>Id_Pago</th>
-          <th>Fecha_Desde</th>
-          <th>Fecha_Hasta</th>
-          <th>Valor</th>
-        </tr>
+  <div class="DescripcionReserva">
+    <div class="Tabla">
+          <div class="Titulo">
+            <div class="BordesReservas">Id_Reserva</div> 
+            <div class="BordesReservas">Id_Usuario</div> 
+            <div class="BordesReservas">Id_Departamento</div> 
+            <div class="BordesReservas">Id_Estado</div> 
+            <div class="BordesReservas">Id_Pago</div> 
+            <div class="BordesReservas">Fecha_Desde</div> 
+            <div class="BordesReservas">Fecha_Hasta</div> 
+            <div class="BordesReservas">Valor</div> 
+            <div class="BordesReservas Bton"></div>
+          </div>
         {% for reserva in reservas %}
             {% if reserva.Id_Estado != 3 %}
-                    <tr>
-                        <td>{{reserva.Id_Reserva}}</td>
-                        <td>{{reserva.Id_Usuario}}</td>
-                        <td>{{reserva.Id_Departamento}}</td>
-                        <td>{{reserva.Id_Estado}}</td>
-                        <td>{{reserva.Id_Pago}}</td>
-                        <td>{{reserva.Fecha_Desde}}</td>
-                        <td>{{reserva.Fecha_Hasta}}</td>
-                        <td>{{reserva.Fecha_Valor}}</td>
-                        <td><button onclick="cancelar('{{reserva.Id_Reserva}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></td>
-                    </tr>
+                    <div class="Columnas">
+                        <div class="BordesReservas">{{reserva.Id_Reserva}}</div>
+                        <div class="BordesReservas">{{reserva.Id_Usuario}}</div>
+                        <div class="BordesReservas">{{reserva.Id_Departamento}}</div>
+                        <div class="BordesReservas">{{reserva.Id_Estado}}</div>
+                        <div class="BordesReservas">{{reserva.Id_Pago}}</div>
+                        <div class="BordesReservas">{{reserva.Fecha_Desde}}</div>
+                        <div class="BordesReservas">{{reserva.Fecha_Hasta}}</div>
+                        <div class="BordesReservas">{{reserva.Fecha_Valor}}</div>
+                        <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.Id_Reserva}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></div>
+                    </div>
             {% endif %}
         {% endfor %}
-      </table>
+    </div>
+  </div> 
 </div>
 {% endblock body %}
 

@@ -21,6 +21,9 @@ button_reserva.addEventListener("click", async ()=>{
     .then(result => r=result)
     .catch(error => console.log('error', error));
 
+    GlobalMessage.setGlobalSuccessMessage("Se ha realizado con exito su reserva")
+    location.href = '/'; 
+
     return r
 
 })

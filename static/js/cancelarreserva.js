@@ -15,6 +15,8 @@ async function cancelar(Id_Reserva){
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));
+    GlobalMessage.setGlobalSuccessMessage("Su reserva se ha cancelado exitosamente")
+    location.reload();
 
     return r
 }
