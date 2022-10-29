@@ -36,10 +36,13 @@
                         <input type="checkbox" value="remember-me" id="checkRememberMe"> Recuerdame
                     </label>
                     </div>
-                    <button id="LoginButton" class="w-100 btn btn-lg btn-primary botonhover" type="button">Iniciar sesion</button>
+                    <button id="LoginButton" onmouseover="toggleDisplay('#flecha-login')" onmouseout="toggleDisplay('#flecha-login')" class="" type="button">
+                        <img src="{% static 'img/flecha.png'%}" id="flecha-login" class="d-none">
+                        <span>Ingresar</span>
+                    </button>
 
                 </form>
-                <a id="btn-crearUsuario" class="dropdown-item" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
+                <a id="btn-crearUsuario" class="dropdown-item a-crear" href="{% url 'userManager:CreateUser' %}">Crear usuario</a>
             </div>
         
 

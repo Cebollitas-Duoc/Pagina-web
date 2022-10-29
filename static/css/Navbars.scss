@@ -59,10 +59,6 @@
         grid-template-columns:  2fr 1px 2fr !important;
             
     }
-    .logo{
-        font-size: 20px !important;
-
-    }
     .logoimg{
         width: 60px !important;
         height: 50px !important;
@@ -72,20 +68,17 @@
     }
 
 }
-
-.logo{
-    color: #DCD7C9;
-    text-decoration: none;
-    font-size: 30px;
+.navizq{
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
 .logoimg{
     width: 80px;
     height: 70px;
-    margin-top: 10px;
+    display: flex;
+    align-self: center;
+    margin-left: 5px;
 }
 
 .usuariobtn{
@@ -96,9 +89,7 @@
     margin-left: 15px;
     
 }
-.logo:hover{
-    color: white!important;
-}
+
 .usuariobtn:hover{
     background: rgba(0,0,0,0.4);
     border: 3px solid white;

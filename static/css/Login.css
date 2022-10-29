@@ -21,8 +21,79 @@
 }
 
 #LoginButton {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
   background-color: rgba(18, 110, 130, 0.9);
   border: rgb(18, 110, 130);
+  border-radius: 15px;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #DCD7C9;
+}
+
+#LoginButton span {
+  display: flex;
+  transition: 0.4s ease-in-out all;
+  margin: auto;
+  z-index: 2;
+  color: #DCD7C9;
+}
+
+#LoginButton:hover {
+  flex-direction: row-reverse;
+}
+
+#LoginButton:hover span {
+  margin-left: 2px;
+}
+
+.a-crear {
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+#flecha-login {
+  height: 15px;
+  width: 15px;
+  margin-top: 17px;
+  margin-right: 2px;
+  transition: 5s ease-in-out all;
+  opacity: 0;
+  z-index: 2;
+}
+
+#LoginButton::after {
+  content: "";
+  height: 1px;
+  width: 1px;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transition: 0.4s ease-in-out all;
+  position: absolute;
+  z-index: 1;
+  border-radius: 100px;
+  transform-origin: center;
+}
+
+#LoginButton:hover::after {
+  transform: scale(400);
+  background: #1B262C;
+}
+
+#LoginButton:hover img {
+  opacity: 1;
+}
+
+.a-crear:hover {
+  color: #DCD7C9 !important;
+}
+
+#LoginButton:hover {
+  color: #DCD7C9;
 }
 
 @media only screen and (max-width: 600px) {
