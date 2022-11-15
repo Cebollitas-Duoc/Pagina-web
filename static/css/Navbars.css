@@ -69,6 +69,12 @@
 .navizq {
   display: flex;
   align-items: center;
+  text-decoration: none;
+}
+
+.LogoLetra {
+  color: #cfd8dc;
+  font-size: x-large;
 }
 
 .logoimg {

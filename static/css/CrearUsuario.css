@@ -1,5 +1,6 @@
 #colorfondoCrearUsuario {
-  background-image: url("/static/img/paisajes.png");
+  background-image: url("/static/img/ImgFondo/ImgFCU.jpg/");
+  background-color: #126E82;
   height: 100vh;
   width: 100%;
   background-position: center;
@@ -16,7 +17,7 @@
   padding: 25px;
   margin: auto;
   border-radius: 25px;
-  background: linear-gradient(to top, rgba(27, 38, 44, 0.9), rgba(28, 28, 28, 0.5));
+  background: linear-gradient(to top, rgb(27, 38, 44), rgba(28, 28, 28, 0.7));
   color: #DCD7C9;
 }
 
