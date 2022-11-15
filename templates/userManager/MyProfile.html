@@ -21,32 +21,32 @@
                 <h1 class="h3 mb-3 fw-normal">Mi perfil</h1>
                 <!-- datos usuario -->
                 <div class="form-floating">
-                    <input type="nombres" class="form-control" id="input-Nombres" value="{{ profile.names }}">
+                    <input type="nombres" class="form-control" id="input-Nombres" maxlength="100" value="{{ profile.names }}">
                     <label for="floatingInput" class="labelcolor">Nombres</label>
                 </div>
                 
                 <div class="form-floating">
-                    <input type="apellidos" class="form-control" id="input-Apellidos" value="{{ profile.lastnames }}">
+                    <input type="apellidos" class="form-control" id="input-Apellidos" maxlength="100" value="{{ profile.lastnames }}">
                     <label for="floatingInput" class="labelcolor">Apellidos</label>
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="input-Rut" value="{{ profile.rut }}">
+                    <input type="text" class="form-control" id="input-Rut" maxlength="10" value="{{ profile.rut }}">
                     <label for="floatingInput" class="labelcolor">Rut</label>
                 </div>
                 
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="input-Email" value="{{ profile.email }}">
+                    <input type="email" class="form-control" id="input-Email" maxlength="50" value="{{ profile.email }}">
                     <label for="floatingInput" class="labelcolor">Email address</label>
                 </div>
                 
                 <div class="form-floating">
-                    <input type="direccion" class="form-control" id="input-Direccion" value="{{ profile.address }}">
+                    <input type="direccion" class="form-control" id="input-Direccion" maxlength="50" value="{{ profile.address }}">
                     <label for="floatingInput" class="labelcolor">Direccion</label>
                 </div>
                 
                 <div class="form-floating">
-                    <input type="telefono" class="form-control" id="input-Telefono"value="{{ profile.phone }}">
+                    <input type="telefono" class="form-control" id="input-Telefono" maxlength="12" value="{{ profile.phone }}">
                     <label for="floatingInput" class="labelcolor">Telefono</label>
                 </div>
             
