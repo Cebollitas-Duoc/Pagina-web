@@ -30,7 +30,7 @@
 }
 #navbar{
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-columns:  1fr 3fr 1fr;
     background-color: #1B262C;
     font-weight: bold;
     height: 90px;
@@ -79,11 +79,21 @@
 }
 
 .LogoLetra{
+    color: #DCD7C9;
+    font-size: x-large;
+}
+.LogoLetra:hover{
     color: #cfd8dc;
     font-size: x-large;
-
 }
 
+.LogoLetra text{
+    text-decoration: none;
+}
+.contenedorlogos{
+    display: flex;
+    justify-content: start;
+}
 .logoimg{
     width: 80px;
     height: 70px;

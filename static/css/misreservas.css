@@ -17,12 +17,6 @@
   font-size: medium;
 }
 
-.DescripcionReserva {
-  border: 1px solid black;
-  margin: auto;
-  grid-column-start: 2;
-}
-
 .Titulo {
   font-size: small;
   color: #1B262C;
@@ -30,20 +24,21 @@
   font-weight: bold;
 }
 
-.BordesReservas {
-  border: 1px solid black;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 120px;
-  padding-top: 10px;
-}
-
-.Columnas {
-  color: #1B262C;
+.cartareserva {
   display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  max-height: 600px;
+  margin-top: 50px;
 }
 
-.Tabla {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+.BordesReservas {
+  margin: auto;
+}
+
+.ContenedorReserva {
+  grid-column-start: 2;
+  display: flex;
+  flex-flow: wrap row;
+  margin: auto;
 }/*# sourceMappingURL=misreservas.css.map */
