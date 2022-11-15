@@ -214,7 +214,7 @@
   grid-template-columns: 1fr 8fr 1fr;
 }
 
-#ButtonReserva {
+.ButtonReserva {
   width: 400px;
   height: 50px;
   border-radius: 25px;
@@ -227,11 +227,11 @@
   color: #DCD7C9;
 }
 
-#ButtonReserva:hover {
+.ButtonReserva:hover {
   background-color: #126E82;
 }
 
-#ButtonReserva h4 {
+.ButtonReserva h4 {
   margin: auto;
 }
 
@@ -267,4 +267,60 @@
 .descripcionder img {
   display: flex;
   margin: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.contenedorreserva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dcd7c9;
+  border: 1px solid rgba(27, 38, 44, 0.8);
+  border-radius: 15px;
+}
+
+.fecha {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px 0 10px;
+}
+
+.fecha span {
+  margin: 0 10px 0 10px;
+}
+
+.topreserva {
+  margin-top: 10px;
+}
+
+.botreserva {
+  margin-bottom: 10px;
+}
+
+.elementoservicio {
+  display: flex;
+  flex-direction: row;
+}
+
+.contenedorvalor {
+  display: flex;
+  flex-direction: row;
+}
+
+.textoreserva {
+  margin-right: 50px;
+}
+
+.marcado {
+  background-color: #126E82;
 }/*# sourceMappingURL=Departamento.css.map */

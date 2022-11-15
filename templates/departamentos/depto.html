@@ -50,7 +50,7 @@
                     <div class="InfoDepto1">Valor : </div>
                     <div id="" class="">${{ depto.Value }}CLP por noche</div>
                 </div>
-                <button id="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
+                <button class="ButtonReserva" id="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
             </div>
         </div>
         <div class="bodydesc">
@@ -94,6 +94,32 @@
                 <img src="{% static 'img/publicidad.png'%}" alt="">
             </div>
         </div>
+    </div>
+</div>
+<div class="modal" id="modalreserva">
+    <div class="contenedorreserva">
+        <h4 class="topreserva">Fecha</h4>
+        <div class="fecha">
+        <input type="date" onchange="actualizarfecha(this)"  id="inicio">
+            <span>-</span>
+            <input type="date" onchange="actualizarfechacobro()"id="final">
+        </div>
+        <h4>Servicios Extra</h4>
+        <div class="ServiciosExtra">
+            {% for servicioextra in serviciosextra %}
+            <div class="elementoservicio" onclick="marcarelemento(this)">
+                <div class="textoreserva" id="{{servicioextra.Nombre}}">{{servicioextra.Nombre}}</div>
+                <div class="contenedorvalor m-auto">
+                    <div>Valor :</div>
+                    <div class="valor">{{servicioextra.Valor}}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div>Valor Total:</div>
+        <div id="total" total="{{depto.Value}}">{{depto.Value}}</div>
+        <button id="reservar" class="ButtonReserva" class="" type="button"><h4>Aceptar</h1></button>
+        <span class="botreserva"></span>
     </div>
 </div>
 

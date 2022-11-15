@@ -52,6 +52,7 @@ def Departamento(request,_Id_Dpto):
     depto = getDepto(_Id_Dpto)
     Imagenes = getImagenes(_Id_Dpto)
     servicios = getFormattedDptoServices(_Id_Dpto)
+    serviciosextra = getFormattedServiciosExtra(_Id_Dpto)
     Fotos = []
     for Imagen in Imagenes:
         Fotos.append(str(f"{apidomain}/files/getimage/{Imagen['Path']}"))
@@ -60,6 +61,7 @@ def Departamento(request,_Id_Dpto):
         "Imagenes": Fotos,
         "servicios": servicios,
         "Id_Dpto":_Id_Dpto,
+        "serviciosextra": serviciosextra,
     }
     return render(request, "departamentos/depto.html", context)
 
