@@ -10,6 +10,10 @@
 {% block js %}
 <script src="{% static 'js/imagegallery.js' %}"></script>
 <script src="{% static 'js/reservar.js' %}"></script>
+<script src="{% static 'js/CambioMoneda.js' %}"></script>
+<script>
+    const valor = '{{ depto.Value }}'
+</script>
 {% endblock js %}
 
 {% block wrapper %}
