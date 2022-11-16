@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from userManager.authAPI import *
+from .reservasAPI import *
 # Create your views here.
 
 def Reserva(request):
-    reservas = getReservas(request)
+    reservas = getReservasFixed(request)
     context = {
         "reservas" : reservas
     }

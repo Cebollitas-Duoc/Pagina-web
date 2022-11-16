@@ -13,8 +13,8 @@
       {% for reserva in reservas %}
         {% if reserva.Id_Estado != 3 %}
           <div class="cartareserva">
-            <img src="{% static 'img/profiles/turing.png'%}" alt="">
-            <div class="BordesReservas">Id_Reserva: {{reserva.Id_Reserva}}</div>
+            <img src="{{reserva.Imagen}}" alt="">
+            <div class="BordesReservas">Direccion: {{reserva.Nombre}}</div>
             <div class="BordesReservas">Id_Usuario: {{reserva.Id_Usuario}}</div>
             <div class="BordesReservas">Id_Departamento: {{reserva.Id_Departamento}}</div>
             <div class="BordesReservas">Id_Estado: {{reserva.Id_Estado}}</div>

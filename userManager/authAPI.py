@@ -86,15 +86,3 @@ def getServicios(ID_depto):
     if response.status_code == 200:
         r = json.loads(response.text)
         return r
-def getReservas(request):
-    url = f"http://{localHostIp}:8081/reservas/getuserreserves/" 
-
-    payload={'SessionKey': request.COOKIES["SessionKey"]}
-    files={}
-    headers = {}
-
-    response = requests.request("GET", url, headers=headers, data=payload, files=files)
-
-    if response.status_code == 200:
-        r = json.loads(response.text)
-        return r
