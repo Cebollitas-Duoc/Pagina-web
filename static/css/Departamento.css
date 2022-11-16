@@ -83,6 +83,7 @@
 .FondoDepto {
   background-color: #faf6eb;
   grid-column: 2;
+  margin-top: 30px;
 }
 
 .Mapadepto {
