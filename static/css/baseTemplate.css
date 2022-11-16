@@ -68,6 +68,7 @@ body {
 #deptos {
   grid-column: 2;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 footer {
@@ -100,6 +101,8 @@ footer {
   max-height: 600px;
   min-width: 300px;
   min-height: 600px;
+  margin: auto;
+  margin-top: 30px;
 }
 
 .depto-image-container {

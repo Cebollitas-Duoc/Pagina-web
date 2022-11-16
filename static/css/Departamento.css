@@ -257,6 +257,7 @@
 
 .descripcionder {
   display: flex;
+  margin: auto;
 }
 
 .descripcionder img {
