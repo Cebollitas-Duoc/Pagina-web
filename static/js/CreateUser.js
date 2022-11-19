@@ -25,8 +25,8 @@ button_createUser.addEventListener("click", async ()=>{
     apellido  = apellidos.split(/[ ]+/)[0]
     apellido2 = apellidos.split(/[ ]+/)[1]
 
-    if (nombre2 == undefined) nombre2 = " ";
-    if (apellido2 == undefined) apellido2 = " ";
+    if (nombre2 == undefined) nombre2 = "";
+    if (apellido2 == undefined) apellido2 = "";
 
     response = JSON.parse(await createUser(email, nombre, nombre2, apellido, apellido2, rut, direccion, telefono, password, password2))
     console.log(response);
