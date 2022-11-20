@@ -9,6 +9,7 @@
 {% block js %}
 <script src="{% static 'js/UpdateProfile.js'%}"></script>
 <script src="{% static 'js/Atajo.js'%}"></script>
+<script src="{% static 'js/RutFormatter.js'%}"></script>
 {% endblock js %}
 
 {% block wrapper %}
@@ -31,7 +32,7 @@
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="input-Rut" maxlength="10" value="{{ profile.rut }}">
+                    <input type="text" class="form-control rut" id="input-Rut" maxlength="12" value="{{ profile.rut }}">
                     <label for="floatingInput" class="labelcolor">Rut</label>
                 </div>
                 

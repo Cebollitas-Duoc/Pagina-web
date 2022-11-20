@@ -10,6 +10,7 @@
 <script src="{% static 'js/CreateUser.js'%}"></script>
 <script src="{% static 'js/hide-show-password.js'%}"></script>
 <script src="{% static 'js/Atajo.js'%}"></script>
+<script src="{% static 'js/RutFormatter.js'%}"></script>
 {% endblock js %}
 
 {% block wrapper %}
@@ -31,7 +32,7 @@
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingRut" maxlength="10" placeholder=" ">
+                    <input type="text" class="form-control rut" id="floatingRut" maxlength="12" placeholder=" ">
                     <label class="labelcolor" for="floatingInput">Rut</label>
                 </div>
                 

@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', async () =>{
     GlobalMessage.setEleements();
     GlobalMessage.showSavedMsg();
