@@ -31,8 +31,8 @@ button_updateProfile.addEventListener("click", async ()=>{
     apellido  = apellidos.split(/[ ]+/)[0]
     apellido2 = apellidos.split(/[ ]+/)[1]
 
-    if (nombre2 == undefined) nombre2 = " ";
-    if (apellido2 == undefined) apellido2 = " ";
+    if (nombre2 == undefined) nombre2 = "";
+    if (apellido2 == undefined) apellido2 = "";
 
     var a = await updateProfile(email, nombre, nombre2, apellido, apellido2, rut, direccion, telefono, imagen)
     console.log(a);
@@ -51,14 +51,14 @@ async function updateProfile(email, nombre, nombre2, apellido, apellido2, rut, d
     var r
     formdata.append("SessionKey", getCookie("SessionKey"));
     formdata.append("Email", email);
-    formdata.append("PrimerNombre", nombre);
-    formdata.append("SegundoNombre", nombre2);
-    formdata.append("PrimerApellido", apellido);
-    formdata.append("SegundoApellido", apellido2);
+    formdata.append("Name", nombre);
+    formdata.append("Name2", nombre2);
+    formdata.append("LastName", apellido);
+    formdata.append("LastName2", apellido2);
     formdata.append("Rut", rut);
-    formdata.append("Direccion", direccion);
-    formdata.append("Telefono", telefono);
-    formdata.append("Imagen", imagen);
+    formdata.append("Address", direccion);
+    formdata.append("Phone", telefono);
+    formdata.append("Image", imagen);
     
     var requestOptions = {
         method: 'POST',
