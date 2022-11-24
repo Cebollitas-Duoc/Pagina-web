@@ -1,23 +1,33 @@
 {% extends 'BaseTemplate.html' %}
 {% load static %}
 {% block body %}
-<div id="colorhome" class="">
-    <div id="deptos" class="d-flex justify-content-space-between">
-        {% for depto in deptos%}
-        <a class = "margen_lista" href = "{% url 'departamentos:Departamento' depto.Id_Dpto %}">
-            <div id="deptoCard" class="" >
-                    <div class="depto-image-container">
-                            <img class="depto-image" src="{{ depto.Imagen }}">
-                    </div>
-                    <div class="info">
-                        <div class="InfoDepto1">{{ depto.Address }} </div>
-                        <div class="InfoDepto2">Habitaciones: {{ depto.Rooms }} </div>
-                        <div class="InfoDepto2">Baños: {{ depto.Bathrooms }} </div>
-                        <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
-                    </div>
-            </div>
-        </a>
-        {% endfor %}
+<div class="contenedorhome">
+    <div class="slider">
+        <ul>
+            <li><img src="{% static 'img/carrusel/la_serena.jpg'%}" alt=""></li>
+            <li><img src="{% static 'img/carrusel/valpo.jpg'%}" alt=""></li>
+            <li><img src="{% static 'img/carrusel/pucon.jpg'%}" alt=""></li>
+            <li><img src="{% static 'img/carrusel/puerto_varas.jpg'%}" alt=""></li>
+        </ul>
+    </div>
+    <div id="colorhome" class="">
+        <div id="deptos" class="d-flex justify-content-space-between">
+            {% for depto in deptos%}
+            <a class = "margen_lista" href = "{% url 'departamentos:Departamento' depto.Id_Dpto %}">
+                <div id="deptoCard" class="" >
+                        <div class="depto-image-container">
+                                <img class="depto-image" src="{{ depto.Imagen }}">
+                        </div>
+                        <div class="info">
+                            <div class="InfoDepto1">{{ depto.Address }} </div>
+                            <div class="InfoDepto2">Habitaciones: {{ depto.Rooms }} </div>
+                            <div class="InfoDepto2">Baños: {{ depto.Bathrooms }} </div>
+                            <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
+                        </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock body %}
