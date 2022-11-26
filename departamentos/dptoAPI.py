@@ -2,6 +2,8 @@ from email import header
 import requests
 import json
 from turismorealweb.settings import localHostIp
+from os import path
+from turismorealweb.settings import BASE_DIR
 
 def getFormattedDptoServices(idDpto):
     services = getDptoServices(idDpto)
@@ -11,6 +13,14 @@ def getFormattedDptoServices(idDpto):
         for category in serviceCategorys:
             if (category["Id_Categoria"] == idCat):
                 service["Nombre"] = category["Descripcion"]
+        x = str(BASE_DIR)
+        print(x)
+        imgPath = path.join(x, "static/img/servicios/", f"{idCat}.png")
+        print(imgPath)
+        if (path.exists(imgPath)):
+            service["img"] = f"{idCat}.png"
+        else:
+            service["img"] = "0.png"
         
     return services
 
