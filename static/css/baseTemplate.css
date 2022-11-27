@@ -127,30 +127,6 @@ footer {
   padding: 5px;
 }
 
-.InfoDepto1 {
-  color: #1B262C !important;
-  text-decoration: none !important;
-  font-style: italic;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  margin-left: 15px;
-  align-items: left !important;
-  text-align: left !important;
-}
-
-.InfoDepto2 {
-  color: #1B262C !important;
-  text-decoration: none !important;
-  font-style: italic;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  margin-left: 15px;
-  align-items: left !important;
-  text-align: left !important;
-}
-
 .Actualizar {
   text-decoration: none;
   background-color: #1B262C;
@@ -165,6 +141,40 @@ footer {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  width: 10px;
+}
+
+/*Nombre departameto*/
+.InfoDepto1 {
+  color: #1B262C !important;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 5px;
+  align-items: left !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  text-overflow: ellipsis !important;
+  width: 295px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*Precio departamento*/
+.InfoDepto2 {
+  color: #1B262C !important;
+  text-decoration: none !important;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 8px;
+  align-items: left !important;
+  text-align: left !important;
+  width: 295px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .margen_lista img {
