@@ -1,28 +1,38 @@
 .navlog {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   margin-left: 80px;
   margin-right: 10px;
   min-width: 120px;
   height: auto;
   background-color: #1B262C !important;
-  border: 1px solid rgba(73, 73, 73, 0.7490196078);
+  border: 1px solid #494949bf;
   border-radius: 8px 8px 8px 8px;
   top: 0;
   margin-top: 82px;
 }
 
 .navnolog {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   margin-left: -35px;
   margin-right: 10px;
   min-width: 140px;
   height: auto;
   background-color: #1B262C !important;
-  border: 1px solid rgba(73, 73, 73, 0.7490196078);
+  border: 1px solid #494949bf;
   border-radius: 8px 8px 8px 8px;
   top: 0;
   margin-top: 82px;
@@ -30,22 +40,31 @@
 }
 
 #navbar {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
   background-color: #1B262C;
   font-weight: bold;
   height: 90px;
 }
 
 .miniperfil {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-right: 20px;
 }
 
 #miniProfile {
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 /*Responsibidad*/
@@ -56,7 +75,8 @@
     margin-left: 5px !important;
   }
   #navbar {
-    grid-template-columns: 2fr 1px 2fr !important;
+    -ms-grid-columns: 2fr 1px 2fr !important;
+        grid-template-columns: 2fr 1px 2fr !important;
   }
   .logoimg {
     width: 60px !important;
@@ -69,9 +89,14 @@
     font-size: large !important;
   }
 }
+
 .navizq {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
 }
 
@@ -91,15 +116,22 @@
 }
 
 .contenedorlogos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .logoimg {
   width: 80px;
   height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   margin-left: 5px;
 }
 
@@ -117,8 +149,10 @@
 }
 
 .perfilnav {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   width: 100px;
   height: 50px;
 }
@@ -136,8 +170,10 @@
 }
 
 .header {
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 90px 200px;
+  -ms-grid-rows: 90px 200px;
+      grid-template-rows: 90px 200px;
 }
 
 .burger {
@@ -211,4 +247,5 @@
 .icono {
   width: 100px;
   height: 50px;
-}/*# sourceMappingURL=Navbars.css.map */
+}
+/*# sourceMappingURL=Navbars.css.map */
