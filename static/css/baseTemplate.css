@@ -7,7 +7,7 @@
 }
 #FormErrorMessage span {
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 #GlobalMessage {
@@ -50,7 +50,7 @@
 }
 
 .botonhover:hover {
-  background-color: #1B262C !important;
+  background-color: #0a2e42 !important;
 }
 
 #colorhome {
@@ -128,7 +128,11 @@ footer {
   text-decoration: none !important;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
   font-weight: bold;
+  margin-left: 15px;
+  align-items: left !important;
+  text-align: left !important;
 }
 
 .InfoDepto2 {
@@ -136,6 +140,11 @@ footer {
   text-decoration: none !important;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 15px;
+  align-items: left !important;
+  text-align: left !important;
 }
 
 .Actualizar {
@@ -150,7 +159,6 @@ footer {
 .info {
   justify-content: center;
   display: flex;
-  align-items: center;
   flex-direction: column;
   margin-bottom: 10px;
 }
@@ -241,4 +249,14 @@ footer {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+}
+
+.TituloDepartamentos {
+  margin: auto;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 37px;
+  letter-spacing: 0.6px;
 }/*# sourceMappingURL=baseTemplate.css.map */

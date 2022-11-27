@@ -78,6 +78,7 @@
 .LogoLetra {
   color: #DCD7C9;
   font-size: x-large;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .LogoLetra:hover {

@@ -10,6 +10,7 @@
             <li><img src="{% static 'img/carrusel/puerto_varas.jpg'%}" alt=""></li>
         </ul>
     </div>
+    <div class="TituloDepartamentos">Departamentos Disponibles</div>
     <div id="colorhome" class="">
         <div id="deptos" class="d-flex justify-content-space-between">
             {% for depto in deptos%}
@@ -20,9 +21,7 @@
                         </div>
                         <div class="info">
                             <div class="InfoDepto1">{{ depto.Address }} </div>
-                            <div class="InfoDepto2">Habitaciones: {{ depto.Rooms }} </div>
-                            <div class="InfoDepto2">Baños: {{ depto.Bathrooms }} </div>
-                            <div class="InfoDepto1">${{ depto.Value }}CLP noche</div>
+                            <div class="InfoDepto2">${{ depto.Value }}CLP noche</div>
                         </div>
                 </div>
             </a>

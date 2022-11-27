@@ -6,7 +6,7 @@
     }
     span{
         font-weight: bold;
-        color: black;    
+        color: white;    
     }
 }
 #GlobalMessage{
@@ -49,7 +49,7 @@
     grid-template-columns: 1fr 1400px 1fr;
 }
 .botonhover:hover{
-    background-color: #1B262C!important;
+    background-color: #0a2e42!important;
 }
 #colorhome{
     display: grid !important;
@@ -119,13 +119,22 @@ footer{
     text-decoration: none!important;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
     font-weight: bold;
+    margin-left: 15px;
+    align-items: left !important;
+    text-align: left !important;
 }
 .InfoDepto2{
     color: #1B262C!important;
     text-decoration: none!important;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 15px;
+    align-items: left !important;
+    text-align: left !important;
 }
 
 .Actualizar{
@@ -139,7 +148,6 @@ footer{
 .info{
     justify-content: center;
     display: flex;
-    align-items: center;
     flex-direction: column;
     margin-bottom: 10px;
 }
@@ -191,4 +199,14 @@ footer{
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+}
+.TituloDepartamentos{
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Lexend Deca", sans-serif;
+    line-height: 37px;
+    letter-spacing: 0.6px;
+
 }
