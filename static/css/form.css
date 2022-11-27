@@ -8,11 +8,10 @@ input.form-control {
 }
 
 #btn-crearUsuario:hover {
-  color: #251f80;
+  color: rgb(37, 31, 128);
   font-weight: bold;
 }
 
 .btn-primary {
   margin-bottom: 1rem;
-}
-/*# sourceMappingURL=form.css.map */
+}/*# sourceMappingURL=form.css.map */

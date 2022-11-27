@@ -2,11 +2,9 @@
   background-color: rgba(255, 0, 0, 0.322);
   width: 100%;
 }
-
 #FormErrorMessage:hover {
   cursor: pointer;
 }
-
 #FormErrorMessage span {
   font-weight: bold;
   color: white;
@@ -22,13 +20,11 @@
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
 }
-
 #GlobalMessage.error {
-  background-color: #fb9b9bc9;
+  background-color: rgba(251, 155, 155, 0.7882352941);
 }
-
 #GlobalMessage.success {
-  background-color: #a1fb9bc9;
+  background-color: rgba(161, 251, 155, 0.7882352941);
 }
 
 /*Responsibidad*/
@@ -37,23 +33,24 @@
     font-size: 12px !important;
   }
   #colorhome {
-    -ms-grid-columns: 1fr 300px 1fr !important;
-        grid-template-columns: 1fr 300px 1fr !important;
+    grid-template-columns: 1fr 300px 1fr !important;
   }
   #GlobalMessage {
     right: 1rem !important;
     width: 20rem !important;
   }
+  .TituloDepartamentos {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+  }
 }
-
 .labelcolor {
   color: #1B262C;
 }
 
 #colorboton {
   background-color: #126E82;
-  -ms-grid-columns: 1fr 1400px 1fr;
-      grid-template-columns: 1fr 1400px 1fr;
+  grid-template-columns: 1fr 1400px 1fr;
 }
 
 .botonhover:hover {
@@ -61,37 +58,26 @@
 }
 
 #colorhome {
-  display: -ms-grid !important;
   display: grid !important;
-  -ms-grid-columns: 1fr 1200px 1fr;
-      grid-template-columns: 1fr 1200px 1fr;
+  grid-template-columns: 1fr 1200px 1fr;
 }
 
 body {
   min-height: 100vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 90px 1fr 50px;
-      grid-template-rows: 90px 1fr 50px;
+  grid-template-rows: 90px 1fr 50px;
   background-color: #faf6eb;
 }
 
 #deptos {
-  -ms-grid-column: 2;
   grid-column: 2;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   background-color: #1B262C;
   font-weight: bold;
   height: 50px;
@@ -120,24 +106,17 @@ footer {
   margin: auto;
   border-radius: 30px;
   margin-top: 40px;
-  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 .margen_lista:hover {
-  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
-          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
-  -webkit-transform: translateY(-3%);
-          transform: translateY(-3%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3%);
 }
 
 .depto-image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -156,9 +135,7 @@ footer {
   font-size: 15px;
   font-weight: bold;
   margin-left: 15px;
-  -webkit-box-align: left !important;
-      -ms-flex-align: left !important;
-          align-items: left !important;
+  align-items: left !important;
   text-align: left !important;
 }
 
@@ -170,9 +147,7 @@ footer {
   font-size: 15px;
   font-weight: 500;
   margin-left: 15px;
-  -webkit-box-align: left !important;
-      -ms-flex-align: left !important;
-          align-items: left !important;
+  align-items: left !important;
   text-align: left !important;
 }
 
@@ -186,16 +161,9 @@ footer {
 }
 
 .info {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 10px;
 }
 
@@ -205,15 +173,13 @@ footer {
 
 .slider {
   width: 95vw;
-  height: 750px;
+  height: 38vw;
   margin: 20px auto 0;
   overflow: hidden;
   border-radius: 20px;
 }
 
 .slider ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
   width: 400%;
@@ -283,25 +249,18 @@ footer {
     margin-left: -300%;
   }
 }
-
 .contenedorhome {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 30px;
 }
 
 .TituloDepartamentos {
-  margin: auto;
+  margin: 10px;
   text-align: center;
   font-size: 40px;
   font-weight: 600;
   font-family: "Lexend Deca", sans-serif;
   line-height: 37px;
   letter-spacing: 0.6px;
-}
-/*# sourceMappingURL=baseTemplate.css.map */
+}/*# sourceMappingURL=baseTemplate.css.map */

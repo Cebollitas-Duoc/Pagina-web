@@ -38,7 +38,10 @@
         right: 1rem!important;
         width: 20rem!important;
     }
-    
+    .TituloDepartamentos{
+        font-size: 25px !important;
+        font-weight: 600 !important;
+    }
 
 }
 .labelcolor{
@@ -158,7 +161,7 @@ footer{
 
 .slider{
     width: 95vw;
-    height: 750px;
+    height: 38vw;
     margin: 20px auto 0;
     overflow: hidden;  
     border-radius: 20px;  
@@ -168,7 +171,6 @@ footer{
     display: flex;
     padding: 0;
     width: 400%;  
-
     animation: slide 16s infinite alternate ease-in-out;
 }
 
@@ -201,12 +203,11 @@ footer{
     margin-bottom: 30px;
 }
 .TituloDepartamentos{
-    margin: auto;
+    margin: 10px;
     text-align: center;
     font-size: 40px;
     font-weight: 600;
     font-family: "Lexend Deca", sans-serif;
     line-height: 37px;
     letter-spacing: 0.6px;
-
 }
