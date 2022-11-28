@@ -165,11 +165,12 @@ footer{
     height: 300px;
 }
 .slider{
-    width: 95vw;
-    height: 38vw;
+    width: 100%;
+    height: auto;
+    // max-width: 1920px;
+    min-width: 300px;
     margin: 20px auto 0;
     overflow: hidden;  
-    border-radius: 20px;  
 }
 .slider ul{
     display: flex;
@@ -179,10 +180,10 @@ footer{
 }
 .slider li{
     list-style: none;
-    width: 95vw;
+    width: 100%;
 }
 .slider img{
-    width: 95vw;
+    width: 100%;
 }
 @keyframes slide{
     0%{margin-left: 0%;}
