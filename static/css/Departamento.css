@@ -1,17 +1,8 @@
 .image-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   max-height: 700px;
   overflow-y: auto;
   padding: 20px;
@@ -52,10 +43,8 @@
   margin: 10px;
   max-width: 1000px;
   max-height: 700px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 150px 1fr;
-      grid-template-columns: 150px 1fr;
+  grid-template-columns: 150px 1fr;
 }
 
 .TituloDepto {
@@ -68,43 +57,31 @@
 
 .DescripcionDeptoContenedor {
   margin: auto;
-  border: 1px solid lightgray;
-  width: 500px;
-  height: 350px;
+  border: 1.5px solid rgb(82, 81, 81);
+  width: 580px;
+  height: 340px;
   border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .titulodesc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   top: 50px;
 }
 
 .DescripcionDepto {
   margin-left: 15px;
   margin-top: 30px;
-  margin-bottom: auto;
-  display: -ms-grid;
+  margin-bottom: 15px;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  width: auto;
+  grid-template-columns: 1fr 1fr;
+  width: 300px;
 }
 
 .FondoDepto {
   background-color: #faf6eb;
-  -ms-grid-column: 2;
   grid-column: 2;
   margin-top: 30px;
 }
@@ -112,35 +89,21 @@
 .Mapadepto {
   width: 100%;
   height: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: auto;
   margin-left: 5px;
 }
 
 .gallery-map {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .ServiciosDeptoContenedor {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: auto;
   margin-left: 15px;
   margin-bottom: 50px;
@@ -153,51 +116,32 @@
 
 .ServiciosDepto {
   margin: auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
 .ServiciosDepto .servicio {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 10px;
 }
-
 .ServiciosDepto .servicio:nth-child(2n+1) {
   background-color: #1B262C;
   color: #DCD7C9;
 }
-
 .ServiciosDepto .servicio:nth-child(2n+1) img {
-  -webkit-filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
-          filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
+  filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
 }
-
 .ServiciosDepto .servicio:nth-child(2n+2) {
   background-color: #DCD7C9;
   color: #1B262C;
 }
-
 .ServiciosDepto .servicio:nth-child(2n+2) img {
-  -webkit-filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
-          filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
+  filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
 }
 
 .galeriayserv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   border-bottom: 1px solid lightgray;
 }
 
@@ -210,32 +154,19 @@
     max-width: 40vh !important;
   }
   .image-gallery {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
+    flex-direction: row !important;
   }
   .galeriayserv {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    flex-direction: column !important;
   }
   .descripcionder {
     display: none !important;
   }
   .image-container {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
     max-width: 40vh !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: column-reverse !important;
-            flex-direction: column-reverse !important;
+    flex-direction: column-reverse !important;
   }
   .Mapadepto {
     width: 40vh !important;
@@ -244,46 +175,35 @@
     width: 40vh !important;
   }
   .descripcionizq {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .descripcion {
     width: 40vh !important;
   }
   .DescripcionDeptoContenedor {
     width: 40vh !important;
+    height: 300px !important;
+    margin-bottom: 5vw !important;
   }
   #ButtonReserva {
-    width: 25vh !important;
+    width: 30vh !important;
+    height: 6vh !important;
   }
   .bodydesc {
-    -ms-grid-columns: 40vh !important;
-        grid-template-columns: 40vh !important;
+    grid-template-columns: 40vh !important;
   }
   .ServiciosDepto {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    flex-direction: column !important;
+  }
+  .mini-image {
+    margin: 0.5vw !important;
   }
 }
-
 .mapa-descripcion {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .mapa {
@@ -296,24 +216,18 @@
 }
 
 .fondo {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 8fr 1fr;
-      grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 8fr 1fr;
 }
 
 .ButtonReserva {
-  width: 400px;
+  width: 350px;
   height: 50px;
   border-radius: 25px;
   margin: auto;
   margin-bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   background-color: #1B262C;
   border: 2px solid #DCD7C9;
   color: #DCD7C9;
@@ -334,39 +248,26 @@
 }
 
 .serviciotop {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40px 1fr;
-      grid-template-columns: 40px 1fr;
+  grid-template-columns: 40px 1fr;
 }
 
 .serviciobot {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
 }
 
 .bodydesc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .descripcionder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
 }
 
 .descripcionder img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
 }
@@ -375,41 +276,25 @@
   display: none;
   position: fixed;
   z-index: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   overflow: auto;
 }
 
 .contenedorreserva {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #dcd7c9;
   border: 1px solid rgba(27, 38, 44, 0.8);
   border-radius: 15px;
 }
 
 .fecha {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin: 0 10px 0 10px;
 }
 
@@ -426,23 +311,13 @@
 }
 
 .elementoservicio {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .contenedorvalor {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .textoreserva {
@@ -451,5 +326,4 @@
 
 .marcado {
   background-color: #126E82;
-}
-/*# sourceMappingURL=Departamento.css.map */
+}/*# sourceMappingURL=Departamento.css.map */

@@ -42,7 +42,25 @@
         font-size: 25px !important;
         font-weight: 600 !important;
     }
-
+    .DetallesDepartamento{
+        margin-left: 1px !important;
+        width: 120px !important;
+    }
+    .InfoDepartamento{
+        flex-wrap: wrap !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        white-space: normal !important;
+        width: 210px !important;
+    }
+    .InfoDepartamentoDescp {
+        width: 86vw !important;
+        margin-left: 1vw !important;
+        margin-right: 1vw !important;
+        margin-top: 1vw !important;
+        margin-bottom: 3vw !important;
+    }
 }
 .labelcolor{
     color: #1B262C;
@@ -145,6 +163,7 @@ footer{
     width: 295px;
     white-space: nowrap;
     overflow: hidden;
+    margin-top: 2vw;
 }
 /*Precio departamento*/
 .InfoDepto2{
@@ -160,6 +179,61 @@ footer{
     width: 295px;
     white-space: nowrap;
     overflow: hidden;
+}
+/*Detalles departamento tarjeta*/
+.DetallesDepartamento{
+    color: #1B262C!important;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 5px;
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*Detalles departamento vista departamento*/
+.InfoDepartamento{
+    color: #1B262C!important;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 5px;
+    width: 28vw;
+    white-space: normal;
+    overflow: hidden;
+    flex-wrap: wrap !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+/*Vista departamento Descripcion */
+.InfoDepartamentoDescp{
+    color: #1B262C!important;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 90vw;
+    flex-wrap: wrap !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden;
+    margin: 5px;
+    text-align: justify;
+}
+/*Vista departamento Descriciom*/
+.MapDepartamento{
+    color: #1B262C!important;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 5px;
+    align-items: left !important;
+    text-align: left !important;
+    text-decoration: none!important;
+    text-overflow: ellipsis !important;
+    width: 295px;
+    white-space: nowrap;
+    margin-top: 2vw;
 }
 .margen_lista img{
     height: 300px;

@@ -58,9 +58,9 @@
   }
 .DescripcionDeptoContenedor{
     margin: auto;
-    border: 1px solid lightgray;
-    width: 500px;
-    height: 350px;
+    border: 1.5px solid rgb(82, 81, 81);
+    width: 580px;
+    height: 340px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -73,10 +73,10 @@
 .DescripcionDepto{
   margin-left: 15px;
   margin-top: 30px;
-  margin-bottom: auto;
+  margin-bottom: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: auto;
+  width: 300px;
 }
 .FondoDepto{
     background-color: #faf6eb;
@@ -175,9 +175,12 @@
   }
   .DescripcionDeptoContenedor{
     width: 40vh!important;
+    height: 300px!important;
+    margin-bottom: 5vw !important;
   }
   #ButtonReserva{
-    width: 25vh!important;
+    width: 30vh!important;
+    height: 6vh!important;
   }
   .bodydesc{
     grid-template-columns: 40vh!important;
@@ -186,7 +189,9 @@
     display: flex!important;
     flex-direction: column!important;
   }
-
+  .mini-image{
+    margin: 0.5vw !important;
+  }
 }
 
 .mapa-descripcion{
@@ -205,7 +210,7 @@
   grid-template-columns: 1fr 8fr 1fr;
 }
 .ButtonReserva{
-  width: 400px;
+  width: 350px;
   height: 50px;
   border-radius: 25px;
   margin: auto;
