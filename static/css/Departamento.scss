@@ -210,7 +210,7 @@
   grid-template-columns: 1fr 8fr 1fr;
 }
 .ButtonReserva{
-  width: 350px;
+  width: 250px;
   height: 50px;
   border-radius: 25px;
   margin: auto;
@@ -264,6 +264,8 @@
   overflow: auto; 
 }
 .contenedorreserva{
+  width: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -278,7 +280,17 @@
 }
 .fecha span{
   margin:0 10px 0 10px;
+  border-radius: 15px;
 }
+
+.fechainicio{
+  border-radius: 15px;
+}
+
+.fechafinal{
+  border-radius: 15px;
+}
+
 .topreserva{
   margin-top: 10px;
 }

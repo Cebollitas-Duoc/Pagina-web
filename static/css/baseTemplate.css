@@ -2,9 +2,11 @@
   background-color: rgba(255, 0, 0, 0.322);
   width: 100%;
 }
+
 #FormErrorMessage:hover {
   cursor: pointer;
 }
+
 #FormErrorMessage span {
   font-weight: bold;
   color: white;
@@ -20,11 +22,13 @@
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
 }
+
 #GlobalMessage.error {
-  background-color: rgba(251, 155, 155, 0.7882352941);
+  background-color: #fb9b9bc9;
 }
+
 #GlobalMessage.success {
-  background-color: rgba(161, 251, 155, 0.7882352941);
+  background-color: #a1fb9bc9;
 }
 
 /*Responsibidad*/
@@ -33,7 +37,8 @@
     font-size: 12px !important;
   }
   #colorhome {
-    grid-template-columns: 1fr 300px 1fr !important;
+    -ms-grid-columns: 1fr 300px 1fr !important;
+        grid-template-columns: 1fr 300px 1fr !important;
   }
   #GlobalMessage {
     right: 1rem !important;
@@ -48,9 +53,15 @@
     width: 120px !important;
   }
   .InfoDepartamento {
-    flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
     overflow: hidden !important;
     white-space: normal !important;
     width: 210px !important;
@@ -63,13 +74,15 @@
     margin-bottom: 3vw !important;
   }
 }
+
 .labelcolor {
   color: #1B262C;
 }
 
 #colorboton {
   background-color: #126E82;
-  grid-template-columns: 1fr 1400px 1fr;
+  -ms-grid-columns: 1fr 1400px 1fr;
+      grid-template-columns: 1fr 1400px 1fr;
 }
 
 .botonhover:hover {
@@ -77,26 +90,37 @@
 }
 
 #colorhome {
+  display: -ms-grid !important;
   display: grid !important;
-  grid-template-columns: 1fr 1200px 1fr;
+  -ms-grid-columns: 1fr 1200px 1fr;
+      grid-template-columns: 1fr 1200px 1fr;
 }
 
 body {
   min-height: 100vh;
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 90px 1fr 50px;
+  -ms-grid-rows: 90px 1fr 50px;
+      grid-template-rows: 90px 1fr 50px;
   background-color: #faf6eb;
 }
 
 #deptos {
+  -ms-grid-column: 2;
   grid-column: 2;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   background-color: #1B262C;
   font-weight: bold;
   height: 50px;
@@ -125,17 +149,24 @@ footer {
   margin: auto;
   border-radius: 30px;
   margin-top: 40px;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 .margen_lista:hover {
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
-  transform: translateY(-3%);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  -webkit-transform: translateY(-3%);
+          transform: translateY(-3%);
 }
 
 .depto-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -156,9 +187,16 @@ footer {
 }
 
 .info {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 10px;
   width: 10px;
 }
@@ -171,7 +209,9 @@ footer {
   font-size: 15px;
   font-weight: bold;
   margin-left: 5px;
-  align-items: left !important;
+  -webkit-box-align: left !important;
+      -ms-flex-align: left !important;
+          align-items: left !important;
   text-align: left !important;
   text-decoration: none !important;
   text-overflow: ellipsis !important;
@@ -190,7 +230,9 @@ footer {
   font-size: 14px;
   font-weight: 600;
   margin-left: 8px;
-  align-items: left !important;
+  -webkit-box-align: left !important;
+      -ms-flex-align: left !important;
+          align-items: left !important;
   text-align: left !important;
   width: 295px;
   white-space: nowrap;
@@ -220,9 +262,15 @@ footer {
   width: 28vw;
   white-space: normal;
   overflow: hidden;
-  flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
-  flex-direction: column !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
 }
 
 /*Vista departamento Descripcion */
@@ -231,9 +279,15 @@ footer {
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 90vw;
-  flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
-  flex-direction: column !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
   overflow: hidden;
   margin: 5px;
   text-align: justify;
@@ -247,7 +301,9 @@ footer {
   font-size: 15px;
   font-weight: bold;
   margin-left: 5px;
-  align-items: left !important;
+  -webkit-box-align: left !important;
+      -ms-flex-align: left !important;
+          align-items: left !important;
   text-align: left !important;
   text-decoration: none !important;
   text-overflow: ellipsis !important;
@@ -269,6 +325,8 @@ footer {
 }
 
 .slider ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0;
   width: 400%;
@@ -338,9 +396,15 @@ footer {
     margin-left: -300%;
   }
 }
+
 .contenedorhome {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
 }
 
@@ -352,4 +416,5 @@ footer {
   font-family: "Lexend Deca", sans-serif;
   line-height: 37px;
   letter-spacing: 0.6px;
-}/*# sourceMappingURL=baseTemplate.css.map */
+}
+/*# sourceMappingURL=baseTemplate.css.map */

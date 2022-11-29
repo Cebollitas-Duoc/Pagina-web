@@ -104,9 +104,9 @@
     <div class="contenedorreserva">
         <h4 class="topreserva">Fecha</h4>
         <div class="fecha">
-        <input type="date" onchange="actualizarfecha(this)"  id="inicio">
+        <input type="date" class="fechainicio" onchange="actualizarfecha(this)"  id="inicio">
             <span>-</span>
-            <input type="date" onchange="actualizarfechacobro()"id="final">
+            <input type="date" class="fechafinal" onchange="actualizarfechacobro()"id="final">
         </div>
         <h4>Servicios Extra</h4>
         <div class="ServiciosExtra">
@@ -122,7 +122,7 @@
         </div>
         <div>Valor Total:</div>
         <div id="total" total="{{depto.Value}}">{{depto.Value}}</div>
-        <button id="reservar" class="ButtonReserva" class="" type="button"><h4>Aceptar</h1></button>
+        <button id="reservar" class="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
         <span class="botreserva"></span>
     </div>
 </div>
