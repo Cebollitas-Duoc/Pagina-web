@@ -1,11 +1,12 @@
-const button_reserva     = document.getElementById("ButtonReserva");
-const modalreserva     = document.getElementById("modalreserva");
-const reservar     = document.getElementById("reservar");
-const Id_Dpto     = document.getElementById("Id_Dpto");
-const Id_State     = document.getElementById("Id_State");
-const Value     = document.getElementById("Value");
-const inicio     = document.getElementById("inicio");
-const final     = document.getElementById("final");
+const button_reserva = document.getElementById("ButtonReserva");
+const modalreserva   = document.getElementById("modalreserva");
+const reservar       = document.getElementById("reservar");
+const Id_Dpto        = document.getElementById("Id_Dpto");
+const Id_State       = document.getElementById("Id_State");
+const Value          = document.getElementById("Value");
+const inicio         = document.getElementById("inicio");
+const final          = document.getElementById("final");
+selectedExtraServices = []
 
 function actualizarfecha(elem){
     final.min = elem.value
@@ -25,32 +26,29 @@ function actualizarfechacobro(){
 }
 
 function actualizarprecio(){
-    const claseMarcar = "marcado"
-    const transportes = document.querySelectorAll(".elementoservicio")
     const total = document.getElementById("total")
-    
+
     let valorTotal = parseInt(total.getAttribute("total"))
-    
-    for (const transporte of transportes){
-      const valor = transporte.querySelector(".valor").innerHTML
-      if (transporte.classList.contains(claseMarcar)){
-        valorTotal += parseInt(valor)
-      }
-      
-      total.innerHTML =  valorTotal
-      
-    }
-    
+
+    for (const selectedServiceId of selectedExtraServices){
+      const selectedService = document.getElementById(`extraSrv-${selectedServiceId}`)
+      const valor = selectedService.querySelector(".valor").innerHTML
+      valorTotal += parseInt(valor)
+    }    
+    total.innerHTML =  valorTotal
+}
+
+function selectExtraService(id, elem){
+  if (selectedExtraServices.includes(id)){
+    elem.classList.remove("selected")
+    selectedExtraServices = selectedExtraServices.filter(function(e) { return e != id })
   }
-  
-  function marcarelemento(elem){
-    const claseMarcar = "marcado"
-    if (elem.classList.contains(claseMarcar)) 
-      elem.classList.remove(claseMarcar)
-    else elem.classList.add(claseMarcar)
-    // Actualizar
-    actualizarprecio()
+  else{
+    elem.classList.add("selected")
+    selectedExtraServices.push(id)
   }
+  actualizarprecio();
+}
 
 button_reserva.addEventListener("click", async ()=>{
     hoy = new Date().toISOString().slice(0, 10)
@@ -78,7 +76,7 @@ reservar.addEventListener("click", async ()=>{
     formdata.append("Id_Estado", Id_State.value);
     formdata.append("FechaDesde", parseInt(d1));
     formdata.append("FechaHasta", parseInt(d2));
-    formdata.append("Valor", parseInt(total.getAttribute("total")));
+    formdata.append("extraServices", selectedExtraServices.toString());
     
     var requestOptions = {
         method: 'POST',

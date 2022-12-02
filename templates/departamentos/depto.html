@@ -108,8 +108,8 @@
         <h4>Servicios Extra</h4>
         <div class="ServiciosExtra">
             {% for servicioextra in serviciosextra %}
-            <div class="elementoservicio" onclick="marcarelemento(this)">
-                <div class="textoreserva" id="{{servicioextra.Nombre}}">{{servicioextra.Nombre}}</div>
+            <div class="elementoservicio" id="extraSrv-{{servicioextra.Id_ExtraService}}" onclick="selectExtraService('{{servicioextra.Id_ExtraService}}', this)">
+                <div class="textoreserva">{{servicioextra.Nombre}}</div>
                 <div class="contenedorvalor m-auto">
                     <div>Valor :</div>
                     <div class="valor">{{servicioextra.Valor}}</div>
