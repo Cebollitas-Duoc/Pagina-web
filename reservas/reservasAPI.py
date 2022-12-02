@@ -42,7 +42,7 @@ def getReservasFixed(request):
     reservas = getReservas(request)
     dptos = getDeptos(request)
     for reserva in reservas:
-        idRes = reserva["Id_Departamento"]
+        idRes = reserva["Id_Dpto"]
         for dpto in dptos:
             if (dpto["Id_Dpto"] == idRes):
                 reserva["Nombre"] = dpto["Address"]
