@@ -2,7 +2,6 @@ const button_reserva = document.getElementById("ButtonReserva");
 const modalreserva   = document.getElementById("modalreserva");
 const reservar       = document.getElementById("reservar");
 const Id_Dpto        = document.getElementById("Id_Dpto");
-const Id_State       = document.getElementById("Id_State");
 const Value          = document.getElementById("Value");
 const inicio         = document.getElementById("inicio");
 const final          = document.getElementById("final");
@@ -51,6 +50,10 @@ function selectExtraService(id, elem){
 }
 
 button_reserva.addEventListener("click", async ()=>{
+    if (getCookie("LogedIn") != "true"){
+      location.href = '/user/login'; 
+      return;
+    }
     hoy = new Date().toISOString().slice(0, 10)
     inicio.value= hoy
     inicio.min = hoy
@@ -64,19 +67,29 @@ window.onclick = function(event) {
     }
 }
 reservar.addEventListener("click", async ()=>{
-    const total = document.getElementById("total")
-    var formdata = new FormData();
+  const idDpto    = Id_Dpto.value
+  const startDate = parseInt(new Date(inicio.value).getTime())
+  const endDate   = parseInt(new Date(final.value).getTime())
+
+  const response = await this.CreateReserveQuery(idDpto, startDate, endDate, selectedExtraServices.toString())
+  if ("reserva_creada" in response && response["reserva_creada"]){
+    GlobalMessage.setGlobalSuccessMessage("Se ha realizado con exito su reserva")
+    location.href = '/reservas/mireserva'; 
+  }
+  else if ("Error" in response) 
+    GlobalMessage.printGlobalErrorMessage(response["Error"])
+  else
+    GlobalMessage.printGlobalErrorMessage("Error desconocido al crear reserva")
+})
+
+async function CreateReserveQuery(idDpto, startDate, endDate, extraServices){
     var r
-    d1 = new Date(inicio.value).getTime();
-    d2 = new Date(final.value).getTime();
-    console.log(d1)
-    console.log(d2)
+    var formdata = new FormData();
     formdata.append("SessionKey", getCookie("SessionKey"));
-    formdata.append("Id_Departamento", Id_Dpto.value);
-    formdata.append("Id_Estado", Id_State.value);
-    formdata.append("FechaDesde", parseInt(d1));
-    formdata.append("FechaHasta", parseInt(d2));
-    formdata.append("extraServices", selectedExtraServices.toString());
+    formdata.append("Id_Departamento", idDpto);
+    formdata.append("StartDate",       startDate);
+    formdata.append("EndDate",         endDate);
+    formdata.append("extraServices",   extraServices);
     
     var requestOptions = {
         method: 'POST',
@@ -89,9 +102,5 @@ reservar.addEventListener("click", async ()=>{
     .then(result => r=result)
     .catch(error => console.log('error', error));
 
-    GlobalMessage.setGlobalSuccessMessage("Se ha realizado con exito su reserva")
-    location.href = '/'; 
-
-    return r
-
-})
+    return JSON.parse(r);
+}
