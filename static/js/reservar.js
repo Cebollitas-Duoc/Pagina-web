@@ -88,7 +88,7 @@ async function CreateReserveQuery(idDpto, startDate, endDate, extraServices){
     formdata.append("SessionKey", getCookie("SessionKey"));
     formdata.append("Id_Departamento", idDpto);
     formdata.append("StartDate",       startDate);
-    formdata.append("EndDate",         endDate);
+    formdata.append("EndDate",         endDate + 86399000);
     formdata.append("extraServices",   extraServices);
     
     var requestOptions = {
