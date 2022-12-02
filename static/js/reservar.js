@@ -5,19 +5,20 @@ const Id_Dpto        = document.getElementById("Id_Dpto");
 const Value          = document.getElementById("Value");
 selectedExtraServices = []
 
-var datePicker = new HotelDatepicker(document.getElementById("datePicker"), {
-  format: 'DD-MM-YYYY'
-});
-
-// datePicker.addEventListener("afterClose", function () {
-//     actualizarprecio()
-//   },false
-// );
+document.addEventListener('DOMContentLoaded', async () =>{
+  datePicker = new HotelDatepicker(document.getElementById("datePicker"), {
+    format: 'DD-MM-YYYY'
+  });
+  
+  document.getElementById("datePicker").addEventListener("afterClose", async () =>{
+      actualizarprecio();
+  });
+})
 
 function actualizarprecio(){
     const dailyValue = document.getElementById("total")
 
-    let valorTotal = parseInt(dailyValue.getAttribute("total")) * 1
+    let valorTotal = parseInt(dailyValue.getAttribute("total")) * datePicker.getNights()
 
     for (const selectedServiceId of selectedExtraServices){
       const selectedService = document.getElementById(`extraSrv-${selectedServiceId}`)
@@ -53,8 +54,8 @@ window.onclick = function(event) {
 }
 reservar.addEventListener("click", async ()=>{
   const idDpto    = Id_Dpto.value
-  const startDate = parseInt(new Date(inicio.value).getTime())
-  const endDate   = parseInt(new Date(final.value).getTime())
+  const startDate = datePicker.start
+  const endDate   = datePicker.end
 
   const response = await this.CreateReserveQuery(idDpto, startDate, endDate, selectedExtraServices.toString())
   if ("reserva_creada" in response && response["reserva_creada"]){
