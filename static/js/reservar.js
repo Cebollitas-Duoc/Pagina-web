@@ -3,31 +3,21 @@ const modalreserva   = document.getElementById("modalreserva");
 const reservar       = document.getElementById("reservar");
 const Id_Dpto        = document.getElementById("Id_Dpto");
 const Value          = document.getElementById("Value");
-const inicio         = document.getElementById("inicio");
-const final          = document.getElementById("final");
 selectedExtraServices = []
 
-function actualizarfecha(elem){
-    final.min = elem.value
-    final.value = elem.value
-}
-function actualizarfechacobro(){
-    const total = document.getElementById("total")
+var datePicker = new HotelDatepicker(document.getElementById("datePicker"), {
+  format: 'DD-MM-YYYY'
+});
 
-    d1 = new Date(inicio.value);
-    d2 = new Date(final.value);
-    diffTime = Math.abs(d2 - d1);
-    diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    totaldia = parseInt(Value.value) * (diffDays+ 1);
-    total.innerHTML = totaldia;
-    total.setAttribute("total", totaldia)
-
-}
+// datePicker.addEventListener("afterClose", function () {
+//     actualizarprecio()
+//   },false
+// );
 
 function actualizarprecio(){
-    const total = document.getElementById("total")
+    const dailyValue = document.getElementById("total")
 
-    let valorTotal = parseInt(total.getAttribute("total"))
+    let valorTotal = parseInt(dailyValue.getAttribute("total")) * 1
 
     for (const selectedServiceId of selectedExtraServices){
       const selectedService = document.getElementById(`extraSrv-${selectedServiceId}`)
@@ -54,11 +44,6 @@ button_reserva.addEventListener("click", async ()=>{
       location.href = '/user/login'; 
       return;
     }
-    hoy = new Date().toISOString().slice(0, 10)
-    inicio.value= hoy
-    inicio.min = hoy
-    final.value= hoy
-    final.min = hoy
     modalreserva.style.display = "flex";
 })
 window.onclick = function(event) {

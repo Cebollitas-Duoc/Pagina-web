@@ -11,18 +11,19 @@
 <div id="colorhome" class="">
     <div class="ContenedorReserva">
       {% for reserva in reservas %}
-        {% if reserva.Id_Estado != 3 %}
+        {% if reserva.Id_Estate != 3 %}
           <div class="cartareserva">
             <img src="{{reserva.Imagen}}" alt="">
             <div class="BordesReservas">Direccion: {{reserva.Nombre}}</div>
-            <div class="BordesReservas">Id_Usuario: {{reserva.Id_Usuario}}</div>
-            <div class="BordesReservas">Id_Departamento: {{reserva.Id_Departamento}}</div>
-            <div class="BordesReservas">Id_Estado: {{reserva.Id_Estado}}</div>
-            <div class="BordesReservas">Id_Pago: {{reserva.Id_Pago}}</div>
-            <div class="BordesReservas">Fecha_Desde: {{reserva.Fecha_Desde}}</div>
-            <div class="BordesReservas">Fecha_Hasta: {{reserva.Fecha_Hasta}}</div>
-            <div class="BordesReservas">Valor: {{reserva.Fecha_Valor}}</div>
-            <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.Id_Reserva}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></div>
+            <div class="BordesReservas">Id_Usuario: {{reserva.Id_User}}</div>
+            <div class="BordesReservas">Id_Departamento: {{reserva.Id_Dpto}}</div>
+            <div class="BordesReservas">Id_Estado: {{reserva.Id_Estate}}</div>
+            <div class="BordesReservas">Id_Pago: {{reserva.Id_Payment}}</div>
+            <div class="BordesReservas">Fecha_Desde: {{reserva.StartDate}}</div>
+            <div class="BordesReservas">Fecha_Hasta: {{reserva.EndDate}}</div>
+            <div class="BordesReservas">Fecha_Creacion: {{reserva.CreateDate}}</div>
+            <div class="BordesReservas">Valor: {{reserva.Value}}</div>
+            <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.Id_Reserve}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></div>
           </div>
         {% endif %}
       {% endfor %}

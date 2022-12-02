@@ -5,9 +5,15 @@
 <link href="{% static 'css/form.css'%}" rel="stylesheet">
 <link href="{% static 'css/myProfile.css'%}" rel="stylesheet">
 <link href="{% static 'css/Departamento.css'%}" rel="stylesheet">
+<link href="{% static 'css/libs/hotel-datepicker/hotel-datepicker.css'%}" rel="stylesheet">
 {% endblock css %}
 
 {% block js %}
+<!-- <script src="{% static 'libs/fecha/fecha.js' %}"></script> -->
+<!-- <script src="{% static 'libs/hotel-datepicker/js/hotel-datepicker.js' %}"></script> -->
+<script src="{% static 'js/libs/Fecha.js' %}"></script>
+<script src="{% static 'js/libs/hotel-datepicker.js' %}"></script>
+
 <script src="{% static 'js/imagegallery.js' %}"></script>
 <script src="{% static 'js/reservar.js' %}"></script>
 <script src="{% static 'js/CambioMoneda.js' %}"></script>
@@ -101,9 +107,7 @@
     <div class="contenedorreserva">
         <h4 class="topreserva">Fecha</h4>
         <div class="fecha">
-        <input type="date" class="fechainicio" onchange="actualizarfecha(this)"  id="inicio">
-            <span>-</span>
-            <input type="date" class="fechafinal" onchange="actualizarfechacobro()"id="final">
+            <input id="datePicker" type="text" />
         </div>
         <h4>Servicios Extra</h4>
         <div class="ServiciosExtra">
