@@ -7,7 +7,8 @@ selectedExtraServices = []
 
 document.addEventListener('DOMContentLoaded', async () =>{
   datePicker = new HotelDatepicker(document.getElementById("datePicker"), {
-    format: 'DD-MM-YYYY'
+    format: 'DD-MM-YYYY',
+    disabledDates: await getReservedDates()
   });
   
   document.getElementById("datePicker").addEventListener("afterClose", async () =>{
@@ -52,6 +53,7 @@ window.onclick = function(event) {
         modalreserva.style.display = "none";
     }
 }
+
 reservar.addEventListener("click", async ()=>{
   const idDpto    = Id_Dpto.value
   const startDate = datePicker.start
@@ -74,7 +76,7 @@ async function CreateReserveQuery(idDpto, startDate, endDate, extraServices){
     formdata.append("SessionKey", getCookie("SessionKey"));
     formdata.append("Id_Departamento", idDpto);
     formdata.append("StartDate",       startDate);
-    formdata.append("EndDate",         endDate + 86399000);
+    formdata.append("EndDate",         endDate);
     formdata.append("extraServices",   extraServices);
     
     var requestOptions = {
@@ -89,4 +91,19 @@ async function CreateReserveQuery(idDpto, startDate, endDate, extraServices){
     .catch(error => console.log('error', error));
 
     return JSON.parse(r);
+}
+
+async function getReservedDates(){
+  var r;
+  var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+  };
+
+  await fetch(`${apidomain}/reservas/getreserveddates/${Id_Dpto.value}/`, requestOptions)
+  .then(response => response.text())
+  .then(result => r=result)
+  .catch(error => console.log('error', error));
+
+  return JSON.parse(r);
 }
