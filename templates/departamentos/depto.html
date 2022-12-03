@@ -63,13 +63,13 @@
                 <button class="ButtonReserva" id="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
             </div>
         </div>
-        <div class="bodydesc">
-            <div class="descripcionizq">
+        <div class="Deps-L-R">
+            <div class="Descripcion-Izq">
                 <div class="mapa-descripcion">
                     <div class="descripcion">
                         <div class="InfoDepto1">Descripción : </div>
                             <div class="InfoDepartamentoDescp">{{ depto.Description }} </div>
-                    </div>
+                    </div>                
                     <div class="Mapadepto">
                         <div class="MapDepartamento">Mapa referencial : </div>
                         <iframe class="mapa"
@@ -77,26 +77,28 @@
                             &q={{ depto.Longitud }},{{ depto.Latitud }}" allowfullscreen>
                         </iframe>
                     </div>
-                    <div class="ServiciosDeptoContenedor">
-                        <div class="infoservicios" >Este lugar cuenta con</div>
-                        <div class="ServiciosDepto">
-                            {% for service in servicios %}
-                                {% if service.Id_Estado == 0 %}
-                                    
-                                    <div class="servicio">
-                                        <div class="serviciotop">
-                                            <img class=""src="{% static 'img/servicios/'%}{{service.img}}"></img>
-                                            <div class="">{{ service.Nombre }}</div>
-                                        </div>
-                                        <div class="serviciobot">
-                                            {% if service.Cantidad != 1 %}
-                                            <div class="">{{ service.Cantidad }}</div>
-                                            {% endif %}
-                                        </div>
+                </div>
+            </div>
+            <div class="Descripcion-Der">
+                <div class="ServiciosDeptoContenedor">
+                    <div class="infoservicios" >Este lugar cuenta con</div>
+                    <div class="ServiciosDepto">
+                        {% for service in servicios %}
+                            {% if service.Id_Estado == 0 %}
+                                
+                                <div class="servicio">
+                                    <div class="serviciotop">
+                                        <img class=""src="{% static 'img/servicios/'%}{{service.img}}"></img>
+                                        <div class="">{{ service.Nombre }}</div>
                                     </div>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
+                                    <div class="serviciobot">
+                                        {% if service.Cantidad != 1 %}
+                                        <div class="">{{ service.Cantidad }}</div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
