@@ -1,7 +1,21 @@
-function reveal(checkbox, id)
+function revelar(checkbox, id, openid, closeid)
       {
-      if(checkbox.checked)
-         {document.getElementById(id).type='text';}
+         const open = document.getElementById(openid).src
+         const close = document.getElementById(closeid).src
+         console.log(checkbox.getAttribute('check'), "wena loco")
+      if(checkbox.getAttribute('check') === '0')
+         {
+         console.log("0", 'uwu')
+         checkbox.src = close
+         document.getElementById(closeid).src = open
+         checkbox.setAttribute('check', '1');
+         document.getElementById(id).setAttribute('type', 'password');
+      }
       else
-      document.getElementById(id).type='password';
+         {console.log("1", 'uwu')
+         checkbox.src = close
+         document.getElementById(closeid).src = open
+         checkbox.setAttribute('check', '0');
+         document.getElementById(id).setAttribute('type', 'text');
+         }
       }

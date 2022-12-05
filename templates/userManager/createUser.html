@@ -54,13 +54,15 @@
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword" maxlength="80" placeholder=" ">
                     <label class="labelcolor" for="floatingPassword">Contraseña</label>
-                    <input class= "box" type="checkbox" onclick ="reveal(this,'floatingPassword')">
+                    <img src="{% static 'img\hide-show-pass\openeye.png'%}" check='0' class='reveal' id='open' alt=""  onclick="revelar(this, 'floatingPassword','open', 'close')">
+                    <img src="{% static 'img/hide-show-pass/closeeye.png' %}" class='d-none' id='close' alt="">
                 </div>
 
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword2"  maxlength="80" placeholder=" ">
                     <label class="labelcolor" for="floatingPassword">Repetir contraseña</label>
-                    <input class= "box" type="checkbox"  onclick ="reveal(this,'floatingPassword2')">
+                    <img src="{% static 'img\hide-show-pass\openeye.png'%}" check='0' class='reveal' id='open2' alt=""  onclick="revelar(this, 'floatingPassword2','open2', 'close2')">
+                    <img src="{% static 'img/hide-show-pass/closeeye.png' %}" class='d-none' id='close2' alt="">
                 </div>
             
                 <div class="checkbox mb-3">
