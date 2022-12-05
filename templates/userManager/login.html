@@ -26,10 +26,10 @@
                         <label class="labelcolor" for="floatingInput">Correo electronico</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="pass" maxlength="80" placeholder=" ">
+                        <input type="password" class="form-control" id="inputPassword" maxlength="80" placeholder=" ">
                         <label class="labelcolor" for="floatingPassword">Contraseña</label>
-                        <img src="{% static 'img\hide-show-pass\openeye.png'%}" check='0' class='reveal' id='open' alt=""  onclick="revelar(this, 'pass', 'open', 'close')">
-                        <img src="{% static 'img/hide-show-pass/closeeye.png' %}" class='d-none' id='close'alt="">
+                        <img src="{% static 'img/hide-show-pass/closeeye.png'%}" check='1' class='reveal' id='open' alt=""  onclick="revelar(this, 'inputPassword', 'open', 'close')">
+                        <img src="{% static 'img/hide-show-pass/openeye.png' %}" class='d-none' id='close'alt="">
                     </div>
                 
                     <div class="checkbox mb-3">
