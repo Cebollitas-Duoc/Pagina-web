@@ -1,29 +1,33 @@
-@charset "UTF-8";
 /* =============================================================
  * BASE STYLES
  * ============================================================*/
 .datepicker {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow: hidden;
   position: absolute;
   width: 260px;
   z-index: 1;
 }
+
 @media (min-width: 320px) {
   .datepicker {
     width: 300px;
   }
 }
+
 @media (min-width: 480px) {
   .datepicker {
     width: 460px;
   }
 }
+
 @media (min-width: 768px) {
   .datepicker {
     width: 560px;
   }
 }
+
 .datepicker--inline {
   position: relative;
 }
@@ -43,11 +47,13 @@
   text-align: center;
   width: 100%;
 }
+
 @media (min-width: 480px) {
   .datepicker__month {
     width: 200px;
   }
 }
+
 @media (min-width: 768px) {
   .datepicker__month {
     width: 240px;
@@ -63,6 +69,7 @@
 .datepicker__month--month2 {
   display: none;
 }
+
 @media (min-width: 480px) {
   .datepicker__month--month2 {
     display: table;
@@ -128,7 +135,8 @@ datepicker__buttons {
 .datepicker {
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 8px 8px 40px 5px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 8px 8px 40px 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 8px 8px 40px 5px rgba(0, 0, 0, 0.08);
   color: #000;
   font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
   font-size: 14px;
@@ -181,13 +189,17 @@ datepicker__buttons {
 }
 
 .datepicker__month-day {
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color, background-color, border-color;
   transition-property: color, background-color, border-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #333;
   padding: 9px 7px;
   border: 1px solid transparent;
 }
+
 .datepicker__month-day:focus {
   outline: none;
   background-color: #ffe684;
@@ -196,6 +208,7 @@ datepicker__buttons {
 .datepicker__month-day--no-checkin {
   position: relative;
 }
+
 .datepicker__month-day--no-checkin:before {
   bottom: 0;
   content: "";
@@ -212,6 +225,7 @@ datepicker__buttons {
 .datepicker__month-day--no-checkout {
   position: relative;
 }
+
 .datepicker__month-day--no-checkout:before {
   top: 0;
   content: "";
@@ -237,14 +251,16 @@ datepicker__buttons {
   color: #e8ebf4;
   position: relative;
 }
+
 .datepicker__month-day--disabled:after {
-  content: "×";
+  content: "\00d7";
   left: 50%;
   position: absolute;
   color: red;
   font-size: 16px;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .datepicker__month-day--no-checkin,
@@ -257,6 +273,7 @@ datepicker__buttons {
   background-color: rgba(56, 88, 233, 0.2);
   color: #fff;
 }
+
 .datepicker__month-day--selected:after, .datepicker__month-day--selected:before {
   display: none;
 }
@@ -282,13 +299,17 @@ datepicker__buttons {
 }
 
 .datepicker__month-button {
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color, background-color, border-color;
   transition-property: color, background-color, border-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
   text-indent: -9999px;
   padding: 5px;
 }
+
 .datepicker__month-button:after {
   background-repeat: no-repeat;
   background-position: center;
@@ -320,8 +341,8 @@ datepicker__buttons {
 
 @media (min-width: 768px) {
   .datepicker--topbar-has-close-button .datepicker__info,
-.datepicker--topbar-has-clear-button .datepicker__info,
-.datepicker--topbar-has-submit-button .datepicker__info {
+  .datepicker--topbar-has-clear-button .datepicker__info,
+  .datepicker--topbar-has-submit-button .datepicker__info {
     max-width: 325px;
   }
 }
@@ -358,13 +379,17 @@ datepicker__buttons {
 .datepicker__close-button,
 .datepicker__clear-button,
 .datepicker__submit-button {
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color, background-color, border-color;
   transition-property: color, background-color, border-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #3858e9;
   border-radius: 2px;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   font-size: 10px;
   color: #ffffff;
   margin-top: 20px;
@@ -373,17 +398,20 @@ datepicker__buttons {
   text-shadow: none;
   text-transform: uppercase;
 }
-.datepicker--topbar-top .datepicker__close-button,
-.datepicker--topbar-top .datepicker__clear-button,
-.datepicker--topbar-top .datepicker__submit-button {
+
+.datepicker--topbar-top .datepicker__close-button, .datepicker--topbar-top
+.datepicker__clear-button, .datepicker--topbar-top
+.datepicker__submit-button {
   margin-top: 0;
 }
+
 .datepicker__close-button:hover,
 .datepicker__clear-button:hover,
 .datepicker__submit-button:hover {
   background-color: #213fd4;
   color: #ffffff;
 }
+
 .datepicker__close-button:disabled, .datepicker__close-button[disabled],
 .datepicker__clear-button:disabled,
 .datepicker__clear-button[disabled],
@@ -412,7 +440,8 @@ datepicker__buttons {
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
@@ -423,6 +452,7 @@ datepicker__buttons {
   margin-top: -5px;
   padding: 5px 10px;
 }
+
 .datepicker__tooltip:after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
@@ -432,4 +462,5 @@ datepicker__buttons {
   left: 50%;
   margin-left: -4px;
   position: absolute;
-}/*# sourceMappingURL=hotel-datepicker.css.map */
+}
+/*# sourceMappingURL=hotel-datepicker.css.map */

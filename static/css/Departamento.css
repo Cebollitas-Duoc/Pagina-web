@@ -1,8 +1,17 @@
 .image-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-height: 700px;
   overflow-y: auto;
   padding: 20px;
@@ -43,8 +52,10 @@
   margin: 10px;
   max-width: 1000px;
   max-height: 700px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 150px 1fr;
+  -ms-grid-columns: 150px 1fr;
+      grid-template-columns: 150px 1fr;
 }
 
 .TituloDepto {
@@ -57,17 +68,26 @@
 
 .DescripcionDeptoContenedor {
   margin: auto;
-  border: 1.5px solid rgb(82, 81, 81);
+  border: 1.5px solid #525151;
   width: 580px;
   height: 340px;
   border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .titulodesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: 50px;
 }
 
@@ -75,13 +95,16 @@
   margin-left: 15px;
   margin-top: 30px;
   margin-bottom: 15px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   width: 300px;
 }
 
 .FondoDepto {
   background-color: #faf6eb;
+  -ms-grid-column: 2;
   grid-column: 2;
   margin-top: 30px;
 }
@@ -89,21 +112,35 @@
 .Mapadepto {
   width: 100%;
   height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: auto;
   margin-left: 5px;
 }
 
 .gallery-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .ServiciosDeptoContenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: auto;
 }
 
@@ -114,32 +151,51 @@
 
 .ServiciosDepto {
   margin: auto;
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
+
 .ServiciosDepto .servicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px;
 }
+
 .ServiciosDepto .servicio:nth-child(2n+1) {
   background-color: #1B262C;
   color: #DCD7C9;
 }
+
 .ServiciosDepto .servicio:nth-child(2n+1) img {
-  filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
+  -webkit-filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
+          filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
 }
+
 .ServiciosDepto .servicio:nth-child(2n+2) {
   background-color: #DCD7C9;
   color: #1B262C;
 }
+
 .ServiciosDepto .servicio:nth-child(2n+2) img {
-  filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
+  -webkit-filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
+          filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
 }
 
 .galeriayserv {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-bottom: 1px solid lightgray;
 }
 
@@ -152,19 +208,32 @@
     max-width: 40vh !important;
   }
   .image-gallery {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    flex-direction: row !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
   }
   .galeriayserv {
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
   .descripcionder {
     display: none !important;
   }
   .image-container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
     max-width: 40vh !important;
-    flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
   }
   .Mapadepto {
     width: 40vh !important;
@@ -176,7 +245,10 @@
     width: 40vh !important;
   }
   .DescripcionDeptoContenedor {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 40vh !important;
     height: 300px !important;
     margin-bottom: 5vw !important;
@@ -186,23 +258,38 @@
     height: 6vh !important;
   }
   .bodydesc {
-    grid-template-columns: 40vh !important;
+    -ms-grid-columns: 40vh !important;
+        grid-template-columns: 40vh !important;
   }
   .ServiciosDepto {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
     margin-bottom: 5px !important;
   }
   .mini-image {
     margin: 0.5vw !important;
   }
   .Deps-L-R {
-    flex-direction: column !important;
+    -webkit-box-orient: vertical  !important;
+    -webkit-box-direction: normal  !important;
+        -ms-flex-direction: column  !important;
+            flex-direction: column  !important;
   }
   .Descripcion-Der {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
   }
   .infoservicios {
@@ -210,23 +297,45 @@
     margin-bottom: 5px !important;
   }
 }
+
 .Deps-L-R {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
 }
 
 .Descripcion-Der {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
 }
 
 .mapa-descripcion {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .mapa {
@@ -239,8 +348,10 @@
 }
 
 .fondo {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
+  -ms-grid-columns: 1fr 8fr 1fr;
+      grid-template-columns: 1fr 8fr 1fr;
 }
 
 .ButtonReserva {
@@ -249,8 +360,12 @@
   border-radius: 25px;
   margin: auto;
   margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   background-color: #1B262C;
   border: 2px solid #DCD7C9;
   color: #DCD7C9;
@@ -271,26 +386,39 @@
 }
 
 .serviciotop {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 40px 1fr;
+  -ms-grid-columns: 40px 1fr;
+      grid-template-columns: 40px 1fr;
 }
 
 .serviciobot {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
 }
 
 .bodydesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .descripcionder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
 }
 
 .descripcionder img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
 }
@@ -299,8 +427,12 @@
   display: none;
   position: fixed;
   z-index: 1;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -309,17 +441,29 @@
 .contenedorreserva {
   width: 400px;
   height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #dcd7c9;
   border: 1px solid rgba(27, 38, 44, 0.8);
   border-radius: 15px;
 }
 
 .fecha {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 0 10px 0 10px;
 }
 
@@ -345,13 +489,23 @@
 }
 
 .elementoservicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contenedorvalor {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .textoreserva {
@@ -360,4 +514,5 @@
 
 .selected {
   background-color: #126E82;
-}/*# sourceMappingURL=Departamento.css.map */
+}
+/*# sourceMappingURL=Departamento.css.map */
