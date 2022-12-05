@@ -465,6 +465,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 10px 0 10px;
+  border-radius: 15px;
 }
 
 .fecha span {
@@ -472,11 +473,7 @@
   border-radius: 15px;
 }
 
-.fechainicio {
-  border-radius: 15px;
-}
-
-.fechafinal {
+.elegirfecha {
   border-radius: 15px;
 }
 
