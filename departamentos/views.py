@@ -36,7 +36,9 @@ def Home(request):
     deptos = getDeptos(request)
     for depto in deptos:
         depto["Imagen"] = f"{apidomain}/files/getimage/{depto['Imagen']}"
-
+    for depto in deptos:
+        if depto["Id_State"] == 1:
+            deptos.remove(depto)
     context = {
         "deptos": deptos
     }
