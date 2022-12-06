@@ -63,6 +63,9 @@
     margin-top: 1vw !important;
     margin-bottom: 3vw !important;
   }
+  #deptos {
+    justify-content: center !important;
+  }
 }
 .labelcolor {
   color: #1B262C;
