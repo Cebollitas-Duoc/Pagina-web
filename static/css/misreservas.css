@@ -20,20 +20,13 @@
 .Titulo {
   font-size: small;
   color: #1B262C;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-weight: bold;
 }
 
 .cartareserva {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-width: 300px;
   max-height: 600px;
   margin-top: 50px;
@@ -41,18 +34,15 @@
   border: 1px solid #1B262C;
   border-radius: 8px;
   margin-right: 30px;
-  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-  cursor: default;
-  -webkit-transition: all 400ms ease;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
   transition: all 400ms ease;
+  font-weight: bold;
 }
 
 .cartareserva:hover {
-  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
-          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
-  -webkit-transform: translateY(-3%);
-          transform: translateY(-3%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3%);
 }
 
 .BordesReservas {
@@ -60,18 +50,45 @@
 }
 
 .ContenedorReserva {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: wrap row;
-          flex-flow: wrap row;
+  flex-flow: wrap row;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-/*# sourceMappingURL=misreservas.css.map */
+
+#detalle {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.contenedorDetalle {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.fondoReservas {
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  font-size: larger;
+  font-weight: bold;
+  color: black;
+  margin-top: 5px;
+  margin-left: 20px;
+}/*# sourceMappingURL=misreservas.css.map */
