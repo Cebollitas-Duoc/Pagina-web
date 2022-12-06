@@ -27,7 +27,8 @@
 <div class="FondoDepto">
     <div class="galeriayserv">
         <div class="gallery-map">
-                <div>
+                <div class="ImagenesDepartamento">
+                    <div class="DepartamentoDireccion">{{ depto.Address }}</div>
                     <div class="image-container">
                         <div class="image-gallery">
                             {% for  Imagen in Imagenes %}
@@ -51,8 +52,6 @@
                     <input id="Id_Dpto"class="d-hidden" value="{{ Id_Dpto }}"></input>
                     <input id="Id_State"class="d-hidden" value="{{ depto.Id_State }}"></input>
                     <input id="Value"class="d-hidden" value="{{ depto.Value }}"></input>
-                    <div class="DetallesDepartamento">Dirección </div>
-                    <div class="InfoDepartamento">{{ depto.Address }}</div>
                     <div class="DetallesDepartamento">Habitaciones </div>
                     <div class="InfoDepartamento">{{ depto.Rooms }} </div>
                     <div class="DetallesDepartamento">Baños </div>
@@ -82,7 +81,7 @@
             </div>
             <div class="Descripcion-Der">
                 <div class="ServiciosDeptoContenedor">
-                    <div class="infoservicios" >Este lugar cuenta con</div>
+                    <div class="infoservicios" >Servicios todos los dias</div>
                     <div class="ServiciosDepto">
                         {% for service in servicios %}
                             {% if service.Id_Estado == 0 %}

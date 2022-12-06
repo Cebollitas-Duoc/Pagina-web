@@ -55,12 +55,23 @@
     white-space: normal !important;
     width: 210px !important;
   }
+  .DepartamentoDireccion {
+    width: 180px !important;
+    font-weight: 600 !important;
+    font-size: large !important;
+  }
   .InfoDepartamentoDescp {
     width: 86vw !important;
     margin-left: 1vw !important;
     margin-right: 1vw !important;
     margin-top: 1vw !important;
     margin-bottom: 3vw !important;
+  }
+}
+/*Responsividad fondo*/
+@media only screen and (max-width: 1200px) {
+  #colorhome {
+    grid-template-columns: 1fr 500px 1fr !important;
   }
 }
 .labelcolor {
@@ -78,7 +89,7 @@
 
 #colorhome {
   display: grid !important;
-  grid-template-columns: 1fr 1200px 1fr;
+  grid-template-columns: 1fr 1800px 1fr;
 }
 
 body {
@@ -212,6 +223,18 @@ footer {
 }
 
 /*Detalles departamento vista departamento*/
+.DepartamentoDireccion {
+  color: #1B262C !important;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 1000px;
+  font-weight: 1000;
+  font-size: x-large;
+  flex-wrap: wrap !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
 .InfoDepartamento {
   color: #1B262C !important;
   font-style: italic;
