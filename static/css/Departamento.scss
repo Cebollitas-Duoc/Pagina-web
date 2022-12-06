@@ -64,6 +64,7 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
  }
  .titulodesc{
   display: flex;
@@ -76,7 +77,6 @@
   margin-bottom: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 300px;
 }
 .FondoDepto{
     background-color: #faf6eb;
@@ -170,7 +170,7 @@
   .DescripcionDeptoContenedor{
     flex-direction: column;
     width: 40vh!important;
-    height: 300px!important;
+    height: 290px!important;
     margin-bottom: 5vw !important;
   }
   #ButtonReserva{

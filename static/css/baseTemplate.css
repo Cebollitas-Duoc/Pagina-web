@@ -48,9 +48,8 @@
     flex-wrap: wrap !important;
     display: flex !important;
     flex-direction: column !important;
-    overflow: hidden !important;
     white-space: normal !important;
-    width: 210px !important;
+    width: 140px !important;
   }
   .DepartamentoDireccion {
     width: 180px !important;
@@ -230,10 +229,10 @@ footer {
   color: #1B262C !important;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-left: 5px;
-  width: 28vw;
+  width: 350px;
   white-space: normal;
-  overflow: hidden;
+  overflow-wrap: anywhere;
+  margin-right: 5px;
   flex-wrap: wrap !important;
   display: flex !important;
   flex-direction: column !important;
@@ -248,7 +247,7 @@ footer {
   flex-wrap: wrap !important;
   display: flex !important;
   flex-direction: column !important;
-  overflow: hidden;
+  overflow: auto;
   margin: 5px;
   text-align: justify;
 }
