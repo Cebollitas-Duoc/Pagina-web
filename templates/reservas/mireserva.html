@@ -15,30 +15,16 @@
     <div class="ContenedorReserva">
       {% for reserva in reservas %}
         {% if reserva.Id_Estate != 3 %}
-          <div class="cartareserva" onclick="abrirDetalle()">
+          <a class="cartareserva" href = "{% url 'reservas:ReservaDetalle' reserva.Id_Dpto %}">
             <img src="{{reserva.Imagen}}" alt="">
             <div class="BordesReservas">{{reserva.Nombre}}</div>
             <div class="BordesReservas">{{reserva.StartDate}} - {{reserva.EndDate}}</div>
             <div class="BordesReservas">Valor: {{reserva.Value}}</div>
             <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.Id_Reserve}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></div>
-          </div>
-          <div class="" id="detalle">
-            <div class="contenedorDetalle">
-              <div>Detalles de la reserva:</div>
-              <div class="">Direccion: {{reserva.Nombre}}</div>
-              <div class="">Id_Usuario: {{reserva.Id_User}}</div>
-              <div class="">Id_Departamento: {{reserva.Id_Dpto}}</div>
-              <div class="">Id_Estado: {{reserva.Id_Estate}}</div>
-              <div class="">Id_Pago: {{reserva.Id_Payment}}</div>
-              <div class="">Fecha_Desde: {{reserva.StartDate}}</div>
-              <div class="">Fecha_Hasta: {{reserva.EndDate}}</div>
-              <div class="">Fecha_Creacion: {{reserva.CreateDate}}</div>
-              <div class="">Valor: {{reserva.Value}}</div>
-            </div>
-          </div>
-  </div>
+          </a>
         {% endif %}
       {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock body %}

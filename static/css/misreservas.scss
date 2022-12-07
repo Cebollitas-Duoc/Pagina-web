@@ -34,6 +34,8 @@
     cursor: pointer;
     transition: all 400ms ease;
     font-weight: bold;
+    text-decoration: none;
+    color: #1B262C;
 }
 
 .cartareserva:hover{
@@ -43,6 +45,10 @@
 
 .BordesReservas{
     margin: auto;
+    text-decoration: none;
+    overflow-wrap: break-word;
+    justify-content: center;
+    margin-left: 10px;
 }
 .ContenedorReserva{
     display: flex;
@@ -50,8 +56,26 @@
     margin: auto;
     justify-content: center;
 }
+.fondoReservas{
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+}
+.titulo{
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------vista Reserva Detalles--------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
 #detalle{
     display: none; /* Hidden by default */
+    align-items: flex-end;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -68,16 +92,56 @@
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     height: fit-content;
+    border-radius: 5px;
 }
-.fondoReservas{
-    grid-column-start: 2;
+.Left-Right-Reserva{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.TContenedordreserv{
+    color: #1B262C!important;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.DescripcionReservaContenedor{
+    flex-direction: column;
+    width: 70vh!important;
+    height: 380px!important;
+    margin-bottom: 5vw !important;
+    margin: auto;
+    border: 1.5px solid rgb(82, 81, 81);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
-.titulo{
-    font-size: larger;
-    font-weight: bold;
-    color: black;
-    margin-top: 5px;
-    margin-left: 20px;
+.DescripcionReserva{
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.DetallesDepartamento{
+    color: #1B262C!important;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 5px;
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.NombreReserva{
+    color: #1B262C!important;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    margin-left: 5px;
 }
