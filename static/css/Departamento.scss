@@ -252,7 +252,7 @@
   color: #DCD7C9;
 
 }
-.ButtonReserva:hover{
+.ButtonReserva:hover:not([disabled]){
   background-color: #126E82;
 }
 .ButtonReserva h4{
@@ -294,8 +294,8 @@
   overflow: auto; 
 }
 .contenedorreserva{
-  width: 400px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -307,7 +307,6 @@
   display: flex;
   flex-direction: row;
   margin: 0 10px 0 10px;
-  border-radius: 15px;
 }
 .fecha span{
   margin:0 10px 0 10px;
@@ -315,11 +314,14 @@
 }
 
 .elegirfecha{
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .topreserva{
-  margin-top: 10px;
+  font-size: 15px;
+  margin: auto;
+  margin-right: 10px;
+  font-weight: bold;
 }
 .botreserva{
   margin-bottom: 10px;
@@ -337,4 +339,60 @@
 }
 .selected{
   background-color: #126E82;
+}
+.calendar{
+  width: 45px;
+  height: 45px;
+}
+.labeldate{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px
+}
+.TituloReserva{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.ServiciosExtra{
+  display: flex;
+  flex-direction: column;
+}
+.head1{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid #1B262C;
+  border-right: 0px;
+  width: 150px;
+}
+.head2{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid #1B262C;
+  width: 150px;
+}
+.elementoservicio{
+  width: 300px;
+  border: 2px solid #1B262C;
+  border-top: 0px;
+}
+.textoreserva{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border-right: 0px;
+  width: 150px;
+  margin: auto;
+}
+.valor{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  width: 150px;
+  margin: auto;
+  border-left:2px solid #1B262C ;
 }

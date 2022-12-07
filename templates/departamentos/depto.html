@@ -107,25 +107,32 @@
 </div>
 <div class="modal" id="modalreserva">
     <div class="contenedorreserva">
-        <h4 class="topreserva">Fecha</h4>
+        <h4 class="TituloReserva">Detalles de la Reserva</h4>
         <div class="fecha">
-            <input id="datePicker" class="elegirfecha" type="text" />
+            <h4 class="topreserva">Seleccione la fecha</h4>
+            <label for="datePicker" class="labeldate">
+                <input id="datePicker" class="elegirfecha " type="text" />
+                <img src="{% static 'img/calendar.png'%}" class='calendar'alt="">
+            </label>
         </div>
-        <h4>Servicios Extra</h4>
         <div class="ServiciosExtra">
+            <h4 class="d-flex justify-content-center ">Servicios Extra</h4>
+            <div class="d-flex flex-row">
+                <div class="head1">Tipo de Servicio</div>
+                <div class="head2">Valor</div>
+            </div>
             {% for servicioextra in serviciosextra %}
             <div class="elementoservicio" id="extraSrv-{{servicioextra.Id_ExtraService}}" onclick="selectExtraService('{{servicioextra.Id_ExtraService}}', this)">
                 <div class="textoreserva">{{servicioextra.Nombre}}</div>
-                <div class="contenedorvalor m-auto">
-                    <div>Valor :</div>
-                    <div class="valor">{{servicioextra.Valor}}</div>
-                </div>
+                <div class="valor">{{servicioextra.Valor}}</div>
             </div>
             {% endfor %}
         </div>
-        <div>Valor Total:</div>
-        <div id="total" total="{{depto.Value}}">{{depto.Value}}</div>
-        <button id="reservar" class="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
+        <div class="mt-3 d-none" id="ValorTotal">
+            <div class="d-flex justify-content-center">Valor Total:</div>
+            <div id="total" total="{{depto.Value}}" class="d-flex justify-content-center">{{depto.Value}}</div>
+        </div>
+        <button id="reservar" class="ButtonReserva" class="" type="button" disabled><h4>Reservar</h1></button>
         <span class="botreserva"></span>
     </div>
 </div>

@@ -3,6 +3,8 @@ const modalreserva   = document.getElementById("modalreserva");
 const reservar       = document.getElementById("reservar");
 const Id_Dpto        = document.getElementById("Id_Dpto");
 const Value          = document.getElementById("Value");
+const ValorTotal     = document.getElementById("ValorTotal");
+
 selectedExtraServices = []
 
 document.addEventListener('DOMContentLoaded', async () =>{
@@ -13,6 +15,18 @@ document.addEventListener('DOMContentLoaded', async () =>{
   
   document.getElementById("datePicker").addEventListener("afterClose", async () =>{
       actualizarprecio();
+      if(datePicker.getNights() !== 0){
+        ValorTotal.classList.remove('d-none');
+        reservar.disabled=false;
+      }
+      if(datePicker.getNights() === 0){
+        if(ValorTotal.classList.contains('d-none')){
+        }
+        else{
+          ValorTotal.classList.add('d-none');
+        }
+        reservar.disabled=true;
+      }
   });
 })
 
