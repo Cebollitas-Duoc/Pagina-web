@@ -1,7 +1,7 @@
 async function cancelar(Id_Reserva){
     var formdata = new FormData();
     var r
-    console.log(Id_Reserva);
+    console.log(Id_Reserva, "wena loco");
     formdata.append("SessionKey", getCookie("SessionKey"));
     formdata.append("Id_Reserva", parseInt(Id_Reserva));
     

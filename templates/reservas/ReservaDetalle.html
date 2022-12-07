@@ -18,13 +18,15 @@
                         <div class="DescripcionReserva">
                             <div class="">Habitaciones {{depto.Rooms}}</div>
                             <div class="">Baños {{depto.Bathrooms}}</div>
+                            <div class="">id reserva {{reserva.ID_RESERVA}}</div>
+                            <div class="">estado reserva {{reserva.ESTADO_RESERVA}}</div>
                         </div>
                     <div>
                 </div> 
             </div>
-            <div class="BordesReservas Bton"><button  id="ButtonCheck-in"  class="" type="button"><h4>Check-In </h1></button></div>
+            <div class="BordesReservas Bton"><button  id="ButtonCheck-in"  class="" type="button"><h4>Check-In</h1></button></div>
             <div class="BordesReservas Bton"><button  id="ButtonCheck-out" class="" type="button"><h4>Check-Out</h1></button></div>
-            <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.Id_Reserve}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar Reserva</h1></button></div>
+            <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.ID_RESERVA}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar Reserva</h1></button></div>
         </div>
         <div class="Rigt-Reserva">
 

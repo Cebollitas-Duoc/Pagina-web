@@ -10,9 +10,11 @@ def Reserva(request):
     }
     return render(request, "reservas/mireserva.html", context)
 
-def ReservaDetalle(request, _iddepto):
-    depto = getDepto(_iddepto)
+def ReservaDetalle(request, _idreserva):
+    reserva = getReserva(_idreserva)
+    depto = getDepto(reserva["ID_DEPARTAMENTO"])
     context = {
+        "reserva": reserva,
         "depto" : depto
     }
     return render(request, "reservas/ReservaDetalle.html", context)

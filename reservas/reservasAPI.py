@@ -49,3 +49,17 @@ def getReservasFixed(request):
                 reserva["Imagen"] = f"{apidomain}/files/getimage/{dpto['Imagen']}"
         
     return reservas
+
+def getReserva(ID_reserva):
+    url = f"http://{localHostIp}:8081/reservas/getuserreservebyid/{ID_reserva}" 
+    
+    payload={}
+    files={}
+    headers = {}
+
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+
+    if response.status_code == 200:
+        r = json.loads(response.text)
+        return r
+    return r([])
