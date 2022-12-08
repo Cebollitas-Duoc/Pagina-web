@@ -1,7 +1,19 @@
 async function cancelar(Id_Reserva){
+    const response = await cancelRequest(Id_Reserva)
+    if ("reserva_cancelada" in response && response["reserva_cancelada"]){
+        GlobalMessage.setGlobalSuccessMessage("Su reserva se ha cancelado exitosamente")
+        location.reload();
+    }
+    else if ("Error" in response) 
+        GlobalMessage.printGlobalErrorMessage(response["Error"])
+    else
+        GlobalMessage.printGlobalErrorMessage("Error desconocido al crear reserva")
+}
+
+async function cancelRequest(Id_Reserva){
     var formdata = new FormData();
     var r
-    console.log(Id_Reserva, "wena loco");
+
     formdata.append("SessionKey", getCookie("SessionKey"));
     formdata.append("Id_Reserva", parseInt(Id_Reserva));
     
@@ -15,8 +27,6 @@ async function cancelar(Id_Reserva){
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));
-    GlobalMessage.setGlobalSuccessMessage("Su reserva se ha cancelado exitosamente")
-    location.reload();
-
-    return r
+    
+    return JSON.parse(r);
 }
