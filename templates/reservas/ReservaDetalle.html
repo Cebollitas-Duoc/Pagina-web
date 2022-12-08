@@ -29,13 +29,7 @@
             <div class="ServiciosReserva">
 
             </div>
-            <div class="TituloDR">Documentos Reserva </div>
-            <div class="Documentacion">
-                <div class="BordesReservas Bton"><button  id="ButtonCheck-in"  class="" type="button"><h4>Check-In</h1></button></div>
-                <div class="BordesReservas Bton"><button  id="ButtonCheck-out" class="" type="button"><h4>Check-Out</h1></button></div>
-            </div>
             
-            <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.ID_RESERVA}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar Reserva</h1></button></div>
         </div>
         
         <div class="Right-Reserva">
@@ -56,15 +50,26 @@
                     </div>
                 </div>   
             </div>
-            <div class="ButtonDirection">
-                <div class="BotonOrd">
-                    <div class="BordesReservas Bton"><button  id="ButtonTicket"  class="" type="button"><h4>Boleta</h1></button></div>
-                    <div class="BordesReservas Bton"><button  id="ButtonServiceExt"  class="" type="button"><h4>Servicios Extra</h1></button></div>
-                </div>
-                <div class="BordesReservas Bton"><button  onclick="pagar('{{reserva.ID_RESERVA}}')" id="ButtonPagar" class="" type="button"><h4>Pagar</h1></button></div>
+        </div>
+    </div>
+    <div class="documentos-boleta">
+        <div class="Documentos">
+            <div class="TituloDR">Documentos Reserva </div>
+            <div class="Documentacion">
+                <div class="BordesReservas Bton"><button  id="ButtonCheck-in"  class="" type="button"><h4>Check-In</h1></button></div>
+                <div class="BordesReservas Bton"><button  id="ButtonCheck-out" class="" type="button"><h4>Check-Out</h1></button></div>
             </div>
         </div>
-        
+        <div class="ButtonDirection">
+            <div class="BotonOrd">
+                <div class="BordesReservas Bton"><button  id="ButtonTicket"  class="" type="button"><h4>Boleta</h1></button></div>
+                <div class="BordesReservas Bton"><button  id="ButtonServiceExt"  class="" type="button"><h4>Servicios Extra</h1></button></div>
+            </div>
+        </div>
+    </div>
+    <div class="botonespagocancelar">
+        <button onclick="cancelar('{{reserva.ID_RESERVA}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar Reserva</h1></button>
+        <button  onclick="pagar('{{reserva.ID_RESERVA}}')" id="ButtonPagar" class="" type="button"><h4>Pagar</h1></button>
     </div>
 </div>
 

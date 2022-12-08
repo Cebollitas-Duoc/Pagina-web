@@ -1,13 +1,54 @@
 /*Responsibidad*/
 @media only screen and (max-width: 600px) {
   .Left-Right-Reserva {
-    flex-direction: column !important;
-  }
-  .Right-Reserva {
     display: flex !important;
     flex-direction: column !important;
+    margin: auto !important;
+    margin-top: 30px !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+  .Left-Reserva {
+    align-items: center !important;
+    width: 90vw !important;
+    margin-left: 0px !important;
+    margin: auto !important;
+    margin-bottom: 30px !important;
+  }
+  .DescripcionReservaContenedor {
+    width: 90vw !important;
+  }
+  .InformacionReservaCont {
+    width: 90vw !important;
+  }
+  .DestalleValores-Fecha {
+    width: 90vw !important;
+  }
+  .DestalleValores-Fecha {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .ContenedorDesgloseValores {
+    width: 80vw !important;
+  }
+  .ValorFormat {
+    width: 80vw !important;
+  }
+  .documentos-boleta {
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 30px !important;
+  }
+  .Documentos {
+    align-items: center !important;
+  }
+  .TituloDR {
+    margin-left: 0px !important;
+  }
+  .botonespagocancelar {
+    display: flex !important;
+    flex-direction: column;
   }
 }
 .contenedorDetalle {
@@ -15,12 +56,22 @@
 }
 
 .Left-Right-Reserva {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 45px;
+  margin-bottom: 0px;
+}
+
+.Left-Reserva {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 90px;
+}
+
+.Right-Reserva {
+  display: flex;
+  margin: auto;
 }
 
 /*Detalle Reserva lado Izquierdo*/
@@ -44,8 +95,8 @@
 .DescripcionReservaContenedor {
   display: flex;
   flex-direction: column;
-  width: 70vh;
-  height: 380px;
+  width: 650px;
+  height: 200px;
   margin-bottom: 5vw;
   margin: auto;
   border: 1.5px solid rgb(0, 0, 0);
@@ -98,6 +149,7 @@
 }
 
 .NombreReserva {
+  display: flex;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
@@ -113,6 +165,7 @@
   font-size: large;
   margin: 10px;
   color: #ffffff;
+  margin-left: -70px;
 }
 
 .Documentacion {
@@ -188,12 +241,10 @@
 .InformacionReservaCont {
   display: flex;
   flex-direction: column;
-  width: 58vh;
-  height: 41vh;
   margin-top: 40px;
-  margin-bottom: 5vw;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 25px;
+  width: 550px;
   background-color: #e9ecef;
 }
 
@@ -245,9 +296,9 @@
 
 .Line {
   height: 0.5px;
-  width: 450px;
+  width: 100%;
   background-color: rgb(68, 68, 68);
-  margin: 5px;
+  margin-bottom: 5px;
 }
 
 .ContenedorValores {
@@ -295,10 +346,10 @@
 .ContenedorDesgloseValores {
   display: flex;
   flex-direction: column;
-  width: 45vh;
+  width: 450px;
   height: 17vh;
   margin-top: 5px;
-  margin-bottom: 1vw;
+  margin-bottom: 10px;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 25px;
   background-color: aliceblue;
@@ -309,6 +360,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .BotonOrd {
@@ -378,4 +430,31 @@
 #ButtonPagar h4 {
   margin: auto;
   font-size: large;
+}
+
+.documentos-boleta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Documentos {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.botonespagocancelar {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr 1fr 195px;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+#ButtonCancelar {
+  grid-column: 2;
+}
+
+#ButtonPagar {
+  grid-column: 4;
 }/*# sourceMappingURL=ReservaDetalle.css.map */
