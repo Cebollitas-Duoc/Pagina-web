@@ -20,7 +20,6 @@ async function verify(token){
 async function Pay(res){
     var formdata = new FormData();
     var r
-    formdata.append("Id_Pago", res.buy_order);
     formdata.append("Id_Estado_Pago", 1);
     formdata.append("VALORTOTAL", res.amount);
     formdata.append("Id_Reserva", res.buy_order);
@@ -35,6 +34,8 @@ async function Pay(res){
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));
+    res = JSON.parse(r)
+    GlobalMessage.setGlobalSuccessMessage(res.Success)
 }
 
 
