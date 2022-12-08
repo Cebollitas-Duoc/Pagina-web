@@ -1,12 +1,12 @@
 {% extends 'BaseTemplate.html' %}
 {% load static %}
 {% block css %}
-    <link href="{% static 'css/misreservas.css'%}" rel="stylesheet">
+<link href="{% static 'css/misreservas.css'%}" rel="stylesheet">
 {% endblock css %}
 
 {% block js %}
-    <script src="{% static 'js/cancelarreserva.js' %}"></script>
-    <script src="{% static 'js/detalle-reserva.js' %}"></script>
+<script src="{% static 'js/cancelarreserva.js' %}"></script>
+<script src="{% static 'js/detalle-reserva.js' %}"></script>
 {% endblock js %}
 {% block body %}
 <div id="colorhome" class="">
@@ -19,8 +19,7 @@
             <img src="{{reserva.Imagen}}" alt="">
             <div class="BordesReservas">{{reserva.Nombre}}</div>
             <div class="BordesReservas">{{reserva.StartDate}} - {{reserva.EndDate}}</div>
-            <div class="BordesReservas">Valor: {{reserva.Value}}</div>
-            <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.Id_Reserve}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar</h1></button></div>
+            <div class="ValorFormat">Valor: {{reserva.Value}}</div>
           </a>
         {% endif %}
       {% endfor %}

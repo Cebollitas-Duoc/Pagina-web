@@ -1,10 +1,25 @@
+.contenedorDetalle{
+    background-color: aliceblue;
+}
 .Left-Right-Reserva{
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin: 45px;
+}
+
+/*Detalle Reserva lado Izquierdo*/
+.Contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
 }
 .TContenedordreserv{ 
-    color: #1B262C!important;
+    color: #1B262C;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
@@ -12,15 +27,15 @@
     margin-left: 10px;
 }
 .DescripcionReservaContenedor{
-    flex-direction: column;
-    width: 70vh!important;
-    height: 380px!important;
-    margin-bottom: 5vw !important;
-    margin: auto;
-    border: 1.5px solid rgb(82, 81, 81);
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
+    width: 70vh;
+    height: 380px;
+    margin-bottom: 5vw;
+    margin: auto;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: cornsilk;
     overflow: hidden;
 }
 .DescripcionReserva{
@@ -30,6 +45,31 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.ServiciosReserva{
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    .servicio{
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      &:nth-child(2n+1) {
+        background-color: #1B262C;
+        color: #DCD7C9;
+        img{
+          filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
+        }
+      }
+      &:nth-child(2n+2) {
+        background-color: #DCD7C9;
+        color: #1B262C;
+        img{
+          filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
+        }
+      }
+    }
+}
+  
 .DetallesDepartamento{
     color: #1B262C!important;
     font-style: italic;
@@ -54,6 +94,7 @@
     height: 50px;
     border-radius: 25px;
     margin-bottom: 15px;
+    margin: 10px;
     background-color: #1B262C;
     border: 2px solid #DCD7C9;
     color: #DCD7C9;
@@ -66,6 +107,7 @@
     height: 50px;
     border-radius: 25px;
     margin-bottom: 15px;
+    margin: 10px;
     background-color: #1B262C;
     border: 2px solid #DCD7C9;
     color: #DCD7C9;
@@ -78,6 +120,7 @@
     height: 50px;
     border-radius: 25px;
     margin-bottom: 15px;
+    margin-top: 200px;
     background-color: #1B262C;
     border: 2px solid #DCD7C9;
     color: #DCD7C9;
@@ -88,4 +131,72 @@
 #ButtonCancelar h4{
     margin: auto;
     font-size: medium;
+}
+/*Detalle Reserva lado Derecho*/
+
+.InformacionReservaCont{
+    display: flex;
+    flex-direction: column;
+    width: 50vh ;
+    height: 55vh ;
+    margin-top: 40px;
+    margin-bottom: 5vw ;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    background-color: cornsilk;
+}
+.DestalleValores-Fecha{
+    color: #1B262C;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 5px;
+}
+.FechasIT{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.FechaInicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 15px;
+    background-color: #1B262C;
+    border: 2px solid #DCD7C9;
+    color: #DCD7C9;
+}
+.FechaTermino{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 15px;
+    background-color: #1B262C;
+    border: 2px solid #DCD7C9;
+    color: #DCD7C9;
+}
+.ContenedorValores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ValorFormat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 45px;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: #1B262C;
+    border: 2px solid #DCD7C9;
+    color: #DCD7C9; 
 }

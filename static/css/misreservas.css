@@ -55,6 +55,14 @@
   margin-left: 10px;
 }
 
+.ValorFormat {
+  margin: auto;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  justify-content: center;
+  margin-left: 10px;
+}
+
 .ContenedorReserva {
   display: flex;
   flex-flow: wrap row;

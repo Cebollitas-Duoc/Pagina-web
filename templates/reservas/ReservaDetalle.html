@@ -6,30 +6,53 @@
 
 {% block js %}
 <script src="{% static 'js/cancelarreserva.js' %}"></script>
+<script src="{% static 'js/CambioMoneda.js' %}"></script>
 {% endblock js %}
 {% block body %}
 
 <div class="contenedorDetalle">
     <div class="Left-Right-Reserva">
         <div class="Left-Reserva">
-            <div class="NombreReserva">{{depto.Address}}</div>
-                <div class="DescripcionReservaContenedor">
-                    <div class="TContenedordreserv" >Detalles Reserva</div>
-                        <div class="DescripcionReserva">
-                            <div class="">Habitaciones {{depto.Rooms}}</div>
-                            <div class="">Baños {{depto.Bathrooms}}</div>
-                            <div class="">id reserva {{reserva.ID_RESERVA}}</div>
-                            <div class="">estado reserva {{reserva.ESTADO_RESERVA}}</div>
-                        </div>
-                    <div>
-                </div> 
+            <div class="Contenedor">
+                <div class="NombreReserva">{{depto.Address}}</div>
+                    <div class="DescripcionReservaContenedor">
+                        <div class="TContenedordreserv" >Detalles Reserva</div>
+                            <div class="DescripcionReserva">
+                                <div class="">Habitaciones {{depto.Rooms}}</div>
+                                <div class="">Baños {{depto.Bathrooms}}</div>
+                                <div class="">id reserva {{reserva.ID_RESERVA}}</div>
+                                <div class="">estado reserva {{reserva.ESTADO_RESERVA}}</div>
+                            </div>
+                        <div>
+                    </div> 
+                </div>
+                <div class="ServiciosReserva">
+        
+                </div>
+                <div class="BordesReservas Bton"><button  id="ButtonCheck-in"  class="" type="button"><h4>Check-In</h1></button></div>
+                <div class="BordesReservas Bton"><button  id="ButtonCheck-out" class="" type="button"><h4>Check-Out</h1></button></div>
             </div>
-            <div class="BordesReservas Bton"><button  id="ButtonCheck-in"  class="" type="button"><h4>Check-In</h1></button></div>
-            <div class="BordesReservas Bton"><button  id="ButtonCheck-out" class="" type="button"><h4>Check-Out</h1></button></div>
             <div class="BordesReservas Bton"><button onclick="cancelar('{{reserva.ID_RESERVA}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar Reserva</h1></button></div>
+            
         </div>
+        
         <div class="Rigt-Reserva">
+            <div class="InformacionReservaCont">
+                <div class="DestalleValores-Fecha">
+                    <div class="FechasIT">
+                        <div class="FechaInicio">Fecha Desde  {{reserva.FECHADESDE}}</div>
+                        -
+                        <div class="FechaTermino">Fecha Hasta {{reserva.FECHAHASTA}}</div>
+                    </div>
+                    <div class="ContenedorValores">
+                        <div id="valor" class="ValorFormat" value="{{ reserva.VALORTOTAL }}" >Costo Final $ {{reserva.VALORTOTAL}}</div>
+                        <div class="ContenedorDesgloseValores">
 
+                        </div>
+                    </div>
+                    
+                </div>   
+            </div>
         </div>
         
     </div>

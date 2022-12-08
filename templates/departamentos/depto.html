@@ -17,9 +17,6 @@
 <script src="{% static 'js/imagegallery.js' %}"></script>
 <script src="{% static 'js/reservar.js' %}"></script>
 <script src="{% static 'js/CambioMoneda.js' %}"></script>
-<script>
-    const valor = '{{ depto.Value }}'
-</script>
 {% endblock js %}
 
 {% block wrapper %}
@@ -57,8 +54,7 @@
                     <div class="DetallesDepartamento">Baños </div>
                     <div class="InfoDepartamento">{{ depto.Bathrooms }} </div>
                     <div class="DetallesDepartamento">Valor </div>
-                    <div id="xd" class="InfoDepartamento">${{ depto.Value }}CLP por noche</div>
-                    <div id="valor" class="d-none" value="{{ depto.Value }}" ></div>
+                    <div id="valorDepto" class="d-none" value="{{ depto.Value }}" ></div>
                 </div>
                 <button class="ButtonReserva" id="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
             </div>
