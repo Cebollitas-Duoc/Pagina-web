@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "userManager.apps.UsermanagerConfig",
     "departamentos.apps.DepartamentosConfig",
     "reservas.apps.ReservasConfig",
+    "pagos.apps.PagosConfig",
 ]
 
 MIDDLEWARE = [

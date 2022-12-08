@@ -13,7 +13,6 @@ async function cancelar(Id_Reserva){
 async function cancelRequest(Id_Reserva){
     var formdata = new FormData();
     var r
-
     formdata.append("SessionKey", getCookie("SessionKey"));
     formdata.append("Id_Reserva", parseInt(Id_Reserva));
     
