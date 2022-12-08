@@ -1,10 +1,22 @@
+/*Responsibidad*/
+@media only screen and (max-width: 600px){
+    .Left-Right-Reserva{
+        flex-direction: column !important;
+    }
+    .Right-Reserva{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+  }
 .contenedorDetalle{
-    background-color: aliceblue;
+    background-color: #008ba7;
 }
 .Left-Right-Reserva{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: nowrap;
     margin: 45px;
@@ -35,7 +47,7 @@
     margin: auto;
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 5px;
-    background-color: cornsilk;
+    background-color: aliceblue;
     overflow: hidden;
 }
 .DescripcionReserva{
@@ -75,19 +87,38 @@
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 5px;
-    width: 120px;
-    white-space: nowrap;
     overflow: hidden;
 }
 .NombreReserva{
-    color: #1B262C!important;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
     font-size: x-large;
-    margin-left: 5px;
+    margin: 5px;
+    color: #ffffff;
+}
+.TituloDR{
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: large;
+    margin: 10px;
+    color: #ffffff;
+}
+.Documentacion{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    color: #1B262C;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 10px;
 }
 #ButtonCheck-in{
     width: 400px;
@@ -97,7 +128,7 @@
     margin: 10px;
     background-color: #1B262C;
     border: 2px solid #DCD7C9;
-    color: #DCD7C9;
+    color: #ffffff;
 }
 #ButtonCheck-in:hover{
     background-color: #126E82;
@@ -110,7 +141,7 @@
     margin: 10px;
     background-color: #1B262C;
     border: 2px solid #DCD7C9;
-    color: #DCD7C9;
+    color: #ffffff;
 }
 #ButtonCheck-out:hover{
     background-color: #126E82;
@@ -120,10 +151,15 @@
     height: 50px;
     border-radius: 25px;
     margin-bottom: 15px;
-    margin-top: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #1B262C;
     border: 2px solid #DCD7C9;
-    color: #DCD7C9;
+    color: #ffffff;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: large;
 }
 #ButtonCancelar:hover{
     background-color: #126E82;
@@ -132,18 +168,18 @@
     margin: auto;
     font-size: medium;
 }
-/*Detalle Reserva lado Derecho*/
-
+/*-------------------------------------------------------------Detalle Reserva lado Derecho----------------------------------------------------------------------*/
 .InformacionReservaCont{
     display: flex;
     flex-direction: column;
-    width: 50vh ;
-    height: 55vh ;
+    width: 58vh;
+    height: 41vh;
     margin-top: 40px;
-    margin-bottom: 5vw ;
+    margin-bottom: 5vw;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 25px;
-    background-color: cornsilk;
+    background-color: #e9ecef;
+
 }
 .DestalleValores-Fecha{
     color: #1B262C;
@@ -163,40 +199,147 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 310px;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 5px;
     margin: 15px;
-    background-color: #1B262C;
-    border: 2px solid #DCD7C9;
-    color: #DCD7C9;
+    background-color: #244050;
+    border: 3px solid #000000;
+    color: #ffffff;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .FechaTermino{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 310px;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 5px;
     margin: 15px;
-    background-color: #1B262C;
-    border: 2px solid #DCD7C9;
-    color: #DCD7C9;
+    background-color: #244050;
+    border: 3px solid #000000;
+    color: #ffffff;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.Line{
+    height: 0.5px;
+    width: 450px;
+    background-color: rgb(68, 68, 68);
+    margin: 5px;
 }
 .ContenedorValores{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.TituloInfoPrecio{ 
+    color: #1B262C;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.InformacionPrecio{
+    display: flex;
+    flex-direction: column;
+    width: 45vh ;
+    height: 30vh ;
+    margin-top: 40px;
+    margin-bottom: 1vw ;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: cornsilk;
+}
 .ValorFormat{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 45px;
-    border-radius: 10px;
+    width: 465px;
+    height: 10px;
+    border-radius: 5px;
     margin: 15px;
+    background-color: #ffffff;
+    border: 2px solid #464646;
+    color: #000000;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.ContenedorDesgloseValores{
+    display: flex;
+    flex-direction: column;
+    width: 45vh;
+    height: 17vh;
+    margin-top: 5px;
+    margin-bottom: 1vw;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    background-color: aliceblue
+}
+.ButtonDirection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.BotonOrd{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: auto;
+    color: #1B262C;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#ButtonTicket{
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px;
     background-color: #1B262C;
     border: 2px solid #DCD7C9;
-    color: #DCD7C9; 
+    color: #ffffff;
+}
+#ButtonTicket:hover{
+    background-color: #126E82;
+}
+#ButtonTicket h4{
+    margin: auto;
+    font-size: large;
+}
+#ButtonServiceExt{
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #1B262C;
+    border: 2px solid #DCD7C9;
+    color: #ffffff;
+}
+#ButtonServiceExt:hover{
+    background-color: #126E82;
+}
+#ButtonServiceExt h4{
+    margin: auto;
+    font-size: large;
+}
+#ButtonPagar{
+    width: 460px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #1B262C;
+    border: 2px solid #DCD7C9;
+    color: #ffffff;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#ButtonPagar:hover{
+    background-color: #126E82;
+}
+#ButtonPagar h4{
+    margin: auto;
+    font-size: large;
 }
