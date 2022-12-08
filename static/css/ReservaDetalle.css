@@ -50,6 +50,18 @@
     display: flex !important;
     flex-direction: column;
   }
+  #ButtonCancelar {
+    width: 80vw !important;
+  }
+  #ButtonPagar {
+    width: 80vw !important;
+  }
+  #ButtonCheck-in {
+    width: 80vw !important;
+  }
+  #ButtonCheck-out {
+    width: 80vw !important;
+  }
 }
 .contenedorDetalle {
   background-color: #008ba7;
