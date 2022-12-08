@@ -57,7 +57,7 @@
   }
   .botonespagocancelar {
     display: flex !important;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   #ButtonCancelar {
     width: 80vw !important;
