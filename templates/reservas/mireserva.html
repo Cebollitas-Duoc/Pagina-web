@@ -19,7 +19,7 @@
             <img src="{{reserva.Imagen}}" alt="">
             <div class="BordesReservas">{{reserva.Nombre}}</div>
             <div class="BordesReservas">{{reserva.StartDate}} - {{reserva.EndDate}}</div>
-            <div class="ValorFormat">Valor: {{reserva.Value}}</div>
+            <div class="ValorFormat">Valor: <span class="money">{{reserva.Value}}</span></div>
           </a>
         {% endif %}
       {% endfor %}

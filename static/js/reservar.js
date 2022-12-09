@@ -41,6 +41,7 @@ function actualizarprecio(){
       valorTotal += parseInt(valor)
     }    
     total.innerHTML =  valorTotal
+    total.dispatchEvent(new Event("change"))
 }
 
 function selectExtraService(id, elem){
