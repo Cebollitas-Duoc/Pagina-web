@@ -16,7 +16,7 @@
 
 <script src="{% static 'js/imagegallery.js' %}"></script>
 <script src="{% static 'js/reservar.js' %}"></script>
-<script src="{% static 'js/CambioMoneda.js' %}"></script>
+<script src="{% static 'js/Cambiomonedadepto.js' %}"></script>
 {% endblock js %}
 
 {% block wrapper %}
@@ -54,7 +54,7 @@
                     <div class="DetallesDepartamento">Baños </div>
                     <div class="InfoDepartamento">{{ depto.Bathrooms }} </div>
                     <div class="DetallesDepartamento">Valor </div>
-                    <div id="valorDepto" class="d-none" value="{{ depto.Value }}" ></div>
+                    <div id="valordepto" class="" value="{{ depto.Value }}"> {{ depto.Value }}</div>
                 </div>
                 <button class="ButtonReserva" id="ButtonReserva" class="" type="button"><h4>Reservar</h1></button>
             </div>

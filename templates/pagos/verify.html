@@ -1,12 +1,20 @@
 {% extends 'BaseTemplate.html' %}
 {% load static %}
 {% block css %}
+<link href="{% static 'css/verify.css'%}" rel="stylesheet">
 {% endblock css %}
 {% block js %}
 <script src="{% static 'js/tokenManage.js' %}"></script>
 {% endblock js %}
 {% block body %}
 <div id="colorhome" class="">
+    <div class="ContenedorPagos">
+        <div class="Titulo1">Pago Realizado Con Exito</div>
+        <div>Fecha de la Transacción</div>
+        <div id="fecha"></div>
+        <div>Hora de la Transacción</div>
+        <div id="hora"></div>
+    </div>
 </div>
 {% endblock body %}
 

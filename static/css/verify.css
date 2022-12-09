@@ -1,0 +1,26 @@
+.colorhome {
+  background-color: bisque;
+}
+
+.ContenedorPagos {
+  grid-column-start: 2;
+  width: 500px;
+  height: 600px;
+  margin-bottom: 5vw;
+  margin: auto;
+  border: 1.5px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+.Titulo1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  color: #1B262C;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: x-large;
+}/*# sourceMappingURL=verify.css.map */

@@ -17,12 +17,13 @@ async function verify(token){
     resp = res.response
     Pay(resp)
 }
-async function Pay(res){
+async function Pay(resp){
     var formdata = new FormData();
     var r
+    var XD = resp
     formdata.append("Id_Estado_Pago", 1);
-    formdata.append("VALORTOTAL", res.amount);
-    formdata.append("Id_Reserva", res.buy_order);
+    formdata.append("VALORTOTAL", resp.amount);
+    formdata.append("Id_Reserva", resp.buy_order);
     
     var requestOptions = {
         method: 'POST',
@@ -34,8 +35,22 @@ async function Pay(res){
     .then(response => response.text())
     .then(result => r=result)
     .catch(error => console.log('error', error));
-    res = JSON.parse(r)
+    resp = JSON.parse(r)
     GlobalMessage.setGlobalSuccessMessage(res.Success)
+    console.log(XD)
+    var fecha = document.getElementById('fecha')
+    var formatfecha = XD.transaction_date
+    fecha.innerHTML = formatfecha.split('T')[0]
+
+    var hora = document.getElementById('hora')
+    var formathora = XD.transaction_date
+    var Horaformat = formathora.split('T')[1]
+    var horahora   = Horaformat.split(':')[0]
+    var horamin    = Horaformat.split(':')[1]
+    var horaseg    = Horaformat.split(':')[0]
+    hora.innerHTML = formathora.split('T')[1]
+
+
 }
 
 
