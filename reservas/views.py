@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from .reservasAPI import *
 from userManager.authAPI import *
+from userManager.decorators import isUserLogged, isUserNotLogged
 # Create your views here.
 
+@isUserLogged()
 def Reserva(request):
     reservas = getReservasFixed(request)
     context = {
@@ -10,6 +12,7 @@ def Reserva(request):
     }
     return render(request, "reservas/mireserva.html", context)
 
+@isUserLogged()
 def ReservaDetalle(request, _idreserva):
     reserva = getReserva(_idreserva)
     depto = getDepto(reserva["ID_DEPARTAMENTO"])

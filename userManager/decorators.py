@@ -1,7 +1,7 @@
 from .authAPI import *
 from django.shortcuts import redirect
 
-def isUserLogged(redirectUrl="departamentos:Home"):
+def isUserLogged(redirectUrl="userManager:Login"):
     def inner(func):
         def wrapper(*args, **kw):
             valid = isSessionValid(args[0])[0]

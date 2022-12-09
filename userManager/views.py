@@ -30,7 +30,7 @@ def Login(request):
 def CreateUser(request):
     return render(request, "userManager/createUser.html")
 
-@isUserLogged(redirectUrl="userManager:Login")
+@isUserLogged()
 def MyProfile(request):
     profileData = getSessionProfile(request)
     p = Profile(
@@ -46,7 +46,7 @@ def MyProfile(request):
     }
     return render(request, "userManager/MyProfile.html", context)
 
-@isUserLogged(redirectUrl="userManager:Login")
+@isUserLogged()
 def ChangePassword(request):
     context = {
     }
