@@ -1,3 +1,7 @@
+function volver(){
+    var url = document.URL;
+    window.location.replace(url.split('/p')[0])
+}
 async function verify(token){
     var formdata = new FormData();
     var r
@@ -20,7 +24,7 @@ async function verify(token){
 async function Pay(resp){
     var formdata = new FormData();
     var r
-    var XD = resp
+    var respuesta = resp
     formdata.append("Id_Estado_Pago", 1);
     formdata.append("VALORTOTAL", resp.amount);
     formdata.append("Id_Reserva", resp.buy_order);
@@ -36,19 +40,18 @@ async function Pay(resp){
     .then(result => r=result)
     .catch(error => console.log('error', error));
     resp = JSON.parse(r)
-    GlobalMessage.setGlobalSuccessMessage(res.Success)
-    console.log(XD)
+    GlobalMessage.setGlobalSuccessMessage(resp.Success)
+    console.log(respuesta)
+    var fechaRaw = respuesta.transaction_date
+    const date = new Date(fechaRaw);
     var fecha = document.getElementById('fecha')
-    var formatfecha = XD.transaction_date
-    fecha.innerHTML = formatfecha.split('T')[0]
-
     var hora = document.getElementById('hora')
-    var formathora = XD.transaction_date
-    var Horaformat = formathora.split('T')[1]
-    var horahora   = Horaformat.split(':')[0]
-    var horamin    = Horaformat.split(':')[1]
-    var horaseg    = Horaformat.split(':')[0]
-    hora.innerHTML = formathora.split('T')[1]
+    var ordencompra = document.getElementById('ordencompra')
+    fecha.innerHTML = date.getDate()+'-'+date.getMonth()+'-'+date.getFullYear()
+    hora.innerHTML = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()
+    ordencompra.innerHTML = respuesta.buy_order
+
+
 
 
 }

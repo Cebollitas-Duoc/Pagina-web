@@ -3,11 +3,8 @@
 }
 .ContenedorPagos{
     grid-column-start: 2;
-    width: 500px;
-    height: 600px;
-    margin-bottom: 5vw;
     margin: auto;
-    border: 1.5px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     background-color: aliceblue;
 }
@@ -20,6 +17,29 @@
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
-    font-size: x-large;
-    
+    font-size: x-large;   
+}
+.Cuerpo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5px;
+}
+#Btnsig{
+    border-radius: 20px;
+    background-color: #1B262C;
+    border: 2px solid #DCD7C9;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+#Btnsig:hover{
+    background-color: green;
+}
+.campo{
+    font-weight: bold;
 }

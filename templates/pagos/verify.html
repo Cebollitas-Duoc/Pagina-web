@@ -10,10 +10,15 @@
 <div id="colorhome" class="">
     <div class="ContenedorPagos">
         <div class="Titulo1">Pago Realizado Con Exito</div>
-        <div>Fecha de la Transacción</div>
-        <div id="fecha"></div>
-        <div>Hora de la Transacción</div>
-        <div id="hora"></div>
+        <div class="Cuerpo">
+            <div class="campo">Fecha de la Transacción</div>
+            <div id="fecha" class="d-flex justify-content-center"></div>
+            <div class="campo">Hora de la Transacción</div>
+            <div id="hora" class="d-flex justify-content-center"></div>
+            <div class="campo">Orden de compra:</div>
+            <div id="ordencompra" class="d-flex justify-content-center"></div>
+        </div>
+        <input type="button" id='Btnsig' value="Continuar" onclick="volver()">
     </div>
 </div>
 {% endblock body %}
