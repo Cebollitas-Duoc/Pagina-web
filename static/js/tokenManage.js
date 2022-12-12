@@ -41,23 +41,26 @@ async function Pay(resp){
     .catch(error => console.log('error', error));
     resp = JSON.parse(r)
     GlobalMessage.setGlobalSuccessMessage(resp.Success)
-    console.log(respuesta)
     var fechaRaw = respuesta.transaction_date
     const date = new Date(fechaRaw);
     var fecha = document.getElementById('fecha')
     var hora = document.getElementById('hora')
     var ordencompra = document.getElementById('ordencompra')
-    fecha.innerHTML = date.getDate()+'-'+date.getMonth()+'-'+date.getFullYear()
+    var total = document.getElementById('total')
+    fecha.innerHTML = date.getDate()+'-'+parseInt(date.getMonth()+1)+'-'+date.getFullYear()
     hora.innerHTML = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()
     ordencompra.innerHTML = respuesta.buy_order
-
-
+    total.innerHTML = respuesta.amount
+    setCurrencyFormat(total)
 
 
 }
-
-
-
+function setCurrencyFormat(element){
+    valueRaw = element.innerHTML.replaceAll(".","").replace("$","");
+    valueRaw = parseInt(valueRaw)
+    ValorFormat = formatterPeso.format(parseInt(valueRaw))
+    element.innerHTML = ValorFormat
+}
 window.addEventListener('load' ,(e)=>{
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token_ws");
