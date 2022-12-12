@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', async () =>{
     const validationResult = await isSessionValid();
     
-    if ("Valid" in validationResult)
+    if ("Valid" in validationResult){
         setCookie("LogedIn", validationResult.Valid, 7)
+        setCookie("UsrName", validationResult.nombre, 7)
+    }
     else 
         setCookie("LogedIn", false, 7)
 })

@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "departamentos.apps.DepartamentosConfig",
     "reservas.apps.ReservasConfig",
     "pagos.apps.PagosConfig",
+    "chat.apps.ChatConfig",
 ]
 
 MIDDLEWARE = [

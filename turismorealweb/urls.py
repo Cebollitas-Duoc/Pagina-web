@@ -9,6 +9,7 @@ urlpatterns = [
     path("user/", include("userManager.urls")),
     path("reservas/", include("reservas.urls")),
     path("pagos/", include("pagos.urls")),
+    path("chat/", include("chat.urls")),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
