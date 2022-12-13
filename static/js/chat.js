@@ -35,9 +35,9 @@ async function SendMessage(){
         addMsgCard(getCookie("UsrName"), msg, 1)
     }   
     else if ("Error" in response) 
-        printGlobalErrorMessage(response["Error"]);
+        GlobalMessage.printGlobalErrorMessage(response["Error"]);
     else
-        printGlobalErrorMessage("Error desconocido al enviar mensaje");
+        GlobalMessage.printGlobalErrorMessage("Error desconocido al enviar mensaje");
 }
 
 async function GetMessagesRequest(from=0){
