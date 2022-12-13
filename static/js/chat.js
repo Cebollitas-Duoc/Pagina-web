@@ -108,6 +108,7 @@ function createSrvCard(user, msg, yours){
 }
 
 function getLastMsgDate(){
+    if (messages.length == 0) return 0;
     lastindex = messages.length - 1
     return messages[lastindex].Date
 }
