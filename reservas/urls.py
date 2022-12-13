@@ -4,7 +4,7 @@ from . import views
 app_name = "reservas"
 
 urlpatterns = [
-    path('mireserva', views.Reserva, name="reserva"),
+    path('misreservas', views.Reservas, name="reserva"),
     path('ReservaDetalle/<int:_idreserva>', views.ReservaDetalle, name="ReservaDetalle")
 ]
 

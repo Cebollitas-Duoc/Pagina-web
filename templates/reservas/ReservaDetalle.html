@@ -8,6 +8,7 @@
 <script src="{% static 'js/cancelarreserva.js' %}"></script>
 <script src="{% static 'js/CambioMoneda.js' %}"></script>
 <script src="{% static 'js/Pagar.js' %}"></script>
+<script src="{% static 'js/ReserveDocuments.js' %}"></script>
 {% endblock js %}
 {% block body %}
 
@@ -54,10 +55,7 @@
     <div class="documentos-boleta">
         <div class="Documentos">
             <div class="TituloDR">Documentos Reserva </div>
-            <div class="Documentacion">
-                <div class="BordesReservas Bton"><button  id="ButtonCheck-in"  class="" type="button"><h4>Check-In</h1></button></div>
-                <div class="BordesReservas Bton"><button  id="ButtonCheck-out" class="" type="button"><h4>Check-Out</h1></button></div>
-            </div>
+            <div class="Documentacion" id="documentContainer"></div>
         </div>
         <div class="ButtonDirection">
             <div class="BotonOrd">

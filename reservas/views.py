@@ -5,12 +5,12 @@ from userManager.decorators import isUserLogged, isUserNotLogged
 # Create your views here.
 
 @isUserLogged()
-def Reserva(request):
+def Reservas(request):
     reservas = getReservasFixed(request)
     context = {
         "reservas" : reservas
     }
-    return render(request, "reservas/mireserva.html", context)
+    return render(request, "reservas/misReservas.html", context)
 
 @isUserLogged()
 def ReservaDetalle(request, _idreserva):

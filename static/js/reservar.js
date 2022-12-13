@@ -77,7 +77,7 @@ reservar.addEventListener("click", async ()=>{
   const response = await this.CreateReserveQuery(idDpto, startDate, endDate, selectedExtraServices.toString())
   if ("reserva_creada" in response && response["reserva_creada"]){
     GlobalMessage.setGlobalSuccessMessage("Se ha realizado con exito su reserva")
-    location.href = '/reservas/mireserva'; 
+    location.href = '/reservas/misreservas'; 
   }
   else if ("Error" in response) 
     GlobalMessage.printGlobalErrorMessage(response["Error"])
