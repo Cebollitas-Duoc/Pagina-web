@@ -25,33 +25,42 @@ async function Pay(resp){
     var formdata = new FormData();
     var r
     var respuesta = resp
-    formdata.append("Id_Estado_Pago", 1);
-    formdata.append("VALORTOTAL", resp.amount);
-    formdata.append("Id_Reserva", resp.buy_order);
-    
-    var requestOptions = {
-        method: 'POST',
-        body: formdata,
-        redirect: 'follow'
-    };
-    
-    await fetch(`${apidomain}/pagos/pagarReserva/`, requestOptions)
-    .then(response => response.text())
-    .then(result => r=result)
-    .catch(error => console.log('error', error));
-    resp = JSON.parse(r)
-    GlobalMessage.setGlobalSuccessMessage(resp.Success)
-    var fechaRaw = respuesta.transaction_date
-    const date = new Date(fechaRaw);
-    var fecha = document.getElementById('fecha')
-    var hora = document.getElementById('hora')
-    var ordencompra = document.getElementById('ordencompra')
-    var total = document.getElementById('total')
-    fecha.innerHTML = date.getDate()+'-'+parseInt(date.getMonth()+1)+'-'+date.getFullYear()
-    hora.innerHTML = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()
-    ordencompra.innerHTML = respuesta.buy_order
-    total.innerHTML = respuesta.amount
-    setCurrencyFormat(total)
+    console.log(respuesta)
+    if(respuesta.status === 'AUTHORIZED'){
+        formdata.append("Id_Estado_Pago", 1);
+        formdata.append("VALORTOTAL", resp.amount);
+        formdata.append("Id_Reserva", resp.buy_order);
+        
+        var requestOptions = {
+            method: 'POST',
+            body: formdata,
+            redirect: 'follow'
+        };
+        
+        await fetch(`${apidomain}/pagos/pagarReserva/`, requestOptions)
+        .then(response => response.text())
+        .then(result => r=result)
+        .catch(error => console.log('error', error));
+        resp = JSON.parse(r)
+        GlobalMessage.setGlobalSuccessMessage(resp.Success)
+        var fechaRaw = respuesta.transaction_date
+        const date = new Date(fechaRaw);
+        var fecha = document.getElementById('fecha')
+        var hora = document.getElementById('hora')
+        var ordencompra = document.getElementById('ordencompra')
+        var total = document.getElementById('total')
+        fecha.innerHTML = date.getDate()+'-'+parseInt(date.getMonth()+1)+'-'+date.getFullYear()
+        hora.innerHTML = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()
+        ordencompra.innerHTML = respuesta.buy_order
+        total.innerHTML = respuesta.amount
+        setCurrencyFormat(total)
+    }
+    else{
+        GlobalMessage.setGlobalSuccessMessage("El pago ha sido Cancelado")
+        var url = document.URL;
+        url = url.split('/p')[0]+'/reservas/ReservaDetalle/'+respuesta.buy_order
+        window.location.replace(url)
+    }
 
 
 }
