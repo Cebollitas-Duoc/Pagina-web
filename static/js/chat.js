@@ -17,6 +17,7 @@ cardTemplate = `
             <div class="card-body">
                 <p class="username"><<name>></p>
                 <p class="msg"><<msg>></p>
+                <<img>>
             </div>
         </div>
     </div>
@@ -103,6 +104,15 @@ function createSrvCard(user, msg, yours){
         card = card.replace("<<yours>>", "send")
     else
         card = card.replace("<<yours>>", "recieved")
+    
+    const regex = /(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])/g;
+    const urls = msg.match(regex);
+
+    if (urls != null){
+        card = card.replace("<<img>>", `<img src="${urls[0]}" alt="">`)
+    }
+    else
+        card = card.replace("<<img>>", "")
 
     return card.toString()
 }
