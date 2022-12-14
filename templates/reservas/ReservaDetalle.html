@@ -20,10 +20,10 @@
                 <div class="DescripcionReservaContenedor">
                     <div class="TContenedordreserv" >Detalles Reserva</div>
                     <div class="DescripcionReserva">
-                        <div class="">Reserva a nombre de: {{reserva.NOMBRE}}</div>
-                        <div class="">Estado Reserva:  {{reserva.ESTADO_RESERVA}}</div>
-                        <div class="">Habitaciones:  {{depto.Rooms}}</div>
-                        <div class="">Baños:  {{depto.Bathrooms}}</div>
+                        <div class="TextoResrva">Reserva de: {{reserva.NOMBRE}}</div>
+                        <div class="TextoResrva">Estado Reserva:  {{reserva.ESTADO_RESERVA}}</div>
+                        <div class="TextoResrva">Habitaciones:  {{depto.Rooms}}</div>
+                        <div class="TextoResrva">Baños:  {{depto.Bathrooms}}</div>
                     </div>
                 </div> 
             </div>
@@ -34,10 +34,11 @@
         <div class="Right-Reserva">
             <div class="InformacionReservaCont">
                 <div class="DestalleValores-Fecha">
+                    <div class="FechasEstadia">Duración Estadía</div>
                     <div class="FechasIT">
-                        <div class="FechaInicio">Fecha Desde  {{reserva.FECHADESDE}}</div>
+                        <div class="FechaInicio">Desde  {{reserva.FECHADESDE}}</div>
                         -
-                        <div class="FechaTermino">Fecha Hasta {{reserva.FECHAHASTA}}</div>
+                        <div class="FechaTermino">Hasta {{reserva.FECHAHASTA}}</div>
                     </div>
                     <div class="Line"></div>
                     <div class="ContenedorValores">

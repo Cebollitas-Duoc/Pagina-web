@@ -193,7 +193,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   color: #1B262C;
   font-style: italic;
@@ -201,6 +201,24 @@
   font-weight: 600;
   font-size: 15px;
   margin-left: 10px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 45px;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  margin: 10px;
+  background-color: #1B262C;
+  border: 2px solid #DCD7C9;
+  color: #ffffff;
+}
+
+.card:hover {
+  background-color: #126E82;
 }
 
 #ButtonCheck-in {
@@ -256,6 +274,12 @@
 #ButtonCancelar h4 {
   margin: auto;
   font-size: medium;
+}
+
+.TextoResrva {
+  font-size: medium;
+  font-weight: 600;
+  color: #000000;
 }
 
 /*-------------------------------------------------------------Detalle Reserva lado Derecho----------------------------------------------------------------------*/
@@ -460,7 +484,7 @@
 .Documentos {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  align-items: center;
 }
 
 .botonespagocancelar {
@@ -477,4 +501,12 @@
 
 #ButtonPagar {
   grid-column: 4;
+}
+
+.FechasEstadia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  margin-top: 5px;
 }/*# sourceMappingURL=ReservaDetalle.css.map */
