@@ -37,7 +37,7 @@ function actualizarprecio(){
 
     for (const selectedServiceId of selectedExtraServices){
       const selectedService = document.getElementById(`extraSrv-${selectedServiceId}`)
-      const valor = selectedService.querySelector(".valor").innerHTML
+      const valor = currencyParseInt(selectedService.querySelector(".valor").innerHTML)
       valorTotal += parseInt(valor)
     }    
     total.innerHTML =  valorTotal
@@ -121,4 +121,8 @@ async function getReservedDates(){
   .catch(error => console.log('error', error));
 
   return JSON.parse(r);
+}
+
+function currencyParseInt(value){
+  return parseInt(value.replaceAll(".","").replace("$","").replace(" ","").replace("&nbsp;",""))
 }
