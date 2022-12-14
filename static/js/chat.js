@@ -108,9 +108,8 @@ function createSrvCard(user, msg, yours){
     const regex = /(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])/g;
     const urls = msg.match(regex);
 
-    if (urls != null){
+    if (urls != null)
         card = card.replace("<<img>>", `<img src="${urls[0]}" alt="">`)
-    }
     else
         card = card.replace("<<img>>", "")
 

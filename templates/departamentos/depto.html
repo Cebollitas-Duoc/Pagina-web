@@ -124,7 +124,7 @@
             {% for servicioextra in serviciosextra %}
             <div class="elementoservicio" id="extraSrv-{{servicioextra.Id_ExtraService}}" onclick="selectExtraService('{{servicioextra.Id_ExtraService}}', this)">
                 <div class="textoreserva">{{servicioextra.Nombre}}</div>
-                <div class="valor">{{servicioextra.Valor}}</div>
+                <div class="valor money">{{servicioextra.Valor}}</div>
             </div>
             {% endfor %}
         </div>
