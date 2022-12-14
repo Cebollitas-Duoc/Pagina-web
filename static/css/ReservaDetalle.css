@@ -542,36 +542,4 @@
   align-items: center;
   font-size: medium;
   font-weight: 600;
-}
-
-.ServiciosExtra {
-  background-color: #DCD7C9;
-  padding: 30px;
-  border-radius: 10px;
-  border: 2px solid #000000;
-  display: flex;
-  flex-direction: column;
-}
-
-.elementoservicio {
-  width: 300px;
-  border: 2px solid #1B262C;
-  border-top: 0px;
-  display: flex;
-  flex-direction: row;
-}
-
-.textoreserva {
-  margin-right: 50px;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
 }/*# sourceMappingURL=ReservaDetalle.css.map */
