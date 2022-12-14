@@ -43,6 +43,13 @@
                     <div class="ContenedorValores">
                         <div class="TituloInfoPrecio">Información Precio Reserva</div>
                         <div class="ContenedorDesgloseValores">
+                            {% for serv in serviciosExtra %}
+                            <div id="{{serv.Id_HiredExtSrv}}">
+                                <div>{{serv.Category}}</div>
+                                <div>{{serv.Value}}</div>
+                            </div>
+                            {% endfor %}
+                            <div>{{ dias }}</div>
 
                         </div>
                         <div id="valor" class="ValorFormat">Costo Final <span class="money">{{reserva.VALORTOTAL}}</span></div>

@@ -63,3 +63,17 @@ def getReserva(ID_reserva):
         r = json.loads(response.text)
         return r
     return r([])
+
+def getServiciosExtra(ID_reserva, SessionKey):
+    url = f"http://{localHostIp}:8081/reservas/listReserveExtraServices/{ID_reserva}/" 
+    
+    payload={'SessionKey': SessionKey}
+    files={}
+    headers = {}
+
+    response = requests.request("GET", url, headers=headers, data=payload, files=files)
+
+    if response.status_code == 200:
+        r = json.loads(response.text)
+        return r
+    return r([])
