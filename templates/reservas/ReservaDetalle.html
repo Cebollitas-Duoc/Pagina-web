@@ -20,10 +20,10 @@
                 <div class="DescripcionReservaContenedor">
                     <div class="TContenedordreserv" >Detalles Reserva</div>
                     <div class="DescripcionReserva">
-                        <div class="TextoResrva">Reserva de: {{reserva.NOMBRE}}</div>
-                        <div class="TextoResrva">Estado Reserva:  {{reserva.ESTADO_RESERVA}}</div>
-                        <div class="TextoResrva">Habitaciones:  {{depto.Rooms}}</div>
-                        <div class="TextoResrva">Baños:  {{depto.Bathrooms}}</div>
+                        <div class="TextoReserva">Reserva de: {{reserva.NOMBRE}}</div>
+                        <div class="TextoReserva">Estado Reserva:  {{reserva.ESTADO_RESERVA}}</div>
+                        <div class="TextoReserva">Habitaciones:  {{depto.Rooms}}</div>
+                        <div class="TextoReserva">Baños:  {{depto.Bathrooms}}</div>
                     </div>
                 </div> 
             </div>
@@ -44,14 +44,15 @@
                     <div class="ContenedorValores">
                         <div class="TituloInfoPrecio">Información Precio Reserva</div>
                         <div class="ContenedorDesgloseValores">
+                            <div class="TituloSE">Servicios Extra</div>
                             {% for serv in serviciosExtra %}
-                            <div id="{{serv.Id_HiredExtSrv}}">
-                                <div>{{serv.Category}}</div>
-                                <div>{{serv.Value}}</div>
+                            <div class="ServiciosExtras" id="{{serv.Id_HiredExtSrv}}">
+                                <div class="">{{serv.Category}} </div>
+                                <div class=""><span class="money">{{serv.Value}}</span> CLP</div>
                             </div>
                             {% endfor %}
-                            <div>{{ dias }}</div>
-
+                            <div class="ValorDV">Detalles Valor</div>
+                            <div class="ValorDVS">Valor <span class="money">{{depto.Value}}</span> CLP X {{ dias }} Noches </div>
                         </div>
                         <div id="valor" class="ValorFormat">Costo Final <span class="money">{{reserva.VALORTOTAL}}</span></div>
                     </div>

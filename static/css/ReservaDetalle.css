@@ -162,7 +162,7 @@
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 20px;
   margin-left: 10px;
 }
 
@@ -368,8 +368,8 @@
   font-size: medium;
 }
 
-.TextoResrva {
-  font-size: medium;
+.TextoReserva {
+  font-size: 18.5px;
   font-weight: 600;
   color: #000000;
 }
@@ -687,4 +687,4 @@
   font-size: large;
   margin-top: 5px;
 }
-/*# sourceMappingURL=ReservaDetalle.css.map */
+/* # sourceMappingURL=ReservaDetalle.css.map */
