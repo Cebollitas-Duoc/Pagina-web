@@ -14,10 +14,8 @@ def getReservas(request):
 
     response = requests.request("GET", url, headers=headers, data=payload, files=files)
 
-    if response.status_code == 200:
-        r = json.loads(response.text)
-        return r
-    return r([])
+    r = json.loads(response.text)
+    return r
 
 def getDeptos(request):
     url = f"http://{localHostIp}:8081/departamentos/viewdptos/" 
@@ -28,10 +26,8 @@ def getDeptos(request):
 
     response = requests.request("GET", url, headers=headers, data=payload, files=files)
 
-    if response.status_code == 200:
-        r = json.loads(response.text)
-        return r
-    return r([])
+    r = json.loads(response.text)
+    return r
 
 
 def getReservasFixed(request):
@@ -59,10 +55,8 @@ def getReserva(ID_reserva):
 
     response = requests.request("GET", url, headers=headers, data=payload, files=files)
 
-    if response.status_code == 200:
-        r = json.loads(response.text)
-        return r
-    return r([])
+    r = json.loads(response.text)
+    return r
 
 def getServiciosExtraPay(ID_reserva, SessionKey):
     url = f"http://{localHostIp}:8081/reservas/listReserveExtraServices/{ID_reserva}/" 
@@ -73,22 +67,16 @@ def getServiciosExtraPay(ID_reserva, SessionKey):
 
     response = requests.request("GET", url, headers=headers, data=payload, files=files)
 
-    if response.status_code == 200:
-        r = json.loads(response.text)
-        return r
-    return r([])
-
+    r = json.loads(response.text)
+    return r
 
 def getServiciosExtra(ID_reserva):
-    url = f"http://{localHostIp}:8081/reservas/listextraservices/{ID_reserva}/" 
+    url = f"http://{localHostIp}:8081/departamentos/listextraservices/{ID_reserva}/" 
     
     payload={}
     files={}
     headers = {}
 
     response = requests.request("GET", url, headers=headers, data=payload, files=files)
-
-    if response.status_code == 200:
-        r = json.loads(response.text)
-        return r
-    return r([])
+    r = json.loads(response.text)
+    return r

@@ -35,7 +35,7 @@ def ReservaDetalle(request, _idreserva):
         "reserva": reserva,
         "depto" : depto,
         "serviciosExtra" : serviciosExtra,
-        "serv" : s,
+        "serv" : serv,
         "dias" : delta.days
     }
     return render(request, "reservas/ReservaDetalle.html", context)
