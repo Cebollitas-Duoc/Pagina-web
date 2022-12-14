@@ -105,7 +105,7 @@
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 10px;
 }
 .DescripcionReservaContenedor{
@@ -257,8 +257,8 @@
     margin: auto;
     font-size: medium;
 }
-.TextoResrva{
-    font-size: medium;
+.TextoReserva{
+    font-size: 18.5px;
     font-weight: 600;
     color: #000000;
 }
@@ -463,4 +463,33 @@
     align-items: center;
     font-size: large;
     margin-top: 5px;
+}
+.TituloSE{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    margin-top: 5px;
+}
+.ServiciosExtras{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    margin-left: 5px;
+    justify-content: space-evenly;
+}
+.ValorDV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    margin-top: 5px;
+}
+.ValorDVS{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    font-weight: 600;
 }
