@@ -2,11 +2,9 @@
   background-color: rgba(255, 0, 0, 0.322);
   width: 100%;
 }
-
 #FormErrorMessage:hover {
   cursor: pointer;
 }
-
 #FormErrorMessage span {
   font-weight: bold;
   color: white;
@@ -22,13 +20,11 @@
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
 }
-
 #GlobalMessage.error {
-  background-color: #fb9b9bc9;
+  background-color: rgba(251, 155, 155, 0.7882352941);
 }
-
 #GlobalMessage.success {
-  background-color: #a1fb9bc9;
+  background-color: rgba(161, 251, 155, 0.7882352941);
 }
 
 /*Responsibidad*/
@@ -49,15 +45,9 @@
     width: 120px !important;
   }
   .InfoDepartamento {
-    -ms-flex-wrap: wrap !important;
-        flex-wrap: wrap !important;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
+    flex-wrap: wrap !important;
     display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    flex-direction: column !important;
     white-space: normal !important;
     width: 140px !important;
   }
@@ -74,20 +64,16 @@
     margin-bottom: 3vw !important;
   }
   #deptos {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    justify-content: center !important;
   }
 }
-
 .labelcolor {
   color: #1B262C;
 }
 
 #colorboton {
   background-color: #126E82;
-  -ms-grid-columns: 1fr 1400px 1fr;
-      grid-template-columns: 1fr 1400px 1fr;
+  grid-template-columns: 1fr 1400px 1fr;
 }
 
 .botonhover:hover {
@@ -95,37 +81,26 @@
 }
 
 #colorhome {
-  display: -ms-grid !important;
   display: grid !important;
-  -ms-grid-columns: 10px 1fr 10px;
-      grid-template-columns: 10px 1fr 10px;
+  grid-template-columns: 10px 1fr 10px;
 }
 
 body {
   min-height: 100vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 90px 1fr 50px;
-      grid-template-rows: 90px 1fr 50px;
+  grid-template-rows: 90px 1fr 50px;
   background-color: #faf6eb;
 }
 
 #deptos {
-  -ms-grid-column: 2;
   grid-column: 2;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   background-color: #1B262C;
   font-weight: bold;
   height: 50px;
@@ -154,24 +129,17 @@ footer {
   margin: 20px;
   border-radius: 30px;
   margin-top: 40px;
-  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 .margen_lista:hover {
-  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
-          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
-  -webkit-transform: translateY(-3%);
-          transform: translateY(-3%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3%);
 }
 
 .depto-image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -192,16 +160,9 @@ footer {
 }
 
 .info {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 10px;
   width: 10px;
 }
@@ -214,9 +175,7 @@ footer {
   font-size: 15px;
   font-weight: bold;
   margin-left: 5px;
-  -webkit-box-align: left !important;
-      -ms-flex-align: left !important;
-          align-items: left !important;
+  align-items: left !important;
   text-align: left !important;
   text-decoration: none !important;
   text-overflow: ellipsis !important;
@@ -235,9 +194,7 @@ footer {
   font-size: 14px;
   font-weight: 600;
   margin-left: 8px;
-  -webkit-box-align: left !important;
-      -ms-flex-align: left !important;
-          align-items: left !important;
+  align-items: left !important;
   text-align: left !important;
   width: 295px;
   white-space: nowrap;
@@ -265,15 +222,9 @@ footer {
   width: 1000px;
   font-weight: 1000;
   font-size: x-large;
-  -ms-flex-wrap: wrap !important;
-      flex-wrap: wrap !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
+  flex-wrap: wrap !important;
   display: flex !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
+  flex-direction: column !important;
 }
 
 .InfoDepartamento {
@@ -284,15 +235,9 @@ footer {
   white-space: normal;
   overflow-wrap: anywhere;
   margin-right: 5px;
-  -ms-flex-wrap: wrap !important;
-      flex-wrap: wrap !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
+  flex-wrap: wrap !important;
   display: flex !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
+  flex-direction: column !important;
 }
 
 /*Vista departamento Descripcion */
@@ -301,15 +246,9 @@ footer {
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 48vw;
-  -ms-flex-wrap: wrap !important;
-      flex-wrap: wrap !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
+  flex-wrap: wrap !important;
   display: flex !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
+  flex-direction: column !important;
   overflow: auto;
   margin: 5px;
   text-align: justify;
@@ -323,9 +262,7 @@ footer {
   font-size: 15px;
   font-weight: bold;
   margin-left: 5px;
-  -webkit-box-align: left !important;
-      -ms-flex-align: left !important;
-          align-items: left !important;
+  align-items: left !important;
   text-align: left !important;
   text-decoration: none !important;
   text-overflow: ellipsis !important;
@@ -348,8 +285,6 @@ footer {
 }
 
 .slider ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
   width: 400%;
@@ -419,15 +354,9 @@ footer {
     margin-left: -300%;
   }
 }
-
 .contenedorhome {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 30px;
 }
 
@@ -439,5 +368,4 @@ footer {
   font-family: "Lexend Deca", sans-serif;
   line-height: 37px;
   letter-spacing: 0.6px;
-}
-/*# sourceMappingURL=baseTemplate.css.map */
+}/*# sourceMappingURL=baseTemplate.css.map */

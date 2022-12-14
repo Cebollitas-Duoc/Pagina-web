@@ -5,10 +5,8 @@
   border: 5px solid #cfd8dc;
   cursor: pointer;
 }
-
 #profilePicture:hover {
-  -webkit-filter: grayscale(50%);
-          filter: grayscale(50%);
+  filter: grayscale(50%);
 }
 
 /*Foto de perfil para visualizar sin acciones*/
@@ -25,7 +23,6 @@
   padding: 25px;
   margin: auto;
   border-radius: 25px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(27, 38, 44, 0.9)), to(rgba(28, 28, 28, 0.5)));
   background: linear-gradient(to top, rgba(27, 38, 44, 0.9), rgba(28, 28, 28, 0.5));
   color: #DCD7C9;
   border: #212529 3px solid;
@@ -45,8 +42,6 @@
   padding: 25px;
   margin: auto;
   border-radius: 25px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(27, 38, 44, 0.9)), to(rgba(28, 28, 28, 0.5)));
   background: linear-gradient(to top, rgba(27, 38, 44, 0.9), rgba(28, 28, 28, 0.5));
   color: #DCD7C9;
-}
-/*# sourceMappingURL=myProfile.css.map */
+}/*# sourceMappingURL=myProfile.css.map */

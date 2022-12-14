@@ -24,13 +24,14 @@ def ReservaDetalle(request, _idreserva):
     date1 = datetime.strptime(FECHADESDE, '%d-%m-%Y')
     date2 = datetime.strptime(FECHAHASTA, '%d-%m-%Y')
     delta = date2 - date1
-    serviciosextra = getServiciosExtra(_idreserva)
+    serviciosextra = getServiciosExtra(reserva["ID_DEPARTAMENTO"])
     serv = []
     serviciosExtra = getServiciosExtraPay(_idreserva, SessionKey)
     for s in serviciosextra:
         for spay in serviciosExtra:
+            serv.append(s)
             if s["Id_ExtraService"] == spay["Id_ExtSrv"]:
-                serv.append(s)
+                serv.remove(s)
     context = {
         "reserva": reserva,
         "depto" : depto,
