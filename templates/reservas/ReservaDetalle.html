@@ -9,6 +9,8 @@
 <script src="{% static 'js/CambioMoneda.js' %}"></script>
 <script src="{% static 'js/Pagar.js' %}"></script>
 <script src="{% static 'js/ReserveDocuments.js' %}"></script>
+<script src="{% static 'js/redirect.js' %}"></script>
+<script src="{% static 'js/extraserv.js' %}"></script>
 {% endblock js %}
 {% block body %}
 
@@ -67,7 +69,7 @@
         </div>
         <div class="ButtonDirection">
             <div class="BotonOrd">
-                <div class="BordesReservas Bton"><button  id="ButtonTicket"  class="" type="button"><h4>Boleta</h1></button></div>
+                <div onclick='redirect("{{reserva.ID_RESERVA}}")' class="BordesReservas Bton"><button  id="ButtonTicket"  class="" type="button"><h4>Chat</h1></button></div>
                 <div class="BordesReservas Bton"><button  id="ButtonServiceExt"  class="" type="button"><h4>Servicios Extra</h1></button></div>
             </div>
         </div>
@@ -75,6 +77,21 @@
     <div class="botonespagocancelar">
         <button onclick="cancelar('{{reserva.ID_RESERVA}}')" id="ButtonCancelar" class="" type="button"><h4>Cancelar Reserva</h1></button>
         <button  onclick="pagar('{{reserva.ID_RESERVA}}')" id="ButtonPagar" class="" type="button"><h4>Pagar</h1></button>
+    </div>
+</div>
+<div id="contenedorserv">
+    <div class="ServiciosExtra">
+        <h4 class="d-flex justify-content-center ">Servicios Extra</h4>
+        <div class="d-flex flex-row">
+            <div class="head1">Tipo de Servicio</div>
+            <div class="head2">Valor</div>
+        </div>
+        {% for ser in serv %}
+        <div class="elementoservicio" id="extraSrv-{{ser.Id_ExtraService}}" onclick="selectExtraService('{{ser.Id_ExtraService}}', this)">
+            <div class="textoreserva">{{ser.Nombre}}</div>
+            <div class="valor">{{ser.Valor}}</div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 

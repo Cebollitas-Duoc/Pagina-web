@@ -24,11 +24,18 @@ def ReservaDetalle(request, _idreserva):
     date1 = datetime.strptime(FECHADESDE, '%d-%m-%Y')
     date2 = datetime.strptime(FECHAHASTA, '%d-%m-%Y')
     delta = date2 - date1
-    serviciosExtra = getServiciosExtra(_idreserva, SessionKey)
+    serviciosextra = getServiciosExtra(_idreserva)
+    serv = []
+    serviciosExtra = getServiciosExtraPay(_idreserva, SessionKey)
+    for s in serviciosextra:
+        for spay in serviciosExtra:
+            if s["Id_ExtraService"] == spay["Id_ExtSrv"]:
+                serv.append(s)
     context = {
         "reserva": reserva,
         "depto" : depto,
         "serviciosExtra" : serviciosExtra,
+        "serv" : s,
         "dias" : delta.days
     }
     return render(request, "reservas/ReservaDetalle.html", context)
