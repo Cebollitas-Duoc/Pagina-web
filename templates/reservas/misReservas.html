@@ -16,7 +16,7 @@
       {% for reserva in reservas %}
         {% if reserva.Id_Estate != 3 %}
           <a class="cartareserva" href = "{% url 'reservas:ReservaDetalle' reserva.Id_Reserve %}">
-            <img src="{{reserva.Imagen}}" alt="">
+            <img src="{{reserva.Imagen}}"  alt="">
             <div class="BordesReservas">{{reserva.Nombre}}</div>
             <div class="BordesReservas">{{reserva.StartDate}} - {{reserva.EndDate}}</div>
             <div class="ValorFormat">Valor: <span class="money">{{reserva.Value}}</span></div>
