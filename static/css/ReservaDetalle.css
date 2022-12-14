@@ -1,15 +1,26 @@
 /*Responsibidad*/
 @media only screen and (max-width: 600px) {
   .Left-Right-Reserva {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
     margin: auto !important;
     margin-top: 30px !important;
-    justify-content: center !important;
-    align-items: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
   .Left-Reserva {
-    align-items: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
     width: 90vw !important;
     margin-left: 0px !important;
     margin: auto !important;
@@ -25,8 +36,13 @@
     width: 90vw !important;
   }
   .DestalleValores-Fecha {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: auto;
   }
   .ContenedorDesgloseValores {
@@ -36,8 +52,13 @@
     width: 80vw !important;
   }
   .documentos-boleta {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 30px !important;
   }
   #ButtonTicket {
@@ -47,17 +68,27 @@
     width: 80vw !important;
   }
   .BotonOrd {
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
   .Documentos {
-    align-items: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
   .TituloDR {
     margin-left: 0px !important;
   }
   .botonespagocancelar {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   #ButtonCancelar {
     width: 80vw !important;
@@ -72,36 +103,58 @@
     width: 80vw !important;
   }
 }
+
 .contenedorDetalle {
   background-color: #008ba7;
 }
 
 .Left-Right-Reserva {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   margin: 45px;
   margin-bottom: 0px;
 }
 
 .Left-Reserva {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-left: 90px;
 }
 
 .Right-Reserva {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
 }
 
 /*Detalle Reserva lado Izquierdo*/
 .Contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .TContenedordreserv {
@@ -114,13 +167,18 @@
 }
 
 .DescripcionReservaContenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 650px;
   height: 200px;
   margin-bottom: 5vw;
   margin: auto;
-  border: 1.5px solid rgb(0, 0, 0);
+  border: 1.5px solid black;
   border-radius: 5px;
   background-color: aliceblue;
   overflow: hidden;
@@ -130,33 +188,49 @@
   margin-left: 15px;
   margin-top: 30px;
   margin-bottom: 15px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 .ServiciosReserva {
   margin: auto;
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
+
 .ServiciosReserva .servicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px;
 }
+
 .ServiciosReserva .servicio:nth-child(2n+1) {
   background-color: #1B262C;
   color: #DCD7C9;
 }
+
 .ServiciosReserva .servicio:nth-child(2n+1) img {
-  filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
+  -webkit-filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
+          filter: invert(93%) sepia(71%) saturate(108%) hue-rotate(321deg) brightness(91%) contrast(88%);
 }
+
 .ServiciosReserva .servicio:nth-child(2n+2) {
   background-color: #DCD7C9;
   color: #1B262C;
 }
+
 .ServiciosReserva .servicio:nth-child(2n+2) img {
-  filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
+  -webkit-filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
+          filter: invert(9%) sepia(33%) saturate(541%) hue-rotate(157deg) brightness(100%) contrast(90%);
 }
 
 .DetallesDepartamento {
@@ -170,6 +244,8 @@
 }
 
 .NombreReserva {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -190,11 +266,21 @@
 }
 
 .Documentacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #1B262C;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -204,9 +290,15 @@
 }
 
 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 200px;
   height: 45px;
   border-radius: 25px;
@@ -284,10 +376,15 @@
 
 /*-------------------------------------------------------------Detalle Reserva lado Derecho----------------------------------------------------------------------*/
 .InformacionReservaCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 40px;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid black;
   border-radius: 25px;
   width: 550px;
   background-color: #e9ecef;
@@ -302,16 +399,30 @@
 }
 
 .FechasIT {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .FechaInicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 310px;
   height: 50px;
   border-radius: 5px;
@@ -324,9 +435,15 @@
 }
 
 .FechaTermino {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 310px;
   height: 50px;
   border-radius: 5px;
@@ -341,14 +458,21 @@
 .Line {
   height: 0.5px;
   width: 100%;
-  background-color: rgb(68, 68, 68);
+  background-color: #444444;
   margin-bottom: 5px;
 }
 
 .ContenedorValores {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .TituloInfoPrecio {
@@ -361,21 +485,32 @@
 }
 
 .InformacionPrecio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 45vh;
   height: 30vh;
   margin-top: 40px;
   margin-bottom: 1vw;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid black;
   border-radius: 10px;
   background-color: cornsilk;
 }
 
 .ValorFormat {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 465px;
   height: 10px;
   border-radius: 5px;
@@ -388,29 +523,50 @@
 }
 
 .ContenedorDesgloseValores {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 450px;
   height: 17vh;
   margin-top: 5px;
   margin-bottom: 10px;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid black;
   border-radius: 25px;
   background-color: aliceblue;
 }
 
 .ButtonDirection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
 }
 
 .BotonOrd {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: auto;
   color: #1B262C;
   font-style: italic;
@@ -477,36 +633,58 @@
 }
 
 .documentos-boleta {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 .Documentos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .botonespagocancelar {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 140px 1fr 1fr 1fr 195px;
-  align-items: center;
+  -ms-grid-columns: 140px 1fr 1fr 1fr 195px;
+      grid-template-columns: 140px 1fr 1fr 1fr 195px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
   margin-bottom: 30px;
 }
 
 #ButtonCancelar {
+  -ms-grid-column: 2;
   grid-column: 2;
 }
 
 #ButtonPagar {
+  -ms-grid-column: 4;
   grid-column: 4;
 }
 
 .FechasEstadia {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: large;
   margin-top: 5px;
-}/*# sourceMappingURL=ReservaDetalle.css.map */
+}
+/*# sourceMappingURL=ReservaDetalle.css.map */

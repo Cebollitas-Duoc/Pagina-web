@@ -19,7 +19,7 @@
             <form>
                 <img id="profilePicture" class="mb-4 m-auto" src="{{ usrImg }}" alt="" width="100" onclick="input_imagen.click()">
                 <input class="form-control d-none" type="file" id="input-Imagen">
-                <h1 class="h3 mb-3 fw-normal">Mi perfil</h1>
+                <h1 class="h3 mb-3 fw-normal">Mi Perfil</h1>
                 <!-- datos usuario -->
                 <div class="form-floating">
                     <input type="nombres" class="form-control" id="input-Nombres" maxlength="100" value="{{ profile.names }}">
@@ -38,25 +38,25 @@
                 
                 <div class="form-floating">
                     <input type="email" class="form-control" id="input-Email" maxlength="50" value="{{ profile.email }}">
-                    <label for="floatingInput" class="labelcolor">Email address</label>
+                    <label for="floatingInput" class="labelcolor">Correo Electrónico</label>
                 </div>
                 
                 <div class="form-floating">
                     <input type="direccion" class="form-control" id="input-Direccion" maxlength="50" value="{{ profile.address }}">
-                    <label for="floatingInput" class="labelcolor">Direccion</label>
+                    <label for="floatingInput" class="labelcolor">Dirección</label>
                 </div>
                 
                 <div class="form-floating">
                     <input type="telefono" class="form-control" id="input-Telefono" maxlength="12" value="{{ profile.phone }}">
-                    <label for="floatingInput" class="labelcolor">Telefono</label>
+                    <label for="floatingInput" class="labelcolor">Teléfono</label>
                 </div>
             
                 <div class="checkbox mb-3">
 
                 </div>
                 
-                <button id="UpdateProfileButton" class="w-100 btn btn-lg btn-primary submit" type="button">Actualizar perfil</button>
-                <a id="btn-changePassword" class="dropdown-item" href="{% url 'userManager:ChangePassword' %}">Cambiar contraseña</a>
+                <button id="UpdateProfileButton" class="w-100 btn btn-lg btn-primary submit" type="button">Actualizar Perfil</button>
+                <a id="btn-changePassword" class="dropdown-item" href="{% url 'userManager:ChangePassword' %}">Cambiar Contraseña</a>
             </form>
             {% include 'FormErrorMessage.html' %}
         </div>

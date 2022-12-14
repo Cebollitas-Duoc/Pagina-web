@@ -3,17 +3,24 @@
 }
 
 .ContenedorPagos {
-  grid-column-start: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
   margin: auto;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid black;
   border-radius: 5px;
   background-color: aliceblue;
 }
 
 .Titulo1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 15px;
   color: #1B262C;
   font-style: italic;
@@ -23,8 +30,10 @@
 }
 
 .Cuerpo {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   margin: 5px;
 }
 
@@ -33,8 +42,12 @@
   background-color: #1B262C;
   border: 2px solid #DCD7C9;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -48,4 +61,5 @@
 
 .campo {
   font-weight: bold;
-}/*# sourceMappingURL=verify.css.map */
+}
+/*# sourceMappingURL=verify.css.map */

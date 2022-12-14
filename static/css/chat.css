@@ -1,19 +1,23 @@
 .card.msg {
   margin-top: 1rem;
 }
+
 .card.msg.send {
   background-color: #9edb9e;
   margin-left: auto;
   text-align: right;
 }
+
 .card.msg .card-body {
   padding: 0;
 }
+
 .card.msg .card-body .username {
   font-size: small;
   margin: 0;
-  color: rgb(59, 59, 59);
+  color: #3b3b3b;
 }
+
 .card.msg .card-body .msg {
   font-size: large;
   margin: 0;
@@ -22,4 +26,5 @@
 #inputs {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}/*# sourceMappingURL=chat.css.map */
+}
+/*# sourceMappingURL=chat.css.map */
